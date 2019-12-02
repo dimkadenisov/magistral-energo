@@ -1,0 +1,26 @@
+.search-sections-select {
+	position: relative;
+	background-color: $gray-200;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+
+	&__icon {
+		position: absolute;
+		right: 20px;
+		top: 16px;
+		width: 15px;
+		height: 15px;
+		color: $gray-300;
+	}
+
+	&__select {
+		height: 44px;
+		padding-right: 35px;
+		padding-left: 20px;
+		background-color: transparent;
+		border: none;
+		color: $gray-300;
+		font-size: 14px;
+		cursor: pointer;
+	}
+}

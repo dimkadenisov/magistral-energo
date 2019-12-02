@@ -26,7 +26,17 @@ fieldset {
 	border: none;
 }
 
-input[type="number"] {
+input {
+	&::-moz-placeholder {
+		opacity: 1;
+	}
+
+	&::placeholder {
+		opacity: 1;
+	}
+}
+
+input[type='number'] {
 	-moz-appearance: textfield;
 
 	&::-webkit-outer-spin-button,

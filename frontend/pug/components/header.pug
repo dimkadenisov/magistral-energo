@@ -1,7 +1,14 @@
 mixin header
   include top-line
   include main-header-line
+  include header-search-line
+  include breadcrumbs
 
   header
     +top-line
     +main-header-line
+    +header-search-line
+    .container
+      .row
+        .col-12
+          +breadcrumbs

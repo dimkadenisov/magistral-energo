@@ -1,0 +1,33 @@
+.breadcrumbs {
+	margin-top: 20px;
+	margin-bottom: 25px;
+
+	&__item {
+		display: inline-block;
+		color: $gray-300;
+
+		&:not(:last-child) {
+			margin-right: 0.65em;
+
+			&::after {
+				content: '>';
+				display: inline-block;
+				margin-left: 0.65em;
+				color: $gray-300;
+			}
+		}
+	}
+
+	&__link {
+		display: inline-block;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		color: $gray-300;
+		text-decoration: none;
+
+		&:hover,
+		&:focus {
+			text-decoration: underline;
+		}
+	}
+}
