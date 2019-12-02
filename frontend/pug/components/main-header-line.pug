@@ -1,0 +1,26 @@
+mixin main-header-line
+
+  include logo
+  include text-small
+  include header-actions
+  include basket
+  include button
+  include header-search
+
+  .main-header-line
+    .container
+      .row.align-items-center
+        .col-xl-3
+          +logo
+        .col-xl-9.d-flex.align-items-center
+          +text-small
+            |Официальный системный
+            <br>
+            |интегратор Siemens
+          +header-actions
+          +basket
+        .col-xl-3
+          +button({variant: 'primary'})
+            |Каталог
+        .col-9
+          +header-search

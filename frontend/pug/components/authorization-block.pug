@@ -1,0 +1,11 @@
+mixin authorization-block
+
+  include header-link
+
+  ul.authorization-block
+    li.authorization-block__item
+      +header-link({iconId: 'briefcase'})
+        |Вход для партнеров
+    li.authorization-block__item
+      +header-link({iconId: 'user'})
+        |Личный кабинет

@@ -1,0 +1,10 @@
+mixin header-link(props = {})
+  include link-icon
+
+  - const {iconId = null} = props;
+
+  a(href="#").header-link
+    if (iconId)
+      +link-icon({iconId: iconId})
+    span.header-link__text
+      block

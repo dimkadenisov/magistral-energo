@@ -1,0 +1,17 @@
+.header-link {
+	display: inline-flex;
+	color: $gray-300;
+	font-size: 14px;
+	text-decoration: none;
+
+	&__text {
+		border-bottom: 1px solid $green-400;
+	}
+
+	&:hover,
+	&:focus {
+		.header-link__text {
+			border-bottom: none;
+		}
+	}
+}

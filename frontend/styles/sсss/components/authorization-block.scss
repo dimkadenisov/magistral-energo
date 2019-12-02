@@ -1,0 +1,11 @@
+.authorization-block {
+	display: flex;
+	justify-content: flex-end;
+	list-style: none;
+
+	&__item {
+		&:nth-last-child(n + 2) {
+			margin-right: 30px;
+		}
+	}
+}

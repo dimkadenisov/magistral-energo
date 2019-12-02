@@ -1,0 +1,10 @@
+.top-line {
+	display: flex;
+	align-items: center;
+	height: 40px;
+	background-color: $gray-100;
+
+	.hot-line {
+		margin-left: auto;
+	}
+}

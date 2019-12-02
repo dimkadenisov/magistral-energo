@@ -1,0 +1,14 @@
+.hot-line {
+	display: inline-block;
+	color: $gray-700;
+	font-family: $Oswald;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 18px;
+	text-decoration: none;
+
+	&:hover,
+	&:focus {
+		text-decoration: underline;
+	}
+}

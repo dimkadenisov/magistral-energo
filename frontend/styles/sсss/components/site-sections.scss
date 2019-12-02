@@ -1,0 +1,11 @@
+.site-sections {
+	display: flex;
+	justify-content: center;
+	list-style: none;
+
+	&__item {
+		&:nth-last-child(n + 2) {
+			margin-right: 30px;
+		}
+	}
+}
