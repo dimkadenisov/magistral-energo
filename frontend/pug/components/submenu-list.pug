@@ -1,0 +1,80 @@
+mixin submenu-list(props = {})
+  include menu-item
+
+  - const { classes = '' } = props
+  - const classlist = 'submenu-list ' + classes
+
+  ul(class= classlist)
+    li.menu-list__item
+      +menu-item
+        |Автоматические выключатели стационарные
+    li.menu-list__item
+      +menu-item
+        |Автоматы защиты двигателя
+    li.menu-list__item
+      +menu-item
+        |Аксессуары для аппаратов защиты
+    li.menu-list__item
+      +menu-item
+        |Измерительные приборы для установки в щит
+    li.menu-list__item
+      +menu-item
+        |Клеммные колодки
+    li.menu-list__item
+      +menu-item
+        |Компоненты светосигнальной арматуры
+    li.menu-list__item
+      +menu-item
+        |Контакторы
+    li.menu-list__item
+      +menu-item
+        |Низковольтные устройства различного назначения и аксессуары
+    li.menu-list__item
+      +menu-item
+        |Пускорегулирующая аппаратура
+    li.menu-list__item
+      +menu-item
+        |Светосигнальная арматура в сборе
+    li.menu-list__item
+      +menu-item
+        |Устройства оптической (световой) и акустической (звуковой) сигнализации
+    li.menu-list__item
+      +menu-item
+        |Элементы управления для светосигнальной арматуры
+      ul.submenu-list
+        li.menu-list__item
+          +menu-item
+            |Автоматические выключатели стационарные
+        li.menu-list__item
+          +menu-item
+            |Автоматы защиты двигателя
+        li.menu-list__item
+          +menu-item
+            |Аксессуары для аппаратов защиты
+        li.menu-list__item
+          +menu-item
+            |Измерительные приборы для установки в щит
+        li.menu-list__item
+          +menu-item
+            |Клеммные колодки
+        li.menu-list__item
+          +menu-item
+            |Компоненты светосигнальной арматуры
+        li.menu-list__item
+          +menu-item
+            |Контакторы
+        li.menu-list__item
+          +menu-item
+            |Низковольтные устройства различного назначения и аксессуары
+        li.menu-list__item
+          +menu-item
+            |Пускорегулирующая аппаратура
+        li.menu-list__item
+          +menu-item
+            |Светосигнальная арматура в сборе
+        li.menu-list__item
+          +menu-item
+            |Устройства оптической (световой) и акустической (звуковой) сигнализации
+        li.menu-list__item
+          +menu-item
+            |Элементы управления для светосигнальной арматуры

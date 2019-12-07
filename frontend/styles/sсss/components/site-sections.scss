@@ -9,3 +9,13 @@
 		}
 	}
 }
+
+@media screen and (max-width: 1199px) {
+	.site-sections {
+		&__item {
+			&:nth-last-child(n + 2) {
+				margin-right: 18px;
+			}
+		}
+	}
+}

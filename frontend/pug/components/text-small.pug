@@ -1,6 +1,7 @@
 mixin text-small(props = {})
 
-  - const { tag = 'span' } = props
+  - const { tag = 'span', classes = '' } = props
+  - const classlist = 'text-small ' + classes
 
-  #{tag}.text-small
+  #{tag}(class= classlist)
     block

@@ -1,0 +1,11 @@
+.catalog-menu {
+	position: absolute;
+	top: 164px;
+	width: 255px;
+}
+
+@media screen and (max-width: 1199px) {
+	.catalog-menu {
+		width: 210px;
+	}
+}

@@ -4,7 +4,13 @@
 	height: 40px;
 	background-color: $gray-100;
 
+	&__content {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+	}
+
 	.hot-line {
-		margin-left: auto;
+		margin-left: 15px;
 	}
 }

@@ -10,10 +10,10 @@ mixin main-header-line
   .main-header-line
     .container
       .row.align-items-center
-        .col-xl-3
+        .col-3
           +logo
-        .col-xl-9.d-flex.align-items-center
-          +text-small
+        .col-9.d-flex.align-items-center
+          +text-small({classes: 'd-none d-xl-block'})
             |Официальный системный
             <br>
             |интегратор Siemens

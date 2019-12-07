@@ -9,3 +9,17 @@
 		}
 	}
 }
+
+@media screen and (max-width: 1199px) {
+	.authorization-block {
+		&__item {
+			&:nth-last-child(n + 2) {
+				margin-right: 18px;
+			}
+		}
+
+		.link-icon {
+			display: none;
+		}
+	}
+}

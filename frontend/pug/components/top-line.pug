@@ -4,15 +4,21 @@ mixin top-line
   include hot-line
   include authorization-block
   include site-sections
+  include catalog-menu
 
   .top-line
     .container
       .row
-        .col-lg-4.col-xl-3.d-flex.justify-content-between.align-items-baseline
-          +header-link({iconId: 'pin'})
-            |Москва
-          +hot-line({iconId: 'phone'})
-        .col-auto.flex-grow-1
-          +site-sections
-        .col-4
-          +authorization-block
+        .col-12
+          .top-line__content
+            +catalog-menu({classes: 'd-none'})
+            .top-line__left
+              +header-link({iconId: 'pin'})
+                |Санкт-Петербург
+              +hot-line({iconId: 'phone'})
+
+            .top-line__center
+              +site-sections
+
+            .top-line__right
+              +authorization-block
