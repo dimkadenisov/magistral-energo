@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 const topLineLeft = $('.top-line__left');
 const topLineRight = $('.top-line__right');
 const mainHeaderTextSmall = $('.main-header-line .text-small');

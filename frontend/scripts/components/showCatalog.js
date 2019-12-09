@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 const catalogButton = $('.header-search-line .button');
 const burgerMenu = $('.burger-menu');
 const menuItem = $('.menu-item:not(:only-child)');

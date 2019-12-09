@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 const burgerButton = $('.button_burger');
 const burgerMenu = $('.burger-menu');
 

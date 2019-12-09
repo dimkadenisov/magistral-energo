@@ -2,19 +2,7 @@
 	"name": "magistral-energo",
 	"version": "1.0.0",
 	"scripts": {
-		"lint:fix": "prettier-eslint '**/*.js' --write",
 		"dev": "gulp"
-	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "lint-staged"
-		}
-	},
-	"lint-staged": {
-		"*.js": [
-			"yarn lint:fix",
-			"git add"
-		]
 	},
 	"devDependencies": {
 		"@babel/core": "^7.7.4",
@@ -47,8 +35,6 @@
 		"gulp-sass": "^4.0.2",
 		"gulp-sourcemaps": "^2.6.5",
 		"gulp-svg-sprite": "^1.5.0",
-		"husky": "^3.1.0",
-		"lint-staged": "^9.5.0",
 		"prettier": "^1.19.1",
 		"prettier-airbnb-config": "^1.0.0",
 		"stream-combiner2": "^1.1.1",
