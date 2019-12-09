@@ -1,11 +1,67 @@
 .catalog-menu {
 	position: absolute;
-	top: 164px;
+	top: 169px;
 	width: 255px;
 }
 
 @media screen and (max-width: 1199px) {
 	.catalog-menu {
 		width: 210px;
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.catalog-menu {
+		position: relative;
+		top: auto;
+		width: 100%;
+
+		&__name {
+			width: 100%;
+			padding: 12px 0;
+			background: transparent;
+			border: none;
+			color: $gray-400;
+			font-family: $Oswald;
+			font-size: 16px;
+			text-align: left;
+			text-transform: uppercase;
+			cursor: pointer;
+
+			&:hover,
+			&:focus {
+				background-color: $gray-200;
+				color: $gray-700;
+			}
+		}
+
+		&__text {
+			display: flex;
+			max-width: 720px;
+			width: 100%;
+			margin: 0 auto;
+			padding: 0 15px;
+
+			&::after {
+				content: '\203A';
+				margin-left: auto;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.catalog-menu {
+		&__text {
+			max-width: 540px;
+		}
+	}
+}
+
+@media screen and (max-width: 575px) {
+	.catalog-menu {
+		&__text {
+			max-width: none;
+		}
 	}
 }

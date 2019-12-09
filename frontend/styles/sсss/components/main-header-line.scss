@@ -10,3 +10,9 @@
 		margin-left: auto;
 	}
 }
+
+@media screen and (max-width: 991px) {
+	.main-header-line {
+		padding: 0;
+	}
+}

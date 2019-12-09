@@ -23,3 +23,16 @@
 		}
 	}
 }
+
+@media screen and (max-width: 991px) {
+	.authorization-block {
+		display: flex;
+		flex-direction: column;
+
+		&__item {
+			&:nth-last-child(n + 2) {
+				margin-right: 0;
+			}
+		}
+	}
+}

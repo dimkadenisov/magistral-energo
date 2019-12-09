@@ -1,8 +1,11 @@
-mixin header-actions
+mixin header-actions(props = {})
 
   include action
 
-  ul.header-actions
+  - const { classes = '' } = props;
+
+
+  ul(class = `header-actions ${classes}`)
     li.header-actions__item
       +action
         |Быстрый заказ

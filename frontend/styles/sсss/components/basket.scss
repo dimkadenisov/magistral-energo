@@ -2,7 +2,7 @@
 	position: relative;
 	width: 48px;
 	height: 48px;
-	border: 1px solid $gray-200;
+	border: 2px solid $gray-200;
 	border-radius: 50%;
 	text-decoration: none;
 
@@ -32,5 +32,16 @@
 		line-height: 20px;
 		text-align: center;
 		transform: translateX(50%);
+	}
+
+	&:hover,
+	&:focus {
+		box-shadow: 2px 5px 10px 0px rgba($black, 0.1);
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.basket {
+		margin-left: 15px;
 	}
 }

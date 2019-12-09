@@ -8,6 +8,48 @@
 
 	&:hover,
 	&:focus {
-		text-decoration: underline;
+		border-bottom: 2px solid $green-400;
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.action {
+		display: block;
+		width: 100%;
+		padding: 12px 0;
+		border-bottom: none;
+		color: $gray-400;
+		font-weight: normal;
+
+		&__text {
+			display: block;
+			max-width: 720px;
+			width: 100%;
+			margin: 0 auto;
+			padding: 0 15px;
+		}
+
+		&:hover,
+		&:focus {
+			background-color: $gray-200;
+			border-bottom: none;
+			color: $gray-700;
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.action {
+		&__text {
+			max-width: 540px;
+		}
+	}
+}
+
+@media screen and (max-width: 575px) {
+	.action {
+		&__text {
+			max-width: none;
+		}
 	}
 }

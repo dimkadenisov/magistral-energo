@@ -1,9 +1,9 @@
 mixin header-search
 
   include header-search-button
-  include search-sections-select
+  include search-sections
 
   form.header-search
-    +search-sections-select
+    +search-sections
     input(type="text" placeholder="Для поиска введите артикул или название товара...").header-search__input
     +header-search-button

@@ -5,6 +5,8 @@
 	min-height: 48px;
 	padding-right: 20px;
 	padding-left: 20px;
+	background-color: transparent;
+	border-color: transparent;
 	border-width: 2px;
 	border-radius: 5px;
 	border-style: solid;
@@ -14,9 +16,29 @@
 	text-transform: uppercase;
 	cursor: pointer;
 
+	&__icon {
+		width: 30px;
+		height: 30px;
+		margin-right: 25px;
+	}
+
 	&_primary {
 		background-color: $green-400;
 		border-color: $green-400;
 		color: $white;
+
+		&:hover,
+		&:focus {
+			box-shadow: 2px 4px 10px 0px rgba($green-400, 0.5);
+		}
+	}
+
+	&_icon {
+		padding-right: 0;
+		padding-left: 0;
+
+		.button__icon {
+			margin-right: 0;
+		}
 	}
 }

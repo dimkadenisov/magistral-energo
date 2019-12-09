@@ -8,3 +8,11 @@
 	list-style: none;
 	z-index: 2;
 }
+
+@media screen and (max-width: 991px) {
+	.menu-list {
+		padding-top: 0;
+		padding-bottom: 0;
+		box-shadow: none;
+	}
+}

@@ -1,9 +1,10 @@
 mixin header-link(props = {})
   include link-icon
 
-  - const {iconId = null} = props;
+  - const {iconId = null, classes = ''} = props;
+  - const classlist = 'header-link ' + classes;
 
-  a(href="#").header-link
+  a(href="#" class= classlist)
     if (iconId)
       +link-icon({iconId: iconId})
     span.header-link__text

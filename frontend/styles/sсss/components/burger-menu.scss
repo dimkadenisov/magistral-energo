@@ -1,0 +1,24 @@
+.burger-menu {
+	max-width: 1140px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+@media screen and (max-width: 1199px) {
+	.burger-menu {
+		max-width: 960px;
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.burger-menu {
+		position: absolute;
+		top: 78px;
+		right: 0;
+		left: 0;
+		padding: 0;
+		background-color: $white;
+		z-index: 2;
+	}
+}

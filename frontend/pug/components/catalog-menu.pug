@@ -6,5 +6,6 @@ mixin catalog-menu(props = {})
   - const classlist = 'catalog-menu ' + classes;
 
   div(class= classlist)
-    .catalog-menu__name.d-none Каталог
-    +menu-list
+    button(type="button").catalog-menu__name.d-lg-none
+      span.catalog-menu__text Каталог
+    +menu-list({classes: 'd-none d-lg-block'})

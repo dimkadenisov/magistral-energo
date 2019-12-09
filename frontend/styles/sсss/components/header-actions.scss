@@ -8,3 +8,16 @@
 		}
 	}
 }
+
+@media screen and (max-width: 991px) {
+	.header-actions {
+		flex-direction: column;
+		width: 100%;
+
+		&__item {
+			&:nth-last-child(n + 2) {
+				margin-right: 0;
+			}
+		}
+	}
+}

@@ -3,8 +3,8 @@ mixin header-search-line
   .header-search-line
     .container
       .row
-        .col-lg-3
-          +button({variant: 'primary'})
+        .col-lg-3.d-none.d-lg-block
+          +button({variant: 'primary', type: 'icon_left', iconId: 'burger'})
             |Каталог
-        .col-9
+        .col-12.col-lg-9
           +header-search

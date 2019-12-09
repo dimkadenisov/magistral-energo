@@ -2,9 +2,8 @@ mixin submenu-list(props = {})
   include menu-item
 
   - const { classes = '' } = props
-  - const classlist = 'submenu-list ' + classes
 
-  ul(class= classlist)
+  ul(class= `submenu-list ${classes}`)
     li.menu-list__item
       +menu-item
         |Автоматические выключатели стационарные

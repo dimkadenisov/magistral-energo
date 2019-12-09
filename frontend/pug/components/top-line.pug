@@ -5,15 +5,20 @@ mixin top-line
   include authorization-block
   include site-sections
   include catalog-menu
+  include button
 
+  .burger-menu.d-none
+    .burger-menu__content
+      +catalog-menu
   .top-line
     .container
       .row
         .col-12
           .top-line__content
-            +catalog-menu({classes: 'd-none'})
+            +button({type: 'icon', iconId: 'burger', classes: 'button_burger d-lg-none'})
+
             .top-line__left
-              +header-link({iconId: 'pin'})
+              +header-link({iconId: 'pin', classes: 'd-none d-lg-inline-flex'})
                 |Санкт-Петербург
               +hot-line({iconId: 'phone'})
 
