@@ -11,3 +11,14 @@
 		0px 5px 10px 0px rgba($black, 0.15);
 	list-style: none;
 }
+
+@media screen and (max-width: 991px) {
+	.submenu-list {
+		position: relative;
+		top: auto;
+		left: auto;
+		padding-top: 0;
+		padding-bottom: 20px;
+		box-shadow: none;
+	}
+}

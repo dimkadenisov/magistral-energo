@@ -17,8 +17,19 @@
 		top: 78px;
 		right: 0;
 		left: 0;
+		max-width: none;
 		padding: 0;
-		background-color: $white;
 		z-index: 2;
+
+		&__content {
+			max-height: calc(100vh - 78px);
+			background-color: $white;
+			overflow-y: auto;
+		}
+
+		&_opened {
+			height: calc(100vh - 78px);
+			background-color: rgba($black, 0.3);
+		}
 	}
 }

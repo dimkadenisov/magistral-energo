@@ -1,7 +1,7 @@
 const topLineLeft = $('.top-line__left');
 const topLineRight = $('.top-line__right');
 const mainHeaderTextSmall = $('.main-header-line .text-small');
-const burgerMenu = $('.burger-menu__content');
+const burgerMenuContent = $('.burger-menu__content');
 const buttonBurger = $('.button_burger');
 
 const actionsClone =
@@ -30,13 +30,13 @@ const logoClone =
 		: $('.main-header-line .logo').clone(true);
 
 const turnActionsToTop = () => {
-	burgerMenu.append(actionsClone);
+	burgerMenuContent.append(actionsClone);
 	$('.main-header-line .header-actions').remove();
 
-	burgerMenu.append(topLineCenterClone);
+	burgerMenuContent.append(topLineCenterClone);
 	$('.top-line__content .top-line__center').remove();
 
-	burgerMenu.append(topLineRight);
+	burgerMenuContent.append(topLineRight);
 	$('.top-line__content .top-line__right').remove();
 
 	topLineLeft.after(basketClone);

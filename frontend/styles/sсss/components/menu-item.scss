@@ -60,5 +60,54 @@
 				}
 			}
 		}
+
+		&_active:not(:only-child) {
+			position: relative;
+			padding-bottom: 0;
+			background-color: $white;
+			color: $gray-400;
+			font-family: $Oswald;
+			font-size: 16px;
+			font-weight: normal;
+			text-transform: uppercase;
+			z-index: 2;
+
+			.menu-item__text {
+				display: block;
+
+				&::after {
+					content: '\003C  Назад';
+					display: block;
+					padding-top: 10px;
+					padding-bottom: 20px;
+					font-family: $Roboto;
+					font-size: 14px;
+					font-weight: normal;
+					text-transform: none;
+					border-bottom: 1px solid $gray-300;
+				}
+			}
+
+			&:hover {
+				background-color: $gray-200;
+				color: $gray-700;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.menu-item {
+		&__text {
+			max-width: 540px;
+		}
+	}
+}
+
+@media screen and (max-width: 575px) {
+	.menu-item {
+		&__text {
+			max-width: none;
+		}
 	}
 }

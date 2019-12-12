@@ -1,6 +1,6 @@
 .catalog-menu {
 	position: absolute;
-	top: 169px;
+	top: 174px;
 	width: 255px;
 }
 
@@ -15,6 +15,7 @@
 		position: relative;
 		top: auto;
 		width: 100%;
+		background-color: $white;
 
 		&__name {
 			width: 100%;
@@ -32,6 +33,25 @@
 			&:focus {
 				background-color: $gray-200;
 				color: $gray-700;
+			}
+
+			&_active {
+				padding-bottom: 0;
+
+				.catalog-menu__text {
+					display: block;
+
+					&::after {
+						content: '\003C  Назад';
+						display: block;
+						padding-top: 10px;
+						padding-bottom: 20px;
+						font-family: $Roboto;
+						font-size: 14px;
+						text-transform: none;
+						border-bottom: 1px solid $gray-300;
+					}
+				}
 			}
 		}
 

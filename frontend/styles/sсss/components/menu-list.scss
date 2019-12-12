@@ -11,8 +11,28 @@
 
 @media screen and (max-width: 991px) {
 	.menu-list {
+		position: absolute;
+		width: 100%;
+		max-height: calc(100vh - 78px - 84px);
 		padding-top: 0;
-		padding-bottom: 0;
+		padding-bottom: 20px;
 		box-shadow: none;
+		overflow-y: auto;
+
+		&__item {
+			&_active {
+				position: fixed;
+				top: 78px;
+				right: 0;
+				left: 0;
+				bottom: 0;
+
+				& > .submenu-list {
+					display: block;
+					max-height: calc(100vh - 78px - 84px);
+					overflow-y: auto;
+				}
+			}
+		}
 	}
 }
