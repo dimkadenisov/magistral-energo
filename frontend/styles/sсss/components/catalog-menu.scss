@@ -20,8 +20,8 @@
 		&__name {
 			width: 100%;
 			padding: 12px 0;
-			background: transparent;
 			border: none;
+			background-color: $white;
 			color: $gray-400;
 			font-family: $Oswald;
 			font-size: 16px;
@@ -66,6 +66,13 @@
 				content: '\203A';
 				margin-left: auto;
 			}
+		}
+
+		&_active {
+			position: absolute;
+			width: 100%;
+			max-height: calc(100vh - 78px);
+			overflow-y: auto;
 		}
 	}
 }

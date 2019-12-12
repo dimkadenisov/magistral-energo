@@ -26,7 +26,7 @@
 		background-color: $gray-200;
 		font-weight: bold;
 
-		& + .submenu-list {
+		& ~ .submenu-list {
 			display: block;
 		}
 	}
@@ -70,7 +70,6 @@
 			font-size: 16px;
 			font-weight: normal;
 			text-transform: uppercase;
-			z-index: 2;
 
 			.menu-item__text {
 				display: block;
@@ -92,22 +91,6 @@
 				background-color: $gray-200;
 				color: $gray-700;
 			}
-		}
-	}
-}
-
-@media screen and (max-width: 767px) {
-	.menu-item {
-		&__text {
-			max-width: 540px;
-		}
-	}
-}
-
-@media screen and (max-width: 575px) {
-	.menu-item {
-		&__text {
-			max-width: none;
 		}
 	}
 }

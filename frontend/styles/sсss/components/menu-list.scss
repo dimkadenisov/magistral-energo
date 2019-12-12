@@ -11,9 +11,7 @@
 
 @media screen and (max-width: 991px) {
 	.menu-list {
-		position: absolute;
 		width: 100%;
-		max-height: calc(100vh - 78px - 84px);
 		padding-top: 0;
 		padding-bottom: 20px;
 		box-shadow: none;
@@ -26,12 +24,8 @@
 				right: 0;
 				left: 0;
 				bottom: 0;
-
-				& > .submenu-list {
-					display: block;
-					max-height: calc(100vh - 78px - 84px);
-					overflow-y: auto;
-				}
+				background-color: rgba($black, 0.3);
+				overflow-y: auto;
 			}
 		}
 	}
