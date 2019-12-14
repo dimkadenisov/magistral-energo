@@ -30,3 +30,9 @@
 		}
 	}
 }
+
+@media screen and (max-width: 767px) {
+	.menu-list__item_active {
+		top: 99px;
+	}
+}

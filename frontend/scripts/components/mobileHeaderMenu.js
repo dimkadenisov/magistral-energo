@@ -86,11 +86,13 @@ $('.menu-item:not(:only-child)').click(function() {
 	$(this)
 		.parent()
 		.toggleClass('menu-list__item_active');
-	$(this)
-		.parent()
-		.parent()
-		.parent()
-		.toggleClass('overflow_hidden');
+	if ($(window).width < 992) {
+		$(this)
+			.parent()
+			.parent()
+			.parent()
+			.toggleClass('overflow_hidden');
+	}
 });
 
 // $('.menu-list > .menu-list__item > .menu-item').click(function() {
