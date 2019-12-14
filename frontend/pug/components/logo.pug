@@ -1,4 +1,6 @@
-mixin logo()
+mixin logo(props = {})
 
-  a(href="/").logo
-    img(src="assets/img/logo.png", alt="Магисмтраль Энерго").logo__img
+  - const { src = "assets/img/logo.png", classes  } = props;
+
+  a(href="/" class=`logo ${classes}`)
+    img(src= src, alt="Магистраль Энерго").logo__img

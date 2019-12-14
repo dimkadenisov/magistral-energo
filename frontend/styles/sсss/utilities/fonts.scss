@@ -1,9 +1,9 @@
 @font-face {
 	font-family: 'Oswald';
 	src: local('Oswald Regular'), local('Oswald-Regular'),
-		url('Oswald-Regular.woff2') format('woff2'),
-		url('Oswald-Regular.woff') format('woff'),
-		url('Oswald-Regular.ttf') format('truetype');
+		url('../assets/fonts/Oswald-Regular.woff2') format('woff2'),
+		url('../assets/fonts/Oswald-Regular.woff') format('woff'),
+		url('../assets/fonts/Oswald-Regular.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
@@ -12,9 +12,9 @@
 @font-face {
 	font-family: 'Roboto';
 	src: local('Roboto'), local('Roboto-Regular'),
-		url('Roboto-Regular.woff2') format('woff2'),
-		url('Roboto-Regular.woff') format('woff'),
-		url('Roboto-Regular.ttf') format('truetype');
+		url('../assets/fonts/Roboto-Regular.woff2') format('woff2'),
+		url('../assets/fonts/Roboto-Regular.woff') format('woff'),
+		url('../assets/fonts/Roboto-Regular.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
@@ -23,9 +23,9 @@
 @font-face {
 	font-family: 'Roboto';
 	src: local('Roboto Bold'), local('Roboto-Bold'),
-		url('Roboto-Bold.woff2') format('woff2'),
-		url('Roboto-Bold.woff') format('woff'),
-		url('Roboto-Bold.ttf') format('truetype');
+		url('../assets/fonts/Roboto-Bold.woff2') format('woff2'),
+		url('../assets/fonts/Roboto-Bold.woff') format('woff'),
+		url('../assets/fonts/Roboto-Bold.ttf') format('truetype');
 	font-weight: bold;
 	font-style: normal;
 	font-display: swap;
@@ -34,9 +34,9 @@
 @font-face {
 	font-family: 'Oswald';
 	src: local('Oswald Medium'), local('Oswald-Medium'),
-		url('Oswald-Medium.woff2') format('woff2'),
-		url('Oswald-Medium.woff') format('woff'),
-		url('Oswald-Medium.ttf') format('truetype');
+		url('../assets/fonts/Oswald-Medium.woff2') format('woff2'),
+		url('../assets/fonts/Oswald-Medium.woff') format('woff'),
+		url('../assets/fonts/Oswald-Medium.ttf') format('truetype');
 	font-weight: 500;
 	font-style: normal;
 	font-display: swap;

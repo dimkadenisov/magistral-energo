@@ -18,11 +18,41 @@
 
 @media screen and (max-width: 991px) {
 	.top-line {
-		height: 78px;
+		height: auto;
+		padding-top: 18px;
 		background: $white;
 
 		&__left {
 			margin-left: auto;
+		}
+
+		.logo {
+			width: 240px;
+			margin-left: 30px;
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.top-line {
+		height: auto;
+		padding-top: 48px;
+		.hot-line {
+			position: fixed;
+			top: 0;
+			right: 0;
+			left: 0;
+			width: 100%;
+			height: auto;
+			margin-left: 0;
+			background-color: $gray-200;
+			border: none;
+			border-radius: 0;
+			line-height: 32px;
+
+			&__text {
+				margin-left: 10px;
+			}
 		}
 	}
 }

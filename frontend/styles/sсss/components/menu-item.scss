@@ -94,3 +94,19 @@
 		}
 	}
 }
+
+@media screen and (max-width: 767px) {
+	.menu-item {
+		&__text {
+			max-width: 540px;
+		}
+	}
+}
+
+@media screen and (max-width: 575px) {
+	.menu-item {
+		&__text {
+			max-width: none;
+		}
+	}
+}

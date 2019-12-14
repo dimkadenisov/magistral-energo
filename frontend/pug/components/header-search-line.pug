@@ -4,7 +4,10 @@ mixin header-search-line
     .container
       .row
         .col-lg-3.d-none.d-lg-block
-          +button({variant: 'primary', type: 'icon_left', iconId: 'burger'})
-            |Каталог
+          .d-flex
+            +logo({classes: 'd-none'})
+            +button({variant: 'primary', type: 'icon_left', iconId: 'burger'})
+              |Каталог
         .col-12.col-lg-9
-          +header-search
+          .d-flex
+            +header-search
