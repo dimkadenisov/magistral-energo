@@ -1,5 +1,5 @@
 function addScrollHeader() {
-	if (window.pageYOffset < 118) return;
+	if (window.pageYOffset <= 118) return;
 	$('.header-search-line').addClass('header-search-line_scroll');
 	$('.header-search-line .logo').removeClass('d-none');
 	if ($('.header-search-line .basket').length === 0) {
