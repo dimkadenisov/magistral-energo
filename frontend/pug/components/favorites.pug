@@ -1,0 +1,8 @@
+mixin favorites(props = {})
+  - const {classes = ''} = props;
+
+  a(href="#" class= `favorites ${classes}`)
+    svg.favorites__icon
+      use(xlink:href="#star-filled")
+    +counter
+      |17

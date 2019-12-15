@@ -1,0 +1,6 @@
+mixin button-to-top(props = {})
+  - const {classes = ''} = props;
+
+  button(type="button" class= `button-to-top ${classes}`)
+    svg.button-to-top__icon
+      use(xlink:href="#arrow-up")

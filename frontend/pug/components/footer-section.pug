@@ -1,0 +1,12 @@
+mixin footer-section(props = {})
+  include footer-section-name
+  include footer-section-list
+
+  - const {classes = '', name= '', items = ''} = props;
+
+  section(class= `footer-section ${classes}`)
+    if name !== ''
+      +footer-section-name({classes: 'd-none d-lg-block'})= name
+    if items !== ''
+      +footer-section-list({items, classes: 'd-none d-lg-block'})
+    block

@@ -1,0 +1,19 @@
+mixin footer-bottom-line(props = {})
+  include basket
+  include footer-bottom-line-item
+  include button-to-top
+
+  - const {classes = ''} = props;
+
+  div(class= `footer-bottom-line ${classes}`)
+    .container
+      .row
+        .col-12
+          .footer-bottom-line__content
+            +button-to-top
+            +footer-bottom-line-item({component: 'favorites'})
+              |Избранное
+            +footer-bottom-line-item({component: 'learn'})
+              |Обучение
+            +footer-bottom-line-item({component: 'basket'})
+              b 999 999 999 €

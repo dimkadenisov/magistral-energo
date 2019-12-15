@@ -1,0 +1,33 @@
+.footer-section {
+	margin-bottom: 60px;
+
+	.footer-section-list {
+		&:only-child {
+			margin-top: 57px;
+		}
+	}
+
+	.logo {
+		margin-bottom: 30px;
+	}
+
+	.hot-line {
+		color: $white;
+		font-size: 26px;
+
+		.link-icon {
+			color: $white;
+		}
+	}
+
+	.text-small {
+		display: block;
+		margin-bottom: 30px;
+		color: $white;
+		opacity: 0.7;
+	}
+
+	.email {
+		margin-bottom: 30px;
+	}
+}

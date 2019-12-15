@@ -1,0 +1,11 @@
+.footer-link {
+	color: $white;
+	font-size: 14px;
+	text-decoration: none;
+	opacity: 0.7;
+
+	&:hover,
+	&:focus {
+		opacity: 1;
+	}
+}

@@ -1,0 +1,7 @@
+mixin social-link(props = {})
+  include link-icon
+
+  - const {classes = '', iconId} = props;
+
+  a(href="#" class= `social-link ${classes}`)
+    +link-icon({iconId})

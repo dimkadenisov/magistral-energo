@@ -1,6 +1,8 @@
 mixin basket
+  include counter
 
   a(href="#").basket
     svg.basket__icon
       use(xlink:href="#truck")
-    span.basket__counter 17
+    +counter
+      |17

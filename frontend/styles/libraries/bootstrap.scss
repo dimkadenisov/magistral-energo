@@ -4,7 +4,7 @@ $grid-breakpoints: (
 	md: 768px,
 	lg: 992px,
 	xl: 1200px,
-	// xxl: 1344px
+	// xxl: 1344px,
 );
 
 $container-max-widths: (
@@ -12,12 +12,13 @@ $container-max-widths: (
 	md: 720px,
 	lg: 960px,
 	xl: 1140px,
-	// xxl: 1320px
+	// xxl: 1320px,
 );
 
-@import "../../../node_modules/bootstrap/scss/functions";
-@import "../../../node_modules/bootstrap/scss/variables";
-@import "../../../node_modules/bootstrap/scss/mixins";
-@import "../../../node_modules/bootstrap/scss/grid";
-@import "../../../node_modules/bootstrap/scss/utilities/_display.scss";
-@import "../../../node_modules/bootstrap/scss/utilities/_flex.scss";
+@import '../../../node_modules/bootstrap/scss/functions';
+@import '../../../node_modules/bootstrap/scss/variables';
+@import '../../../node_modules/bootstrap/scss/mixins';
+@import '../../../node_modules/bootstrap/scss/grid';
+@import '../../../node_modules/bootstrap/scss/utilities/_display.scss';
+@import '../../../node_modules/bootstrap/scss/utilities/_flex.scss';
+@import '../../../node_modules/bootstrap/scss/utilities/_spacing.scss';

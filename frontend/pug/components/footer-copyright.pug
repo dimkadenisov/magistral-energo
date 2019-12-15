@@ -1,0 +1,15 @@
+mixin footer-copyright(props = {})
+  include text-small
+
+  - const {classes = ''} = props;
+
+  div(class= `footer-copyright ${classes}`)
+    .container
+      .row
+        .col-12
+          .footer-copyright__content
+            +text-small
+              |© 2019, МагистральЭнергоИнжиниринг
+            +text-small
+              |Создание сайта -
+              a(href="#") Айти Эскорт

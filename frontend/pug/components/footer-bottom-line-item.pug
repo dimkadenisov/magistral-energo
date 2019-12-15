@@ -1,0 +1,12 @@
+mixin footer-bottom-line-item(props = {})
+  include basket
+  include favorites
+  include learn
+
+  - const {classes = '', component} = props;
+
+
+  div(class= `footer-bottom-line-item ${classes}`)
+    +#{component}
+    span.footer-bottom-line-item__text
+      block

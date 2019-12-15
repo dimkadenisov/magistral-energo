@@ -1,6 +1,7 @@
-mixin hot-line({iconId})
+mixin hot-line(props)
   include link-icon
+  - const {iconId, textClasses = ''} = props;
 
   a(href="tel:88002507657").hot-line
     +link-icon({iconId})
-    span.d-inline.d-md-none.d-lg-inline.hot-line__text 8 800 250-76-57
+    span(class=`hot-line__text ${textClasses}`) 8 800 250-76-57

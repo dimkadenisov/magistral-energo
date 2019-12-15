@@ -1,0 +1,6 @@
+mixin learn(props = {})
+  - const {classes = ''} = props;
+
+  a(href="#" class= `learn ${classes}`)
+    svg.learn__icon
+      use(xlink:href="#youtube")

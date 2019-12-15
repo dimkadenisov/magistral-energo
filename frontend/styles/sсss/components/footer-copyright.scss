@@ -1,0 +1,23 @@
+.footer-copyright {
+	background-color: rgba($black, 0.06);
+
+	&__content {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 48px;
+	}
+
+	.text-small {
+		color: rgba($white, 0.5);
+
+		a {
+			color: rgba($white, 0.5);
+
+			&:hover,
+			&:focus {
+				color: $white;
+			}
+		}
+	}
+}
