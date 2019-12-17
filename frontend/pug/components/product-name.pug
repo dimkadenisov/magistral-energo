@@ -1,0 +1,12 @@
+mixin product-name(props = {})
+  - const {classes = ''} = props;
+
+  div(class= `product-name ${classes}`)
+    .container
+      .row
+        .col-7.col-sm-4.col-md-3.col-lg-2
+          img(src="assets/img/siemens.jpg", alt="siemens").product-name__logo
+          a(href="#").product-name__link
+            span Официальный поставщик
+        .col-12.col-lg-10
+          h1.product-name__text БЕСПРЕДОХРАНИТЕЛЬНАЯ ФИДЕРНАЯ СБОРКА ПРЯМОГО ПУСКА, AC 400V, ТИПОРАЗМЕР S00, 0.14.. .0.2A, AC 230V, ВИНТОВЫЕ КЛЕММЫ, ДЛЯ МОНТАЖА НА СТАНДАРТНОЙ МОНТАЖ

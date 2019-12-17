@@ -1,0 +1,52 @@
+.share-link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 24px;
+	height: 24px;
+	padding: 0;
+	background-color: transparent;
+	border: none;
+	border-radius: 2px;
+	cursor: pointer;
+
+	&__icon {
+		width: 14px;
+		height: 14px;
+		color: $white;
+	}
+
+	&__button {
+		width: 24px;
+		height: 24px;
+	}
+
+	&:hover,
+	&:focus {
+		box-shadow: 1px 4px 10px 0 rgba($black, 0.25);
+	}
+
+	&_vk {
+		background-color: $blue-vk;
+	}
+
+	&_facebook {
+		background-color: $blue-facebook;
+	}
+
+	&_viber {
+		background-color: $violet-viber;
+	}
+
+	&_whatsapp {
+		background-color: $green-whatsapp;
+	}
+
+	&_email {
+		background-color: $red-200;
+	}
+
+	&_print {
+		background-color: $gray-400;
+	}
+}

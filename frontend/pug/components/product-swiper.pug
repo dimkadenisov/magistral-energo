@@ -1,0 +1,18 @@
+mixin product-swiper(props = {})
+  include swiper-button
+  - const {classes = ''} = props;
+
+  div(class= `product-swiper ${classes}`)
+    .swiper-wrapper
+      a(href="#").product-swiper__item
+        .product-swiper__image-wrapper
+          img(src="assets/img/product-image.jpg", data-object-fit="contain" alt="Изображение").product-swiper__image
+      a(href="#").product-swiper__item
+        .product-swiper__image-wrapper
+          img(src="assets/img/product-image.jpg", data-object-fit="contain" alt="Изображение").product-swiper__image
+      a(href="#").product-swiper__item
+        .product-swiper__image-wrapper
+          img(src="assets/img/product-image.jpg", data-object-fit="contain" alt="Изображение").product-swiper__image
+
+    +swiper-button({side: 'left'})
+    +swiper-button({side: 'right'})

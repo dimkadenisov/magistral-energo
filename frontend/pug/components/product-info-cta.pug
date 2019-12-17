@@ -1,0 +1,9 @@
+mixin product-info-cta(props = {})
+  include button
+  - const {classes = ''} = props;
+
+  div(class= `product-info-cta ${classes}`)
+    +button({border: 'primary'})
+      |Заказать звонок
+    +button({border: 'gray-400'})
+      |Написать

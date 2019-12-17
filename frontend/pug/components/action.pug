@@ -1,5 +1,6 @@
-mixin action
+mixin action(props = {})
+  - const {classes = ''} = props;
 
-  a(href="#").action
+  a(href="#" class= `action ${classes}`)
     span.action__text
       block

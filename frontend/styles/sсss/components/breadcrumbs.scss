@@ -27,6 +27,7 @@
 
 		&:hover,
 		&:focus {
+			color: $green-400;
 			text-decoration: underline;
 		}
 	}

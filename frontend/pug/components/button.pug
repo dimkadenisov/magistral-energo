@@ -1,6 +1,6 @@
 mixin button(props = {})
 
-  - let {type='', variant='', tag='button', size='', iconId='', borderColor='', classes=''} = props
+  - let {type='', variant='', tag='button', size='', iconId='', border='', classes=''} = props
 
   - let classList= 'button'
 
@@ -13,8 +13,8 @@ mixin button(props = {})
   - if (size != '')
     - classList+= ` button_${size}`
 
-  - if (borderColor != '')
-    - classList+= ` button_border-${borderColor}`
+  - if (border != '')
+    - classList+= ` button_border_${border}`
 
   - if (otherClasses != '')
     - classList+= ` ${classes}`

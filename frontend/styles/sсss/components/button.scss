@@ -12,7 +12,7 @@
 	border-style: solid;
 	font-family: $Oswald;
 	font-size: 16px;
-	font-weight: 500;
+	font-weight: normal;
 	text-transform: uppercase;
 	cursor: pointer;
 
@@ -39,6 +39,28 @@
 
 		.button__icon {
 			margin-right: 0;
+		}
+	}
+
+	&_border_primary {
+		border: 2px solid $green-400;
+
+		&:hover,
+		&:focus {
+			background-color: $green-400;
+			box-shadow: 2px 4px 10px 0 rgba($green-400, 0.5);
+			color: $white;
+		}
+	}
+
+	&_border_gray-400 {
+		border: 2px solid $gray-400;
+
+		&:hover,
+		&:focus {
+			background-color: $gray-400;
+			box-shadow: 2px 4px 10px 0 rgba($gray-400, 0.5);
+			color: $white;
 		}
 	}
 }

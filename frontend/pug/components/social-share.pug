@@ -1,0 +1,16 @@
+mixin social-share(props = {})
+  include share-link
+  - const {classes = ''} = props;
+
+  div(class= `social-share ${classes}`)
+    span.social-share__text
+      |Отправить
+      br
+      |на согласование:
+    .social-share__links
+      +share-link({icon: 'vk'})
+      +share-link({icon: 'facebook'})
+      +share-link({icon: 'viber'})
+      +share-link({icon: 'whatsapp'})
+      +share-link({icon: 'email'})
+      +share-link({icon: 'print'})

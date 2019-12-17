@@ -1,0 +1,11 @@
+mixin swiper-button(props = {})
+  - const {classes = '', side} = props;
+
+  button(type="button" class= `swiper-button swiper-button_${side} ${classes}`)
+    case side
+      when 'left'
+        svg.swiper-button__icon
+          use(xlink:href="#arrow-left-swiper")
+      when 'right'
+        svg.swiper-button__icon
+          use(xlink:href="#arrow-right-swiper")

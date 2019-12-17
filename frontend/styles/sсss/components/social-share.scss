@@ -1,0 +1,32 @@
+.social-share {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	&__text {
+		display: inline-block;
+		flex-shrink: 0;
+		margin-right: 5px;
+		color: $gray-400;
+		font-size: 14px;
+	}
+
+	&__links {
+		display: flex;
+	}
+
+	.share-link {
+		&:nth-last-child(n + 2) {
+			margin-right: 4px;
+		}
+	}
+
+	.share-link__wrapper {
+		position: relative;
+		margin-right: 4px;
+
+		.share-link {
+			margin-right: 0;
+		}
+	}
+}

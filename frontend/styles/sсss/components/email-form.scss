@@ -1,0 +1,77 @@
+.email-form {
+	position: absolute;
+	top: calc(100% + 21px);
+	right: -28px;
+	padding: 14px 24px 16px 15px;
+	background-color: $white;
+	border-radius: 5px;
+	box-shadow: 0 0 5px 0 rgba($black, 0.1), 0 5px 10px 0 rgba($black, 0.15);
+	z-index: 2;
+
+	&__fieldset {
+		position: relative;
+		margin: 0;
+		padding: 0;
+		border-radius: 5px;
+		overflow: hidden;
+	}
+
+	&__input {
+		max-width: 227px;
+		padding-top: 6px;
+		padding-right: 48px;
+		padding-bottom: 7px;
+		padding-left: 14px;
+		border: 1px solid $gray-400;
+		border-radius: 5px;
+		color: $gray-400;
+		font-size: 14px;
+	}
+
+	.button_primary {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 32px;
+		min-height: auto;
+		height: 32px;
+		border-radius: 0;
+
+		.button__icon {
+			width: 16px;
+			height: 16px;
+		}
+	}
+
+	&__button {
+		position: absolute;
+		top: 5px;
+		right: 3px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 20px;
+		height: 20px;
+		padding: 0;
+		border: none;
+		background-color: transparent;
+	}
+
+	&__icon {
+		width: 16px;
+		height: 16px;
+		color: $gray-400;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: -10px;
+		right: 35px;
+		width: 0;
+		height: 0;
+		border-right: 6px solid transparent;
+		border-bottom: 10px solid $white;
+		border-left: 6px solid transparent;
+	}
+}

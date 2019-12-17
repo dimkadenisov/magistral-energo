@@ -1,11 +1,23 @@
 extends ../components/page
 
+include ../components/breadcrumbs
+include ../components/product-name
+include ../components/product-swiper
+include ../components/product-info
+include ../components/product-price-block
+
 block title
   |Карточка товара
 
 block content
-  .container
-    .row
-      .col-12
-        +breadcrumbs
-        main.main
+      +breadcrumbs
+      main.main
+        +product-name
+      .container
+        .row
+          .col-4
+            +product-swiper
+          .col-4
+            +product-info
+          .col-4
+            +product-price-block

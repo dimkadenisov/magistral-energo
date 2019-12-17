@@ -1,0 +1,14 @@
+mixin product-info(props = {})
+  include info-list
+  include bold-link
+  include product-info-cta
+  include social-share
+
+  - const {classes = ''} = props;
+
+  div(class= `product-info ${classes}`)
+    +info-list
+    +bold-link
+      |Составить договор
+    +product-info-cta
+    +social-share

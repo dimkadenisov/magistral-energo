@@ -1,0 +1,25 @@
+.swiper-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 32px;
+	height: 32px;
+	padding: 0;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	z-index: 2;
+
+	&__icon {
+		width: 15px;
+		height: 15px;
+		color: $gray-400;
+	}
+
+	&:hover,
+	&:focus {
+		.swiper-button__icon {
+			color: $green-400;
+		}
+	}
+}
