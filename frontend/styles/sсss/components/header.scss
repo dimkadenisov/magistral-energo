@@ -1,5 +1,6 @@
 .header {
 	position: relative;
+	height: 192px;
 
 	&__content {
 		padding-bottom: 10px;
@@ -7,9 +8,15 @@
 	}
 }
 
+@media screen and (max-width: 1199px) {
+	.header {
+		height: 186px;
+	}
+}
+
 @media screen and (max-width: 991px) {
 	.header {
-		height: 144px;
+		height: 143px;
 
 		&__content {
 			position: fixed;
@@ -22,7 +29,7 @@
 	}
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 767px) {
 	.header {
 		height: 173px;
 	}
