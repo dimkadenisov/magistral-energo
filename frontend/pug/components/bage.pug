@@ -1,0 +1,8 @@
+mixin bage(props = {})
+  - const {classes = ''} = props;
+
+  div(class= `bage ${classes}`)
+    svg.bage__icon
+      use(xlink:href="#clock")
+    span.bage__text
+      block

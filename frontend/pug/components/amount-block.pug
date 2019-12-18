@@ -1,0 +1,10 @@
+mixin amount-block(props = {})
+  include button
+  - const {classes = ''} = props;
+
+  div(class= `amount-block ${classes}`)
+    +button
+      |-
+    input(type="text" placeholder="1").amount-block__input
+    +button
+      |+

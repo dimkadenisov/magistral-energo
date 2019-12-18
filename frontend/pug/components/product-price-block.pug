@@ -1,4 +1,13 @@
 mixin product-price-block(props = {})
+  include amount-block
+  include button
+  include price
+
   - const {classes = ''} = props;
 
   div(class= `product-price-block ${classes}`)
+    +price
+    .d-flex
+      +amount-block
+      +button({type: 'icon_left', variant: 'primary', iconId: 'truck'})
+        |в заказ

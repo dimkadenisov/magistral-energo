@@ -44,3 +44,27 @@
 		}
 	}
 }
+
+@media screen and (max-width: 1199px) {
+	.product-swiper {
+		&__image-wrapper {
+			padding-top: 172%;
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.product-swiper {
+		margin-bottom: 30px;
+
+		&__image-wrapper {
+			padding-top: 100%;
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.product-swiper {
+		margin-bottom: 15px;
+	}
+}

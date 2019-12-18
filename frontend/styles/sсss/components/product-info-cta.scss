@@ -2,3 +2,47 @@
 	display: flex;
 	justify-content: space-between;
 }
+
+@media screen and (max-width: 1199px) {
+	.product-info-cta {
+		flex-wrap: wrap;
+
+		.button {
+			flex-basis: 100%;
+
+			&:first-child {
+				margin-bottom: 7px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.product-info-cta {
+		flex-wrap: nowrap;
+
+		.button {
+			flex-basis: calc(50% - 4px);
+
+			&:first-child {
+				margin-right: 8px;
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 575px) {
+	.product-info-cta {
+		flex-wrap: wrap;
+
+		.button {
+			flex-basis: 100%;
+
+			&:first-child {
+				margin-right: 0;
+				margin-bottom: 7px;
+			}
+		}
+	}
+}

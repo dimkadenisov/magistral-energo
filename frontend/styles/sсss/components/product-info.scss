@@ -12,3 +12,15 @@
 		margin-bottom: 45px;
 	}
 }
+
+@media screen and (max-width: 991px) {
+	.product-info {
+		margin-bottom: 60px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.product-info {
+		margin-bottom: 40px;
+	}
+}

@@ -1,0 +1,33 @@
+.bage {
+	display: inline-flex;
+	align-items: center;
+	position: relative;
+	height: 18px;
+	margin-right: 8px;
+	padding-right: 12px;
+	padding-left: 12px;
+	background-color: $red-300;
+	border-top-left-radius: 2px;
+	border-bottom-left-radius: 2px;
+	color: $white;
+	font-size: 12px;
+	font-weight: bold;
+
+	&__icon {
+		width: 12px;
+		height: 12px;
+		margin-right: 3px;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: -8px;
+		width: 0;
+		height: 0;
+		border-top: 9px solid transparent;
+		border-bottom: 9px solid transparent;
+		border-left: 8px solid $red-300;
+	}
+}
