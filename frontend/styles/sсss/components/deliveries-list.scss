@@ -1,0 +1,7 @@
+.deliveries-list {
+	list-style: none;
+
+	&__item {
+		border-top: 1px solid rgba($gray-400, 0.3);
+	}
+}

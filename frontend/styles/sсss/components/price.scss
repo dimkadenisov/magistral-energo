@@ -1,11 +1,10 @@
 .price {
 	display: flex;
 	flex-wrap: wrap;
-	margin-bottom: 25px;
+	margin-bottom: 10px;
 
 	&__actual {
 		display: inline-block;
-		margin-bottom: 10px;
 		font-family: $Oswald;
 		font-size: 28px;
 		vertical-align: top;
@@ -22,16 +21,5 @@
 		font-size: 22px;
 		font-weight: 100;
 		text-decoration: line-through;
-	}
-
-	&__description {
-		display: flex;
-		flex-basis: 100%;
-		color: $gray-400;
-		font-size: 14px;
-
-		.bage {
-			margin-left: auto;
-		}
 	}
 }

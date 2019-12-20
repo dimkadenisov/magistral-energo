@@ -1,0 +1,10 @@
+mixin delivery-block(props = {})
+  include deliveries-list
+  - const {classes = ''} = props;
+
+  div(class= `delivery-block ${classes}`)
+    span.delivery-block__text Доставка в
+    |
+    |
+    a.delivery-block__link(href="#") Москва
+    +deliveries-list

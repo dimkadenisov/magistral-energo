@@ -1,0 +1,9 @@
+mixin additional-info(props = {})
+  include bage
+
+  - const {classes = ''} = props;
+
+  div(class= `additional-info ${classes}`)
+    span.additional-info__text Цена с НДС за штуку
+    +bage
+      |Действует 2 дня!

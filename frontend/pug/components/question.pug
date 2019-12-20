@@ -1,0 +1,7 @@
+mixin question(props = {})
+  include answer
+  - const {classes = ''} = props;
+
+  div(class= `question ${classes}`)
+    span.question__text ?
+    +answer

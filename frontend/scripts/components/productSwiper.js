@@ -1,4 +1,4 @@
-let productSwiper = new Swiper('.product-swiper', {
+let productSwiper = new Swiper('.product-swiper__content', {
 	slideClass: 'product-swiper__item',
 	slidesPerView: 1,
 	spaceBetween: 0,

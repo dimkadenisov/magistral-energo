@@ -1,0 +1,24 @@
+.bonuses {
+	margin-right: 8px;
+
+	&__text {
+		display: inline-block;
+		margin-bottom: 5px;
+		color: $red-300;
+		font-size: 14px;
+	}
+
+	&__amount {
+		display: inline-block;
+		margin-right: 7px;
+		color: $red-300;
+	}
+}
+
+@media screen and (max-width: 1199px) {
+	.bonuses {
+		&__text {
+			font-size: 12px;
+		}
+	}
+}

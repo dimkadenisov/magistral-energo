@@ -1,0 +1,14 @@
+.additional-info {
+	display: flex;
+	flex-wrap: wrap;
+	flex-basis: 100%;
+	margin-bottom: 25px;
+
+	&__text {
+		display: block;
+		margin-right: 5px;
+		margin-bottom: 5px;
+		color: $gray-400;
+		font-size: 14px;
+	}
+}

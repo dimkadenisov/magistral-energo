@@ -7,8 +7,9 @@ mixin product-info(props = {})
   - const {classes = ''} = props;
 
   div(class= `product-info ${classes}`)
-    +info-list
-    +bold-link
-      |Составить договор
-    +product-info-cta
-    +social-share
+    .product-info__content
+      +info-list
+      +bold-link
+        |Составить договор
+      +product-info-cta
+      +social-share

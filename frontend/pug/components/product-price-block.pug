@@ -2,12 +2,23 @@ mixin product-price-block(props = {})
   include amount-block
   include button
   include price
+  include additional-info
+  include bonuses
+  include quick-order-button
+  include delivery-block
 
   - const {classes = ''} = props;
 
   div(class= `product-price-block ${classes}`)
-    +price
-    .d-flex
-      +amount-block
-      +button({type: 'icon_left', variant: 'primary', iconId: 'truck'})
-        |в заказ
+    .product-price-block__content
+      +button({type: 'icon', iconId: 'star-stroke', classes: 'button_star'})(type="button")
+      +price
+      +additional-info
+      .d-flex.mb-3
+        +amount-block
+        +button({type: 'icon_left', variant: 'primary', iconId: 'truck', classes: 'button_order'})
+          |в заказ
+      .d-flex.mb-3
+        +bonuses
+        +quick-order-button
+      +delivery-block

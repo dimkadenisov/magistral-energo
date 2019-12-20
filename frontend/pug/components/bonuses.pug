@@ -1,0 +1,10 @@
+mixin bonuses(props = {})
+  include question
+  - const {classes = ''} = props;
+
+  div(class= `bonuses ${classes}`)
+    span.bonuses__text Начислим бонусов:
+    |
+    |
+    b.bonuses__amount 159
+    +question
