@@ -1,0 +1,15 @@
+mixin videos-swiper(props = {})
+  include video
+
+  .videos-swiper&attributes(attributes)
+    .swiper-wrapper
+      .videos-swiper__item
+        +video
+      .videos-swiper__item
+        +video
+      .videos-swiper__item
+        +video
+      .videos-swiper__item
+        +video
+
+    .d-md-none.swiper-pagination

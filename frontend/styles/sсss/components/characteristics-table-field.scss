@@ -1,0 +1,15 @@
+.characteristics-table-field {
+	display: flex;
+	flex-wrap: wrap;
+
+	&__name {
+		margin-right: 10px;
+	}
+
+	&__separator {
+		flex-grow: 1;
+		min-width: 10px;
+		margin-right: 10px;
+		border-bottom: 1px solid $gray-100;
+	}
+}

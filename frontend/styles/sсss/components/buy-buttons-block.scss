@@ -1,0 +1,32 @@
+.buy-buttons-block {
+	max-width: 352px;
+	margin: 0 auto 80px auto;
+
+	&__content {
+		display: flex;
+		justify-content: center;
+	}
+
+	.button {
+		flex-basis: 50%;
+
+		&:first-child {
+			margin-right: 14px;
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.buy-buttons-block {
+		margin-top: -20px;
+		margin-bottom: 60px;
+	}
+}
+
+@media screen and (max-width: 575px) {
+	.buy-buttons-block {
+		.button {
+			flex-basis: auto;
+		}
+	}
+}

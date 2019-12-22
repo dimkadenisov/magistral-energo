@@ -1,0 +1,7 @@
+mixin certificate(props = {})
+
+  - const { certNumber } = props;
+
+  a(href=`assets/img/certificate-${certNumber}-big.jpg` data-fancybox="certificates").certificate&attributes(attributes)
+    .certificate__image-wrapper
+      img(src=`assets/img/certificate-${certNumber}-small.jpg`, alt="Сертификат" data-object-fit="contain").certificate__image

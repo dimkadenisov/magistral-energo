@@ -1,0 +1,25 @@
+mixin characteristics(props = {})
+  include tab-heading
+  include characteristics-table
+
+  .characteristics&attributes(attributes)
+    +tab-heading
+      |Характеристики
+
+    .tab-content
+      .row
+        .col-12.col-md-9
+          .characteristics__tables
+            +characteristics-table({fields: [{name: 'Артикул', value: 'RA21100BA151AP0'}, {name: 'UPC', value: '662643898804'}, {name: 'Страна происхождения', value: 'Германия'}, {name: 'Производитель', value: 'Siemens'}]})
+
+            +characteristics-table({fields: [{name: 'Вес', value: '0.524 кг'}, {name: 'Размер упаковки', value: '174*50*112.5 мм'}, {name: 'Количество в упаковке', value: '1'}, {name: 'Минимальное количетво поставки', value: '1'}]})
+        .col-12.col-md-3
+          img(src="assets/img/code.jpg", alt="code").characteristics__code
+
+        .col-12.col-xl-9
+          blockquote
+            span Для этого продукта мы предлагаем дополнительные услуги, такие как
+              |
+              |
+              b заказ запасных частей, ремонт, замена.
+          p Magnet contactor, AC-switching, Switch module, Star-delta contactor, Relay, Power relay, Mini contactor, Contactor, AC-switching, Contactor, Power contactor, AC switching

@@ -1,0 +1,28 @@
+.review {
+	margin-bottom: 25px;
+
+	&__reviewer {
+		display: inline-block;
+		margin-right: 30px;
+		margin-bottom: 5px;
+	}
+
+	.rating {
+		margin-bottom: 5px;
+	}
+
+	&__date {
+		display: block;
+		margin-bottom: 10px;
+		color: $gray-400;
+		font-size: 14px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.review {
+		&__reviewer {
+			margin-right: 15px;
+		}
+	}
+}

@@ -1,0 +1,8 @@
+mixin characteristics-table-field(props = {})
+
+  - const {name= 'Характеристика', value= 'Значение'} = props;
+
+  .characteristics-table-field&attributes(attributes)
+    .characteristics-table-field__name= name
+    .characteristics-table-field__separator
+    .characteristics-table-field__value= value

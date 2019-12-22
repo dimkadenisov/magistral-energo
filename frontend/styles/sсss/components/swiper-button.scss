@@ -22,4 +22,19 @@
 			color: $green-400;
 		}
 	}
+
+	&_stroke {
+		border: 1px solid $gray-400;
+
+		&.swiper-button_right {
+			border-top-right-radius: 5px;
+			border-bottom-right-radius: 5px;
+		}
+
+		&.swiper-button_left {
+			border-right: none;
+			border-top-left-radius: 5px;
+			border-bottom-left-radius: 5px;
+		}
+	}
 }

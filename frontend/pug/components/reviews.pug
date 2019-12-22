@@ -1,0 +1,11 @@
+mixin reviews(props = {})
+  include tab-heading
+  include reviews-swiper
+
+  .reviews&attributes(attributes)
+    +tab-heading
+      |Характеристики
+    .tab-content
+      .row
+        .col-12.col-md-9
+          +reviews-swiper

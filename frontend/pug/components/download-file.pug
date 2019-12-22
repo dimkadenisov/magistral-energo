@@ -1,0 +1,12 @@
+mixin download-file(props = {})
+
+  - const {name, size} = props;
+
+  .download-file&attributes(attributes)
+    svg.download-file__icon
+      use(xlink:href="#pdf")
+    .download-file__text
+      a(href="#").download-file__link= name
+      |
+      |
+      b.download-file__size= size

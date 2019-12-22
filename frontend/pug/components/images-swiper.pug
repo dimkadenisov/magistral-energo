@@ -1,0 +1,15 @@
+mixin images-swiper(props = {})
+  include image
+
+  .images-swiper&attributes(attributes)
+    .swiper-wrapper
+      .images-swiper__item
+        +image
+      .images-swiper__item
+        +image
+      .images-swiper__item
+        +image
+      .images-swiper__item
+        +image
+
+    .d-md-none.swiper-pagination

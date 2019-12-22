@@ -1,0 +1,9 @@
+mixin characteristics-table(props = {})
+  include characteristics-table-field
+
+  - const { fields = [] } = props;
+
+  ul.characteristics-table&attributes(attributes)
+    each field in fields
+      li.characteristics-table__item
+        +characteristics-table-field({name: field.name, value: field.value})

@@ -1,0 +1,19 @@
+mixin certificates-swiper(props = {})
+  include certificate
+
+  .certificates-swiper&attributes(attributes)
+    .swiper-wrapper
+      .certificates-swiper__item
+        +certificate({certNumber: 1})
+      .certificates-swiper__item
+        +certificate({certNumber: 2})
+      .certificates-swiper__item
+        +certificate({certNumber: 3})
+      .certificates-swiper__item
+        +certificate({certNumber: 4})
+      .certificates-swiper__item
+        +certificate({certNumber: 5})
+      .certificates-swiper__item
+        +certificate({certNumber: 6})
+
+    .d-md-none.swiper-pagination

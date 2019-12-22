@@ -1,0 +1,36 @@
+.tab-button {
+	display: block;
+	position: relative;
+	padding: 11px 23px;
+	background-color: $gray-200;
+	border: 1px solid $gray-200;
+	color: $gray-400;
+	font-family: $Oswald;
+	font-size: 16px;
+	line-height: 1.5;
+	text-decoration: none;
+	text-transform: uppercase;
+
+	&__text {
+		display: block;
+		text-align: center;
+	}
+
+	&:hover,
+	&:focus,
+	&_active {
+		background-color: $white;
+		box-shadow: 0 0 15px 0 rgba($black, 0.1);
+		color: $gray-700;
+
+		&:after {
+			content: '';
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			height: 3px;
+			background-color: $green-400;
+		}
+	}
+}

@@ -5,15 +5,19 @@ mixin product-swiper(props = {})
   div(class= `product-swiper ${classes}`)
     .product-swiper__content
       .swiper-wrapper
-        a(href="#").product-swiper__item
+        a(href="assets/img/product-image.jpg" data-fancybox="product").product-swiper__item
           .product-swiper__image-wrapper
             img(src="assets/img/product-image.jpg", data-object-fit="contain" alt="Изображение").product-swiper__image
-        a(href="#").product-swiper__item
+        a(href="assets/img/product-image.jpg" data-fancybox="product").product-swiper__item
           .product-swiper__image-wrapper
             img(src="assets/img/product-image.jpg", data-object-fit="contain" alt="Изображение").product-swiper__image
-        a(href="#").product-swiper__item
+        a(href="assets/img/product-image.jpg" data-fancybox="product").product-swiper__item
           .product-swiper__image-wrapper
             img(src="assets/img/product-image.jpg", data-object-fit="contain" alt="Изображение").product-swiper__image
+        a(href="assets/img/product-image.jpg" data-fancybox="product").product-swiper__item
+          .product-swiper__image-wrapper
+            img(src="assets/img/product-image.jpg", data-object-fit="contain" alt="Изображение").product-swiper__image
+
 
       +swiper-button({side: 'left'})
       +swiper-button({side: 'right'})

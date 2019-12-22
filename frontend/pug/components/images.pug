@@ -1,0 +1,11 @@
+mixin images(props = {})
+  include tab-heading
+  include images-swiper
+
+  .images&attributes(attributes)
+    +tab-heading
+      |Фото
+    .tab-content
+      .row
+        .col-12.col-xl-9
+          +images-swiper

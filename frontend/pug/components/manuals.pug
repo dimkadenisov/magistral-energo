@@ -1,0 +1,15 @@
+mixin manuals(props = {})
+  include tab-heading
+  include download-file
+
+  .manuals&attributes(attributes)
+    +tab-heading
+      |Мануалы
+
+    .tab-content
+      .row
+        .col-12.col-xl-9
+          +download-file({name: 'Каталог продукции «Аппараты защиты: автоматичеcкие выключатели и реле перегрузки Sirius»', size: '13.33 Мб'})
+          +download-file({name: 'Брошюра «Низковольтные коммутационные аппараты Sirius Innovations»', size: '13.33 Мб'})
+          +download-file({name: 'Каталог продукции «Аппараты защиты: автоматичеcкие выключатели и реле перегрузки Sirius»', size: '13.33 Мб'})
+          +download-file({name: 'Каталог продукции «Аппараты защиты: автоматичеcкие выключатели и реле перегрузки Sirius»', size: '13.33 Мб'})

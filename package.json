@@ -43,6 +43,7 @@
 		"stylelint-scss": "^3.9.0"
 	},
 	"dependencies": {
+		"@fancyapps/fancybox": "^3.5.7",
 		"bootstrap": "^4.4.1",
 		"css-vars-ponyfill": "^2.1.2",
 		"jquery": "^3.4.1",

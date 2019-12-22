@@ -1,0 +1,50 @@
+.videos-swiper {
+	overflow-x: hidden;
+
+	.swiper-wrapper {
+		flex-wrap: wrap;
+	}
+
+	&__item {
+		flex-basis: calc((100% - 30px * 2) / 3);
+		margin-right: 30px;
+		margin-bottom: 30px;
+
+		&:nth-child(3n + 3) {
+			margin-right: 0;
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.videos-swiper {
+		&__item {
+			flex-basis: calc((100% - 30px) / 2);
+
+			&:nth-child(3n + 3) {
+				margin-right: 30px;
+			}
+
+			&:nth-child(2n) {
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.videos-swiper {
+		.swiper-wrapper {
+			flex-wrap: nowrap;
+		}
+
+		&__item {
+			flex-basis: auto;
+			margin-bottom: 30px;
+
+			&:nth-child(n) {
+				margin-right: 0;
+			}
+		}
+	}
+}

@@ -1,0 +1,20 @@
+.certificate {
+	display: block;
+
+	&__image-wrapper {
+		position: relative;
+		padding-top: 148%;
+	}
+
+	&__image {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		max-width: 100%;
+		width: 100%;
+		max-height: 100%;
+		height: 100%;
+		object-fit: contain;
+		transform: translate(-50%, -50%);
+	}
+}

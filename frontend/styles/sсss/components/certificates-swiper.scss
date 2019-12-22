@@ -1,0 +1,34 @@
+.certificates-swiper {
+	overflow-x: hidden;
+
+	.swiper-wrapper {
+		flex-wrap: wrap;
+	}
+
+	&__item {
+		flex-basis: calc((100% - 30px * 4) / 4);
+		margin-right: 30px;
+		margin-bottom: 30px;
+
+		&:nth-child(4n) {
+			margin-right: 0;
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.certificates-swiper {
+		.swiper-wrapper {
+			flex-wrap: nowrap;
+		}
+
+		&__item {
+			flex-basis: auto;
+			margin-bottom: 30px;
+
+			&:nth-child(n) {
+				margin-right: 0;
+			}
+		}
+	}
+}

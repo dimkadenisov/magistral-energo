@@ -1,0 +1,11 @@
+mixin certificates(props = {})
+  include tab-heading
+  include certificates-swiper
+
+  .certificates&attributes(attributes)
+    +tab-heading
+      |Сертификаты
+    .tab-content
+      .row
+        .col-12.col-xl-9
+          +certificates-swiper

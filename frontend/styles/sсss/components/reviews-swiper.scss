@@ -1,0 +1,15 @@
+.reviews-swiper {
+  overflow-x: hidden;
+
+	.swiper-wrapper {
+		flex-direction: column;
+	}
+}
+
+@media screen and (max-width: 767px) {
+  .reviews-swiper {
+	.swiper-wrapper {
+		flex-direction: row;
+	}
+}
+}

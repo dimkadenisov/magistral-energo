@@ -1,0 +1,11 @@
+mixin videos(props = {})
+  include tab-heading
+  include videos-swiper
+
+  .videos&attributes(attributes)
+    +tab-heading
+      |Видео
+    .tab-content
+      .row
+        .col-12.col-xl-9
+          +videos-swiper

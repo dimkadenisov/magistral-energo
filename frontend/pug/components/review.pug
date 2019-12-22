@@ -1,0 +1,10 @@
+mixin review(props = {})
+  include rating
+
+  - const {reviewer, date, rating, text } = props;
+
+  .review&attributes(attributes)
+    b.review__reviewer= reviewer
+    +rating({disabled: true, rating: rating})
+    span.review__date= date
+    p.review__text= text
