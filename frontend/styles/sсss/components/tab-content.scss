@@ -9,6 +9,7 @@
 
 		&:before {
 			content: url('../assets/img/verified.svg');
+			display: block;
 			flex-shrink: 0;
 			width: 32px;
 			height: 32px;

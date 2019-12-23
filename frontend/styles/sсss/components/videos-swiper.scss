@@ -6,7 +6,7 @@
 	}
 
 	&__item {
-		flex-basis: calc((100% - 30px * 2) / 3);
+		flex-basis: calc((100% - 30px * 3) / 3);
 		margin-right: 30px;
 		margin-bottom: 30px;
 
@@ -19,7 +19,7 @@
 @media screen and (max-width: 991px) {
 	.videos-swiper {
 		&__item {
-			flex-basis: calc((100% - 30px) / 2);
+			flex-basis: calc((100% - 30px * 2) / 2);
 
 			&:nth-child(3n + 3) {
 				margin-right: 30px;

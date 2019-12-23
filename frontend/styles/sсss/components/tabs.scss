@@ -1,7 +1,12 @@
 .tabs {
 	display: flex;
-	margin-bottom: 40px;
+	background-color: $white;
 	list-style: none;
+
+	&__wrapper {
+		height: 48px;
+		margin-bottom: 40px;
+	}
 
 	&__item {
 		flex-grow: 1;
@@ -11,11 +16,41 @@
 			margin-right: 3px;
 		}
 	}
+
+	&_fixed {
+		position: fixed;
+		top: 64px;
+		right: 0;
+		left: 0;
+		z-index: 3;
+	}
 }
+
+// @supports (position: sticky) {
+// 	.tabs {
+// 		&__wrapper {
+// 			position: sticky;
+// 			top: 64px;
+// 			z-index: 2;
+// 		}
+// 	}
+
+// 	@media screen and (max-width: 991px) {
+// 		.tabs {
+// 			&__wrapper {
+// 				top: 142px;
+// 			}
+// 		}
+// 	}
+// }
 
 @media screen and (max-width: 1199px) {
 	.tabs {
 		flex-wrap: wrap;
+
+		&__wrapper {
+			height: 102px;
+		}
 
 		&__item {
 			flex-basis: 24%;
@@ -24,6 +59,14 @@
 			&:nth-child(4n) {
 				margin-right: 0;
 			}
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.tabs {
+		&_fixed {
+			top: 142px;
 		}
 	}
 }

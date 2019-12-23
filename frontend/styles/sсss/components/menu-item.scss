@@ -55,7 +55,8 @@
 				display: flex;
 
 				&::after {
-					content: '\203A';
+          content: '\203A';
+          display: block;
 					margin-left: auto;
 				}
 			}

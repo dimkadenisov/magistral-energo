@@ -32,24 +32,33 @@ block content
               +product-info
             .col-12.col-md-6.col-lg-4
               +product-price-block
+
+        +tabs(class="d-none d-md-flex")
+
+        #tabs
+          .container
+            .row
+              .col-12
+
+                +characteristics(id="characteristics")
+
+                +overview(id="overview")
+
+                +tech-info(id="tech-info")
+
+                +manuals(id="manuals")
+
+                +certificates(id="certificate")
+
+                +videos(id="video")
+
+                +images(id="image")
+
+                +reviews(id="reviews")
+
+        .container
+          .row
             .col-12
-              +tabs(class="d-none d-md-flex")
-
-              +characteristics
-
-              +overview
-
-              +tech-info
-
-              +manuals
-
-              +certificates
-
-              +videos
-
-              +images
-
-              +reviews
 
               +items-swiper({heading: 'С этим товаром покупают', name: 'SIMATIC S7-300, SM321, МОДУЛЬ ВВОДА ДИСКРЕТНЫХ СИГНАЛОВ'})
 

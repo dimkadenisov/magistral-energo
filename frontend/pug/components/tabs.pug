@@ -1,28 +1,32 @@
 mixin tabs(props = {})
   include tab-button
 
-  ul(class= `tabs ${classes}`)&attributes(attributes)
-    li.tabs__item
-      +tab-button(href="#characteristics" class="tab-button_active")
-        |Характеристики
-    li.tabs__item
-      +tab-button(href="#overview")
-        |Обзор
-    li.tabs__item
-      +tab-button(href="#tech-info")
-        |Тех. информация
-    li.tabs__item
-      +tab-button(href="#manuals")
-        |Мануалы
-    li.tabs__item
-      +tab-button(href="#certifacts")
-        |Сертификаты
-    li.tabs__item
-      +tab-button(href="#video")
-        |Видео
-    li.tabs__item
-      +tab-button(href="#photo")
-        |Фото
-    li.tabs__item
-      +tab-button(href="#reviews")
-        |Отзывы
+  .tabs__wrapper
+    .container
+      .row
+        .col-12
+          ul.tabs&attributes(attributes)
+            li.tabs__item
+              +tab-button(href="#characteristics" class="tab-button_active")
+                |Характеристики
+            li.tabs__item
+              +tab-button(href="#overview")
+                |Обзор
+            li.tabs__item
+              +tab-button(href="#tech-info")
+                |Тех. информация
+            li.tabs__item
+              +tab-button(href="#manuals")
+                |Мануалы
+            li.tabs__item
+              +tab-button(href="#certificate")
+                |Сертификаты
+            li.tabs__item
+              +tab-button(href="#video")
+                |Видео
+            li.tabs__item
+              +tab-button(href="#image")
+                |Фото
+            li.tabs__item
+              +tab-button(href="#reviews")
+                |Отзывы
