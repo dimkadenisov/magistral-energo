@@ -1,4 +1,7 @@
 mixin tab-heading(props = {})
 
-  span.tab-heading&attributes(attributes)
-    block
+  button(type="button").tab-heading&attributes(attributes)
+    span
+      block
+    svg.tab-heading__icon.d-block.d-md-none
+      use(xlink:href="#arrow-up")

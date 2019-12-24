@@ -1,11 +1,11 @@
 mixin tabs(props = {})
   include tab-button
 
-  .tabs__wrapper
+  .tabs__wrapper&attributes(attributes)
     .container
       .row
         .col-12
-          ul.tabs&attributes(attributes)
+          ul.tabs
             li.tabs__item
               +tab-button(href="#characteristics" class="tab-button_active")
                 |Характеристики

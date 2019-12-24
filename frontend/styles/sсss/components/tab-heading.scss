@@ -1,8 +1,56 @@
 .tab-heading {
 	display: block;
 	margin-bottom: 25px;
+	padding: 0;
+	background: none;
+	border: none;
 	color: $gray-400;
 	font-family: $Oswald;
 	font-size: 22px;
+	line-height: 1.5;
 	text-transform: uppercase;
+}
+
+@media screen and (max-width: 767px) {
+	.tab-heading {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		margin-bottom: 8px;
+		padding: 10px 20px;
+		border: 2px solid $gray-350;
+		border-radius: 5px;
+		font-size: 16px;
+		text-align: left;
+		cursor: pointer;
+		transition: margin-bottom 0.3s;
+
+		&__icon {
+			width: 20px;
+			height: 20px;
+			margin-left: auto;
+			transition: transform 0.3s;
+		}
+
+		&:hover,
+		&:focus {
+			border-color: $green-400;
+		}
+
+		&_opened {
+			margin-bottom: 35px;
+			transition: margin-bottom 0.3s;
+
+			.tab-heading__icon {
+				transform: rotate(180deg);
+				transition: transform 0.3s;
+			}
+
+			& + .tab-content {
+				max-height: 5000px;
+				margin-bottom: 40px;
+				transition: max-height margin-bottom 0.3s;
+			}
+		}
+	}
 }

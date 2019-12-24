@@ -1,5 +1,6 @@
 .tabs {
 	display: flex;
+	position: relative;
 	background-color: $white;
 	list-style: none;
 
@@ -20,29 +21,10 @@
 	&_fixed {
 		position: fixed;
 		top: 64px;
-		right: 0;
-		left: 0;
+		width: 1110px;
 		z-index: 3;
 	}
 }
-
-// @supports (position: sticky) {
-// 	.tabs {
-// 		&__wrapper {
-// 			position: sticky;
-// 			top: 64px;
-// 			z-index: 2;
-// 		}
-// 	}
-
-// 	@media screen and (max-width: 991px) {
-// 		.tabs {
-// 			&__wrapper {
-// 				top: 142px;
-// 			}
-// 		}
-// 	}
-// }
 
 @media screen and (max-width: 1199px) {
 	.tabs {
@@ -60,6 +42,10 @@
 				margin-right: 0;
 			}
 		}
+
+		&_fixed {
+			width: 930px;
+		}
 	}
 }
 
@@ -67,6 +53,7 @@
 	.tabs {
 		&_fixed {
 			top: 142px;
+			width: 690px;
 		}
 	}
 }
