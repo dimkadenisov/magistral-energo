@@ -1,9 +1,11 @@
 $('.question').click(function() {
+	console.log(1);
 	if (
 		$(this)
 			.find('.answer')
 			.css('display') === 'none'
 	) {
+		console.log(2);
 		$(this)
 			.find('.answer')
 			.show();
@@ -30,6 +32,7 @@ $('.question').click(function() {
 			},
 		});
 	} else {
+		console.log(3);
 		$(this)
 			.find('.answer')
 			.hide();

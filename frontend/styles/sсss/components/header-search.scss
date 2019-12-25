@@ -1,5 +1,6 @@
 .header-search {
 	display: flex;
+	position: relative;
 	width: 100%;
 	border: 2px solid $green-400;
 	border-radius: 5px;
@@ -12,5 +13,11 @@
 		border-radius: 5px;
 		color: $gray-400;
 		font-size: 14px;
+
+		&:focus {
+			& ~ .title-search-result {
+				display: block;
+			}
+		}
 	}
 }

@@ -1,8 +1,7 @@
 mixin email-form(props = {})
   include button
-  - const {classes = ''} = props;
 
-  form(class= `email-form ${classes} d-none`)
+  form.email-form&attributes(attributes)
     fieldset.email-form__fieldset
       input.email-form__input(type="email" placeholder="Введите email")
       +button({variant: 'primary', type: 'icon', iconId: 'email'})(type="submit")

@@ -1,9 +1,11 @@
 .quick-order-popup {
 	display: flex;
+	justify-content: center;
 	position: relative;
-	max-width: 720px;
 
 	&__wrapper {
+		max-width: 720px;
+		width: 100%;
 		padding: 0;
 		border-radius: 5px;
 	}
@@ -44,6 +46,7 @@
 
 		&__content {
 			flex-basis: 100%;
+			width: 100%;
 			padding: 30px 20px;
 		}
 	}
