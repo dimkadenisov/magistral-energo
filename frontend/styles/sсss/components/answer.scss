@@ -1,7 +1,5 @@
 .answer {
-	position: absolute;
-	top: calc(100% + 10px);
-	left: -40px;
+	display: none;
 	width: 320px;
 	padding: 14px;
 	background-color: $white;
@@ -20,17 +18,10 @@
 			color: $green-400;
 		}
 	}
+}
 
-	&::after {
-		content: '';
-		display: block;
-		position: absolute;
-		top: -5px;
-		left: 44px;
-		width: 0;
-		height: 0;
-		border-bottom: 5px solid $white;
-		border-right: 5px solid transparent;
-		border-left: 5px solid transparent;
+@media screen and (max-width: 575px) {
+	.answer {
+		width: 300px;
 	}
 }
