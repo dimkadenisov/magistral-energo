@@ -16,6 +16,7 @@ include ../components/reviews
 include ../components/certificates
 include ../components/videos
 include ../components/images
+include ../components/quick-order-popup
 
 block title
   |Карточка товара
@@ -65,3 +66,5 @@ block content
               +items-swiper({heading: 'Просмотренные товары', name: 'SIMATIC S7-300, SM321, МОДУЛЬ ВВОДА ДИСКРЕТНЫХ СИГНАЛОВ'})
 
               +buy-buttons-block
+
+              +quick-order-popup(id="quick-order-popup" style="display: none;")

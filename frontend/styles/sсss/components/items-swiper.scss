@@ -9,13 +9,6 @@
 		background-color: $gray-200;
 	}
 
-	&__heading {
-		color: $gray-400;
-		font-family: $Oswald;
-		font-size: 22px;
-		text-transform: uppercase;
-	}
-
 	&__buttons {
 		display: flex;
 	}
@@ -80,10 +73,6 @@
 		&__header {
 			padding-top: 8px;
 			padding-bottom: 8px;
-		}
-
-		&__heading {
-			font-size: 18px;
 		}
 	}
 }

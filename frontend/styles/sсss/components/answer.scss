@@ -1,9 +1,8 @@
 .answer {
-	display: none;
 	position: absolute;
 	top: calc(100% + 10px);
 	left: -40px;
-	max-width: 322px;
+	width: 320px;
 	padding: 14px;
 	background-color: $white;
 	border-radius: 5px;

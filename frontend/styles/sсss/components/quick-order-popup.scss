@@ -1,0 +1,50 @@
+.quick-order-popup {
+	display: flex;
+	position: relative;
+	max-width: 720px;
+
+	&__wrapper {
+		padding: 0;
+		border-radius: 5px;
+	}
+
+	&__img {
+		display: block;
+		flex-basis: 50%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.popup-button-close {
+		position: absolute;
+		top: 30px;
+		right: 30px;
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		flex-basis: 50%;
+		padding: 40px 30px;
+	}
+
+	.heading {
+		margin-bottom: 35px;
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.quick-order-popup {
+		max-width: 375px;
+
+		&__img {
+			display: none;
+		}
+
+		&__content {
+			flex-basis: 100%;
+			padding: 30px 20px;
+		}
+	}
+}

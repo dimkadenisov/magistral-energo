@@ -11,6 +11,7 @@ function removeScrollHeader() {
 	$('.header-search-line').removeClass('header-search-line_scroll');
 	$('.header-search-line .logo').addClass('d-none');
 	$('.header-search-line .basket').remove();
+	$('.catalog-menu_fixed').removeClass('catalog-menu_fixed');
 }
 
 (function() {

@@ -1,0 +1,14 @@
+mixin quick-order-popup(props = {})
+  include heading
+  include quick-order-form
+  include popup-button-close
+
+
+  .quick-order-popup__wrapper&attributes(attributes)
+    .quick-order-popup
+      img(src="assets/img/quick-order-image.jpg", alt="Изображение").quick-order-popup__img
+      +popup-button-close
+      .quick-order-popup__content
+        +heading
+          |Быстрый заказ
+        +quick-order-form
