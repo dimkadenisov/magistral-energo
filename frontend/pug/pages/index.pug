@@ -22,49 +22,49 @@ block title
   |Карточка товара
 
 block content
-      +breadcrumbs
-      main.main
-        +product-name
-        .container
-          .row
-            .col-12.col-md-6.col-lg-4.mr-5.mr-lg-0
-              +product-swiper
-            .col-12.col-md-6.col-lg-4
-              +product-info
-            .col-12.col-md-6.col-lg-4
-              +product-price-block
+  +breadcrumbs
+  main.main
+    +product-name
+    .container
+      .row
+        .col-12.col-md-6.col-lg-4.mr-5.mr-lg-0
+          +product-swiper
+        .col-12.col-md-6.col-lg-4
+          +product-info
+        .col-12.col-md-6.col-lg-4
+          +product-price-block
 
-        +tabs(class="d-none d-md-flex")
+    +tabs(class="d-none d-md-flex")
 
-        #tabs
-          .container
-            .row
-              .col-12.mb-5.mb-md-0
+    #tabs
+      .container
+        .row
+          .col-12.mb-5.mb-md-0
 
-                +characteristics(id="characteristics")
+            +characteristics(id="characteristics")
 
-                +overview(id="overview")
+            +overview(id="overview")
 
-                +tech-info(id="tech-info")
+            +tech-info(id="tech-info")
 
-                +manuals(id="manuals")
+            +manuals(id="manuals")
 
-                +certificates(id="certificate")
+            +certificates(id="certificate")
 
-                +videos(id="video")
+            +videos(id="video")
 
-                +images(id="image")
+            +images(id="image")
 
-                +reviews(id="reviews")
+            +reviews(id="reviews")
 
-        .container
-          .row
-            .col-12
+    .container
+      .row
+        .col-12
 
-              +items-swiper({heading: 'С этим товаром покупают', name: 'SIMATIC S7-300, SM321, МОДУЛЬ ВВОДА ДИСКРЕТНЫХ СИГНАЛОВ'})
+          +items-swiper({heading: 'С этим товаром покупают', name: 'SIMATIC S7-300, SM321, МОДУЛЬ ВВОДА ДИСКРЕТНЫХ СИГНАЛОВ'})
 
-              +items-swiper({heading: 'Просмотренные товары', name: 'SIMATIC S7-300, SM321, МОДУЛЬ ВВОДА ДИСКРЕТНЫХ СИГНАЛОВ'})
+          +items-swiper({heading: 'Просмотренные товары', name: 'SIMATIC S7-300, SM321, МОДУЛЬ ВВОДА ДИСКРЕТНЫХ СИГНАЛОВ'})
 
-              +buy-buttons-block
+          +buy-buttons-block
 
-              +quick-order-popup(id="quick-order-popup" style="display: none;")
+          +quick-order-popup(id="quick-order-popup" style="display: none;")

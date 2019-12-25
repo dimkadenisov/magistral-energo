@@ -3,7 +3,7 @@ mixin transport-company(props = {})
 
   div(class= `transport-company ${classes}`)
     .transport-company__img-wrapper
-      img(src= logoUrl, alt= name data-object-fit="contain").transport-company__img
+      img(src= logoUrl, alt= name).transport-company__img
     .d-flex.flex-column
       span= `ТК ${name}:`
       b= `${price}₽, ${time} дня`
