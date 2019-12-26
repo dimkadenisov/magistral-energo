@@ -4,10 +4,10 @@ mixin quick-order-form(props = {})
   include checkbox
 
   form.quick-order-form&attributes(attributes)
-    +input(type="text", placeholder="Введите Название компании или ИНН" required)
-    +input(type="email", placeholder="Email" inputmode='email' autocapitalize='off' autocorrect='off' autocomplete='email' required)
-    +input(type="tel", placeholder="Телефон" inputmode='tel' autocorrect='off' autocomplete='tel' required)
+    +input(type="text" placeholder="Введите Название компании или ИНН" required)
+    +input(type="email" placeholder="Email" inputmode='email' autocapitalize='off' autocorrect='off' autocomplete='email' required)
+    +input(type="tel" placeholder="Телефон" inputmode='tel' autocorrect='off' autocomplete='tel' required)
     +button({variant: 'primary'})(type="submit")
       |Получить счет
-    +checkbox(checked="true")
+    +checkbox(checked="checked")
       |Нажимая кнопку «Получить счет», я даю свое согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных в Согласии на обработку персональных данных

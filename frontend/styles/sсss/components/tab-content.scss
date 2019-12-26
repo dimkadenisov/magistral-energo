@@ -1,23 +1,6 @@
 .tab-content {
 	margin-bottom: 40px;
 
-	blockquote {
-		display: flex;
-		background-color: $yellow;
-		margin: 0 0 40px 0;
-		padding: 10px 75px 10px 28px;
-
-		&:before {
-			content: url('../assets/img/verified.svg');
-			display: block;
-			flex-shrink: 0;
-			width: 32px;
-			height: 32px;
-			margin-top: 5px;
-			margin-right: 15px;
-		}
-	}
-
 	p {
 		max-width: 825px;
 		margin-bottom: 1em;
@@ -40,10 +23,5 @@
 		margin-bottom: 0;
 		overflow: hidden;
 		transition: max-height margin-bottom 0.3s;
-
-		blockquote {
-			padding-right: 25px;
-			padding-left: 15px;
-		}
 	}
 }

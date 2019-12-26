@@ -1,6 +1,7 @@
 mixin question(props = {})
   include answer
 
-  button(type="button").question&attributes(attributes)
-    span.question__text ?
+  .question&attributes(attributes)
+    button(type="button").question__button
+      span ?
     +answer
