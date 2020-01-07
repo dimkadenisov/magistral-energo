@@ -11,6 +11,13 @@
 	color: $gray-400;
 	cursor: pointer;
 
+	&__selected {
+		max-width: 150px;
+		text-overflow: ellipsis;
+		overflow-x: hidden;
+		white-space: nowrap;
+	}
+
 	&__icon {
 		width: 15px;
 		height: 15px;
