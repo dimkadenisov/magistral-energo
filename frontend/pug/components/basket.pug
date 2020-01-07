@@ -1,7 +1,10 @@
-mixin basket
+mixin basket(props={})
   include counter
 
-  a(href="#").basket
+  - const {tag = 'a'} = props;
+  - const attrs = tag === 'a' ? '(href="#")' : ''
+
+  #{tag}.basket&attributes(attrs)
     svg.basket__icon
       use(xlink:href="#truck")
     +counter

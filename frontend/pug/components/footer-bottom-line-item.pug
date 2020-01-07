@@ -1,12 +1,36 @@
+//- mixin footer-bottom-line-item(props = {})
+//-   include basket
+//-   include favorites
+//-   include learn
+
+//-   - const {classes = '', component} = props;
+
+
+//-   div(class= `footer-bottom-line-item ${classes}`)
+//-     +#{component}
+//-     span.footer-bottom-line-item__text
+//-       block
+
 mixin footer-bottom-line-item(props = {})
   include basket
   include favorites
   include learn
 
-  - const {classes = '', component} = props;
+  - const { component } = props;
 
-
-  div(class= `footer-bottom-line-item ${classes}`)
-    +#{component}
-    span.footer-bottom-line-item__text
-      block
+  case component
+    when 'favorites'
+      a(href="#").footer-bottom-line-item&attributes(attributes)
+        +favorites
+        span.footer-bottom-line-item__text
+          block
+    when 'learn'
+      a(href="#").footer-bottom-line-item&attributes(attributes)
+        +learn
+        span.footer-bottom-line-item__text
+          block
+    when 'basket'
+      a(href="#").footer-bottom-line-item&attributes(attributes)
+        +basket({tag: "div"})
+        span.footer-bottom-line-item__text
+          block
