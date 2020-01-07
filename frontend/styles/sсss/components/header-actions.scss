@@ -13,10 +13,51 @@
 	.header-actions {
 		flex-direction: column;
 		width: 100%;
+		margin-bottom: 1px;
 
 		&__item {
 			&:nth-last-child(n + 2) {
 				margin-right: 0;
+			}
+
+			&:last-child {
+				position: relative;
+
+				&::after {
+					content: '';
+					display: block;
+					position: absolute;
+					top: 100%;
+					left: 50%;
+					width: 690px;
+					height: 1px;
+					background-color: $gray-300;
+					transform: translateX(-50%);
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.header-actions {
+		&__item {
+			&:last-child {
+				&::after {
+					width: 510px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 575px) {
+	.header-actions {
+		&__item {
+			&:last-child {
+				&::after {
+					width: calc(100% - 30px);
+				}
 			}
 		}
 	}
