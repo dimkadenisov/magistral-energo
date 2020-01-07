@@ -3,11 +3,11 @@ mixin header-search-line
   .header-search-line
     .container
       .row
-        .col-lg-3.d-none.d-lg-block
+        .col-lg-auto.d-none.d-lg-block
           .d-flex
             +logo({classes: 'd-none'})
             +button({variant: 'primary', type: 'icon_left', iconId: 'burger'})
-              |Каталог
-        .col-12.col-lg-9
+              |Каталог товаров
+        .col-12.col-lg-auto.flex-grow-1
           .d-flex
             +header-search
