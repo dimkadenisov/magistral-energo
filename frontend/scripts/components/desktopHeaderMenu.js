@@ -20,7 +20,7 @@ $('.menu-item:not(:only-child)').click(function(e) {
 
 $(window).scroll(function() {
 	if (
-		$(window).width() > 991 &&
+		window.matchMedia('(min-width: 992px)').matches &&
 		!$('.burger-menu.d-none').length &&
 		!$('.catalog-menu_fixed').length &&
 		window.pageYOffset > 118

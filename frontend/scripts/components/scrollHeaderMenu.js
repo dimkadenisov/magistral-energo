@@ -20,7 +20,10 @@ function removeScrollHeader() {
 	$(window).scroll(() => {
 		if (time) clearTimeout(time);
 		time = setTimeout(function() {
-			if (window.pageYOffset > 118 && $(window).width() > 991)
+			if (
+				window.pageYOffset > 118 &&
+				window.matchMedia('(min-width: 992px)').matches
+			)
 				addScrollHeader();
 			else removeScrollHeader();
 		}, 5);
