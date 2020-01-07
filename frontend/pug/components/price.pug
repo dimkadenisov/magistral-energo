@@ -1,6 +1,5 @@
 mixin price(props = {})
-  - const {classes = ''} = props;
 
-  div(class= `price ${classes}`)
+  .price&attributes(attributes)
     span.price__actual 544,72 €
     span.price__line-through 995,62
