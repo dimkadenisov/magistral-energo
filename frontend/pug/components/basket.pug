@@ -2,7 +2,7 @@ mixin basket(props={})
   include counter
 
   - const {tag = 'a'} = props;
-  - const attrs = tag === 'a' ? '(href="#")' : ''
+  - const attrs = tag === 'a' ? {href: '#'} : ''
 
   #{tag}.basket&attributes(attrs)
     svg.basket__icon
