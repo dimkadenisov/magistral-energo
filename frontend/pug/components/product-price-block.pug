@@ -11,7 +11,11 @@ mixin product-price-block(props = {})
 
   div(class= `product-price-block ${classes}`)
     .product-price-block__content
-      +button({type: 'icon', iconId: 'star-stroke', classes: 'button_star'})(type="button")
+      button.button.button_icon.button_star(type="button")
+        svg.button__icon
+          use(xlink:href= '#star-stroke')
+        svg.button__icon
+          use(xlink:href= '#star-filled')
       +price
       +additional-info
       .d-flex.mb-3
