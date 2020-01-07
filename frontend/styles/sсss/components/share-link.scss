@@ -23,7 +23,7 @@
 
 	&:hover,
 	&:focus {
-		box-shadow: 1px 4px 10px 0 rgba($black, 0.25);
+		box-shadow: 1px 4px 10px 0 $black-alpha-30;
 	}
 
 	&_vk {

@@ -20,7 +20,7 @@
 		max-width: none;
 		height: calc(100vh - 78px);
 		padding: 0;
-		background-color: rgba($black, 0.3);
+		background-color: $black-alpha-30;
 		z-index: 2;
 
 		&__content {

@@ -19,7 +19,7 @@
 
 	&:hover,
 	&:focus {
-		box-shadow: 2px 5px 10px 0px rgba($black, 0.1);
+		box-shadow: 2px 5px 10px 0px $black-alpha-10;
 	}
 }
 

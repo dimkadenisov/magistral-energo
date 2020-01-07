@@ -29,7 +29,7 @@
 
 		&:hover,
 		&:focus {
-			box-shadow: 2px 4px 10px 0px rgba($green-400, 0.5);
+			box-shadow: 2px 4px 10px 0px $green-400-alpha-50;
 		}
 	}
 
@@ -48,7 +48,7 @@
 		&:hover,
 		&:focus {
 			background-color: $green-400;
-			box-shadow: 2px 4px 10px 0 rgba($green-400, 0.5);
+			box-shadow: 2px 4px 10px 0 $green-400-alpha-50;
 			color: $white;
 		}
 	}
@@ -59,7 +59,7 @@
 		&:hover,
 		&:focus {
 			background-color: $gray-400;
-			box-shadow: 2px 4px 10px 0 rgba($gray-400, 0.5);
+			box-shadow: 2px 4px 10px 0 $gray-400-alpha-50;
 			color: $white;
 		}
 	}

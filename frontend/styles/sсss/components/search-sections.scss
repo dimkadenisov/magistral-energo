@@ -34,8 +34,8 @@
 		padding-top: 16px;
 		padding-bottom: 16px;
 		border-radius: 5px;
-		box-shadow: 0px 0px 5px 0px rgba($black, 0.1),
-			0px 5px 10px 0px rgba($black, 0.15);
+		box-shadow: 0 0 5px 0 $black-alpha-10,
+			0 5px 10px 0 $black-alpha-15;
 		background-color: $white;
 		list-style: none;
 		z-index: 2;

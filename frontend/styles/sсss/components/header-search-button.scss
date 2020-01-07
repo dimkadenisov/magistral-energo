@@ -16,6 +16,6 @@
 
 	&:hover,
 	&:focus {
-		box-shadow: 2px 4px 10px 0px rgba($green-400, 0.5);
+		box-shadow: 2px 4px 10px 0 $green-400-alpha-50;
 	}
 }
