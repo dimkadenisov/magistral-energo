@@ -53,3 +53,35 @@
 		}
 	}
 }
+
+@media screen and (max-width: 767px) {
+	.footer-bottom-line {
+		padding-top: 4px;
+		padding-bottom: 4px;
+
+		.favorites {
+			width: 40px;
+			height: 40px;
+		}
+
+		.learn {
+			width: 40px;
+			height: 40px;
+		}
+
+		.basket {
+			width: 40px;
+			height: 40px;
+
+			&__icon {
+				width: 30px;
+				height: 30px;
+			}
+		}
+
+		.button-to-top {
+			width: 40px;
+			height: 40px;
+		}
+	}
+}
