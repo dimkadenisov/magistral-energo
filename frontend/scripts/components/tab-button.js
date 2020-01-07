@@ -5,7 +5,12 @@ $('.tab-button').click(function(e) {
 	$(this).addClass('tab-button_active');
 
 	const destination = $($(this).attr('href')).offset().top - 112;
-	document.documentElement.scrollTop = destination;
+	$([document.documentElement, document.body]).animate(
+		{
+			scrollTop: destination,
+		},
+		300,
+	);
 });
 
 $(window).scroll(function() {

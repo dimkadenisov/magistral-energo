@@ -1,3 +1,8 @@
 $('.button-to-top').click(() => {
-	document.documentElement.scrollTop = 0;
+	$([document.documentElement, document.body]).animate(
+		{
+			scrollTop: 0,
+		},
+		300,
+	);
 });
