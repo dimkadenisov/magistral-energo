@@ -1,10 +1,21 @@
 .email-form {
 	display: none;
+	position: relative;
 	padding: 14px 24px 16px 15px;
 	background-color: $white;
 	border-radius: 5px;
 	box-shadow: 0 0 5px 0 rgba($black, 0.1), 0 5px 10px 0 rgba($black, 0.15);
 	z-index: 2;
+
+	&__arrow {
+		position: absolute;
+		top: -6px;
+		width: 0;
+		height: 0;
+		border-right: 5px solid transparent;
+		border-bottom: 6px solid $white;
+		border-left: 5px solid transparent;
+	}
 
 	&__fieldset {
 		position: relative;

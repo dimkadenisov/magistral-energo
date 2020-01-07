@@ -3,7 +3,9 @@
 	position: relative;
 
 	&__button {
-		display: block;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		width: 20px;
 		height: 20px;
 		padding: 0;
@@ -13,6 +15,8 @@
 		cursor: pointer;
 		color: $white;
 		font-size: 18px;
+		line-height: 20px;
 		text-align: center;
+		opacity: 0.4;
 	}
 }

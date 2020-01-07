@@ -6,6 +6,11 @@ $('.share-link_email').click(function() {
 	const popper = new Popper(this, $(this).next(), {
 		placement: 'bottom',
 		modifiers: {
+			arrow: {
+				element: $(this)
+					.next()
+					.find('.email-form__arrow')[0],
+			},
 			flip: {
 				enabled: true,
 				behavior: [

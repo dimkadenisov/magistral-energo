@@ -1,8 +1,6 @@
 mixin search-sections(props = {})
 
-  - const {classes = ''} = props;
-
-  div(class= `search-sections ${classes}`)
+  div(class= `search-sections`)
     .search-sections__selected Весь сайт
     svg.search-sections__icon
       use(xlink:href="#arrow-down")
