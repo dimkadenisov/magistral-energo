@@ -6,4 +6,9 @@
 			margin-bottom: 14px;
 		}
 	}
+
+	&_colums {
+		column-count: 2;
+		column-gap: 30px;
+	}
 }

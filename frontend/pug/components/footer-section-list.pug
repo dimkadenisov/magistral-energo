@@ -1,8 +1,8 @@
 mixin footer-section-list(props = {})
   include footer-link
-  - const {classes = '', items} = props;
+  - const {items, colums} = props;
 
-  ul(class= `footer-section-list ${classes}`)
+  ul(class= colums ? 'footer-section-list footer-section-list_colums' : 'footer-section-list')&attributes(attributes)
     each item in items
       li.footer-section-list__item
         +footer-link= item
