@@ -5,4 +5,6 @@ $('.button-to-top').click(() => {
 		},
 		300,
 	);
+	$('.tab-button').removeClass('tab-button_active');
+	$('.tab-button:first').addClass('tab-button_active');
 });
