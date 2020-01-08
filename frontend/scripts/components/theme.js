@@ -1,6 +1,7 @@
-// cssVars({
-// 	watch: true,
-// });
+cssVars({
+	watch: true,
+	include: 'link:not([data-ignore])',
+});
 
 // // const newTheme = {
 // // 	'--color-primary': 'teal',
