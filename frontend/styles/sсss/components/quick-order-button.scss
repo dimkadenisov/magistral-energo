@@ -1,10 +1,10 @@
 .quick-order-button {
 	flex-shrink: 0;
-	color: $gray-700;
+	color: var(--gray-700);
 	font-weight: bold;
 
 	&:hover,
 	&:focus {
-		color: $green-400;
+		color: var(--green-400);
 	}
 }

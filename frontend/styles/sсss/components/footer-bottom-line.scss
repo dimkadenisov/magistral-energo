@@ -1,14 +1,14 @@
 .footer-bottom-line {
 	padding-top: 10px;
 	padding-bottom: 10px;
-	background-color: $black-alpha-15;
+	background-color: var(--black-alpha-15);
 
 	&__wrapper {
 		position: fixed;
 		right: 0;
 		bottom: 0;
 		left: 0;
-		background-color: $gray-400;
+		background-color: var(--gray-400);
 		z-index: 2;
 	}
 

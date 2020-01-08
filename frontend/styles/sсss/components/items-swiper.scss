@@ -6,7 +6,7 @@
 		justify-content: space-between;
 		margin-bottom: 40px;
 		padding: 16px 28px;
-		background-color: $gray-200;
+		background-color: var(--gray-200);
 	}
 
 	&__buttons {
@@ -16,7 +16,7 @@
 	&__content {
 		position: relative;
 		width: 100%;
-		border: 1px solid $gray-300;
+		border: 1px solid var(--gray-300);
 		overflow-x: hidden;
 	}
 
@@ -24,11 +24,11 @@
 		display: block;
 		flex-shrink: 0;
 		width: 100%;
-		color: $gray-700;
+		color: var(--gray-700);
 		text-decoration: none;
 
 		&:nth-last-child(n + 2) {
-			border-right: 1px solid $gray-300;
+			border-right: 1px solid var(--gray-300);
 		}
 	}
 

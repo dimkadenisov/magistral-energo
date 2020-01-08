@@ -24,13 +24,13 @@
 	}
 
 	& a {
-		color: $gray-700;
+		color: var(--gray-700);
 		line-height: 1.5;
-		text-decoration-color: $green-400;
+		text-decoration-color: var(--green-400);
 
 		&:hover,
 		&:focus {
-			color: $green-400;
+			color: var(--green-400);
 		}
 	}
 
@@ -74,7 +74,7 @@
 				top: 0;
 				left: 0;
 				width: 30px;
-				color: $green-400;
+				color: var(--green-400);
 				font-weight: 900;
 				font-size: 15px;
 				text-align: right;
@@ -100,7 +100,7 @@
 				left: 20px;
 				width: 6px;
 				height: 6px;
-				background-color: $green-400;
+				background-color: var(--green-400);
 			}
 		}
 	}
@@ -109,8 +109,8 @@
 		display: block;
 		padding: 35px 40px 30px 50px;
 		margin: 0 0 55px 0;
-		background-color: $gray-200;
-		border-left: 3px solid $green-400;
+		background-color: var(--gray-200);
+		border-left: 3px solid var(--green-400);
 
 		& cite {
 			font-style: normal;
@@ -134,7 +134,7 @@
 
 .responsive-table table tr:nth-child(odd),
 .tab-content table tr:nth-child(odd) {
-	background: $gray-100;
+	background: var(--gray-100);
 }
 
 .responsive-table table tr th,
@@ -142,7 +142,7 @@
 .tab-content table tr th,
 .tab-content table tr td {
 	padding: 16px 12px;
-	color: $gray-700;
+	color: var(--gray-700);
 	font-size: 15px;
 	line-height: 24px;
 	text-align: left;

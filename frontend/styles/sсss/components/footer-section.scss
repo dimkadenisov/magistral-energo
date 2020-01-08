@@ -12,18 +12,18 @@
 	}
 
 	.hot-line {
-		color: $white;
+		color: var(--white);
 		font-size: 26px;
 
 		.link-icon {
-			color: $white;
+			color: var(--white);
 		}
 	}
 
 	.text-small {
 		display: block;
 		margin-bottom: 30px;
-		color: $white;
+		color: var(--white);
 		opacity: 0.7;
 	}
 

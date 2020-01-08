@@ -13,18 +13,18 @@
 	&__icon {
 		width: 15px;
 		height: 15px;
-		color: $gray-400;
+		color: var(--gray-400);
 	}
 
 	&:hover,
 	&:focus {
 		.swiper-button__icon {
-			color: $green-400;
+			color: var(--green-400);
 		}
 	}
 
 	&_stroke {
-		border: 1px solid $gray-400;
+		border: 1px solid var(--gray-400);
 
 		&.swiper-button_right {
 			border-top-right-radius: 5px;

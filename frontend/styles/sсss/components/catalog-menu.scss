@@ -16,8 +16,8 @@
 		width: 210px;
 
 		&_fixed {
-      top: 64px;
-      transform: translateX(80px);
+			top: 64px;
+			transform: translateX(80px);
 		}
 	}
 }
@@ -27,15 +27,15 @@
 		position: relative;
 		top: auto;
 		width: 100%;
-		background-color: $white;
+		background-color: var(--white);
 
 		&__name {
 			width: 100%;
 			padding: 12px 0;
 			border: none;
-			background-color: $white;
-			color: $gray-400;
-			font-family: $Oswald;
+			background-color: var(--white);
+			color: var(--gray-400);
+			font-family: var(--Oswald);
 			font-size: 16px;
 			text-align: left;
 			text-transform: uppercase;
@@ -43,8 +43,8 @@
 
 			&:hover,
 			&:focus {
-				background-color: $gray-200;
-				color: $gray-700;
+				background-color: var(--gray-200);
+				color: var(--gray-700);
 			}
 
 			&_active {
@@ -58,10 +58,10 @@
 						display: block;
 						padding-top: 10px;
 						padding-bottom: 20px;
-						font-family: $Roboto;
+						font-family: var(--Roboto);
 						font-size: 14px;
 						text-transform: none;
-						border-bottom: 1px solid $gray-300;
+						border-bottom: 1px solid var(--gray-300);
 					}
 				}
 			}

@@ -13,7 +13,7 @@
 	&__icon {
 		width: 14px;
 		height: 14px;
-		color: $white;
+		color: var(--white);
 	}
 
 	&__button {
@@ -23,30 +23,30 @@
 
 	&:hover,
 	&:focus {
-		box-shadow: 1px 4px 10px 0 $black-alpha-30;
+		box-shadow: 1px 4px 10px 0 var(--black-alpha-30);
 	}
 
 	&_vk {
-		background-color: $blue-vk;
+		background-color: var(--blue-vk);
 	}
 
 	&_facebook {
-		background-color: $blue-facebook;
+		background-color: var(--blue-facebook);
 	}
 
 	&_viber {
-		background-color: $violet-viber;
+		background-color: var(--violet-viber);
 	}
 
 	&_whatsapp {
-		background-color: $green-whatsapp;
+		background-color: var(--green-whatsapp);
 	}
 
 	&_email {
-		background-color: $red-200;
+		background-color: var(--red-200);
 	}
 
 	&_print {
-		background-color: $gray-400;
+		background-color: var(--gray-400);
 	}
 }

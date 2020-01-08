@@ -2,7 +2,7 @@
 	display: flex;
 	position: relative;
 	width: 100%;
-	border: 2px solid $green-400;
+	border: 2px solid var(--green-400);
 	border-radius: 5px;
 
 	&__input {
@@ -11,7 +11,7 @@
 		padding-left: 20px;
 		border: none;
 		border-radius: 5px;
-		color: $gray-400;
+		color: var(--gray-400);
 		font-size: 14px;
 
 		&:focus {

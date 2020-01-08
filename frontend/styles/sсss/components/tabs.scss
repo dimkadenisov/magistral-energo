@@ -1,7 +1,7 @@
 .tabs {
 	display: flex;
 	position: relative;
-	background-color: $white;
+	background-color: var(--white);
 	list-style: none;
 
 	&__wrapper {

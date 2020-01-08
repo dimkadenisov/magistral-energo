@@ -10,7 +10,7 @@
 	border-width: 2px;
 	border-radius: 5px;
 	border-style: solid;
-	font-family: $Oswald;
+	font-family: var(--Oswald);
 	font-size: 16px;
 	font-weight: normal;
 	text-transform: uppercase;
@@ -23,13 +23,13 @@
 	}
 
 	&_primary {
-		background-color: $green-400;
-		border-color: $green-400;
-		color: $white;
+		background-color: var(--green-400);
+		border-color: var(--green-400);
+		color: var(--white);
 
 		&:hover,
 		&:focus {
-			box-shadow: 2px 4px 10px 0px $green-400-alpha-50;
+			box-shadow: 2px 4px 10px 0px var(--green-400-alpha-50);
 		}
 	}
 
@@ -43,24 +43,24 @@
 	}
 
 	&_border_primary {
-		border: 2px solid $green-400;
+		border: 2px solid var(--green-400);
 
 		&:hover,
 		&:focus {
-			background-color: $green-400;
-			box-shadow: 2px 4px 10px 0 $green-400-alpha-50;
-			color: $white;
+			background-color: var(--green-400);
+			box-shadow: 2px 4px 10px 0 var(--green-400-alpha-50);
+			color: var(--white);
 		}
 	}
 
 	&_border_gray-400 {
-		border: 2px solid $gray-400;
+		border: 2px solid var(--gray-400);
 
 		&:hover,
 		&:focus {
-			background-color: $gray-400;
-			box-shadow: 2px 4px 10px 0 $gray-400-alpha-50;
-			color: $white;
+			background-color: var(--gray-400);
+			box-shadow: 2px 4px 10px 0 var(--gray-400-alpha-50);
+			color: var(--white);
 		}
 	}
 }

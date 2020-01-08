@@ -2,9 +2,9 @@
 	display: block;
 	margin-bottom: 26px;
 	padding-bottom: 10px;
-	border-bottom: 1px solid $white-alpha-15;
-	color: $white;
-	font-family: $Oswald;
+	border-bottom: 1px solid var(--white-alpha-15);
+	color: var(--white);
+	font-family: var(--Oswald);
 	font-size: 16px;
 	line-height: 1.25;
 	font-weight: 500;

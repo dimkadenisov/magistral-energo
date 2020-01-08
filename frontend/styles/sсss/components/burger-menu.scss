@@ -20,12 +20,12 @@
 		max-width: none;
 		height: calc(100vh - 78px);
 		padding: 0;
-		background-color: $black-alpha-30;
+		background-color: var(--black-alpha-30);
 		z-index: 2;
 
 		&__content {
 			max-height: calc(100vh - 78px);
-			background-color: $white;
+			background-color: var(--white);
 			overflow-y: auto;
 		}
 	}

@@ -1,5 +1,5 @@
 .footer-copyright {
-	background-color: $black-alpha-10;
+	background-color: var(--black-alpha-10);
 
 	&__content {
 		display: flex;
@@ -9,14 +9,14 @@
 	}
 
 	.text-small {
-		color: $white-alpha-50;
+		color: var(--white-alpha-50);
 
 		a {
-			color: $white-alpha-50;
+			color: var(--white-alpha-50);
 
 			&:hover,
 			&:focus {
-				color: $white;
+				color: var(--white);
 			}
 		}
 	}

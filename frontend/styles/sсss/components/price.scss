@@ -5,7 +5,7 @@
 
 	&__actual {
 		display: inline-block;
-		font-family: $Oswald;
+		font-family: var(--Oswald);
 		font-size: 28px;
 		vertical-align: top;
 
@@ -17,7 +17,7 @@
 	&__line-through {
 		display: inline-block;
 		margin-top: 3px;
-		font-family: $Oswald;
+		font-family: var(--Oswald);
 		font-size: 22px;
 		font-weight: 100;
 		text-decoration: line-through;

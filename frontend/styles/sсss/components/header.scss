@@ -5,7 +5,7 @@
 
 	&__content {
 		padding-bottom: 10px;
-		background-color: $white;
+		background-color: var(--white);
 	}
 }
 
@@ -24,7 +24,7 @@
 			top: 0;
 			right: 0;
 			left: 0;
-			box-shadow: -10px 0px 20px 0px $black-alpha-15;
+			box-shadow: -10px 0px 20px 0px var(--black-alpha-15);
 			z-index: 2;
 		}
 	}

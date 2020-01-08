@@ -4,7 +4,7 @@
 	padding-right: 15px;
 	padding-bottom: 4px;
 	padding-left: 15px;
-	color: $gray-700;
+	color: var(--gray-700);
 	font-size: 14px;
 	text-decoration: none;
 
@@ -14,7 +14,7 @@
 		height: 48px;
 		flex-shrink: 0;
 		margin-right: 14px;
-		border: 1px solid $gray-300;
+		border: 1px solid var(--gray-300);
 		overflow: hidden;
 	}
 
@@ -29,12 +29,12 @@
 	}
 
 	&:hover {
-		background-color: $gray-200;
+		background-color: var(--gray-200);
 		font-weight: bold;
 	}
 
 	&_active {
-		background-color: $gray-200;
+		background-color: var(--gray-200);
 		font-weight: bold;
 
 		& ~ .submenu-list {
@@ -57,7 +57,7 @@
 @media screen and (max-width: 991px) {
 	.menu-item {
 		padding: 12px 0;
-		color: $gray-700;
+		color: var(--gray-700);
 		font-size: 16px;
 
 		&__img-wrapper {
@@ -87,9 +87,9 @@
 		&_active:not(:only-child) {
 			position: relative;
 			padding-bottom: 0;
-			background-color: $white;
-			color: $gray-400;
-			font-family: $Oswald;
+			background-color: var(--white);
+			color: var(--gray-400);
+			font-family: var(--Oswald);
 			font-size: 16px;
 			font-weight: normal;
 			text-transform: uppercase;
@@ -102,17 +102,17 @@
 					display: block;
 					padding-top: 10px;
 					padding-bottom: 20px;
-					font-family: $Roboto;
+					font-family: var(--Roboto);
 					font-size: 14px;
 					font-weight: normal;
 					text-transform: none;
-					border-bottom: 1px solid $gray-300;
+					border-bottom: 1px solid var(--gray-300);
 				}
 			}
 
 			&:hover {
-				background-color: $gray-200;
-				color: $gray-700;
+				background-color: var(--gray-200);
+				color: var(--gray-700);
 			}
 		}
 	}

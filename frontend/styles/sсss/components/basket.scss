@@ -3,8 +3,8 @@
 	position: relative;
 	width: 48px;
 	height: 48px;
-	background-color: $white;
-	border: 2px solid $gray-200;
+	background-color: var(--white);
+	border: 2px solid var(--gray-200);
 	border-radius: 50%;
 	text-decoration: none;
 
@@ -19,7 +19,7 @@
 
 	&:hover,
 	&:focus {
-		box-shadow: 2px 5px 10px 0px $black-alpha-10;
+		box-shadow: 2px 5px 10px 0px var(--black-alpha-10);
 	}
 }
 

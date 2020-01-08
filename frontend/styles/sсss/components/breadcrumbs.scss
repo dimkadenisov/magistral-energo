@@ -5,7 +5,7 @@
 
 	&__item {
 		display: inline-block;
-		color: $gray-400;
+		color: var(--gray-400);
 
 		&:not(:last-child) {
 			margin-right: 0.65em;
@@ -14,7 +14,7 @@
 				content: '>';
 				display: inline-block;
 				margin-left: 0.65em;
-				color: $gray-400;
+				color: var(--gray-400);
 			}
 		}
 	}
@@ -23,12 +23,12 @@
 		display: inline-block;
 		padding-top: 10px;
 		padding-bottom: 10px;
-		color: $gray-400;
+		color: var(--gray-400);
 		text-decoration: none;
 
 		&:hover,
 		&:focus {
-			color: $green-400;
+			color: var(--green-400);
 			text-decoration: underline;
 		}
 	}

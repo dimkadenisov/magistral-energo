@@ -5,10 +5,10 @@
 	position: relative;
 	padding-right: 20px;
 	padding-left: 20px;
-	background-color: $gray-200;
+	background-color: var(--gray-200);
 	border-top-left-radius: 5px;
 	border-bottom-left-radius: 5px;
-	color: $gray-400;
+	color: var(--gray-400);
 	cursor: pointer;
 
 	&__selected {
@@ -23,7 +23,7 @@
 		height: 15px;
 		margin-top: 4px;
 		margin-left: 8px;
-		color: $gray-400;
+		color: var(--gray-400);
 	}
 
 	&__list {
@@ -34,16 +34,16 @@
 		padding-top: 16px;
 		padding-bottom: 16px;
 		border-radius: 5px;
-		box-shadow: 0 0 5px 0 $black-alpha-10,
-			0 5px 10px 0 $black-alpha-15;
-		background-color: $white;
+		box-shadow: 0 0 5px 0 var(--black-alpha-10),
+			0 5px 10px 0 var(--black-alpha-15);
+		background-color: var(--white);
 		list-style: none;
 		z-index: 2;
 	}
 
 	&__item {
 		padding: 8px 20px;
-		color: $gray-700;
+		color: var(--gray-700);
 		font-size: 14px;
 		cursor: pointer;
 		white-space: nowrap;
@@ -52,7 +52,7 @@
 
 		&:hover,
 		&:focus {
-			background-color: $gray-200;
+			background-color: var(--gray-200);
 		}
 	}
 }

@@ -11,7 +11,7 @@
 		z-index: 0;
 		&-bullet {
 			&-active {
-				background-color: $green-400;
+				background-color: var(--green-400);
 			}
 		}
 	}

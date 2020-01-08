@@ -6,10 +6,10 @@
 	margin-right: 8px;
 	padding-right: 12px;
 	padding-left: 12px;
-	background-color: $red-300;
+	background-color: var(--red-300);
 	border-top-left-radius: 2px;
 	border-bottom-left-radius: 2px;
-	color: $white;
+	color: var(--white);
 	font-size: 12px;
 	font-weight: bold;
 
@@ -29,6 +29,6 @@
 		height: 0;
 		border-top: 9px solid transparent;
 		border-bottom: 9px solid transparent;
-		border-left: 8px solid $red-300;
+		border-left: 8px solid var(--red-300);
 	}
 }

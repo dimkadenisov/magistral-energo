@@ -1,7 +1,7 @@
 .hot-line {
 	display: inline-block;
-	color: $gray-700;
-	font-family: $Oswald;
+	color: var(--gray-700);
+	font-family: var(--Oswald);
 	font-weight: 500;
 	font-size: 18px;
 	line-height: 18px;
@@ -13,6 +13,6 @@
 
 	&:hover,
 	&:focus {
-		color: $green-400;
+		color: var(--green-400);
 	}
 }

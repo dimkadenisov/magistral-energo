@@ -6,10 +6,10 @@
 	min-width: 20px;
 	padding-right: 5px;
 	padding-left: 5px;
-	color: $white;
-	background-color: $green-400;
+	color: var(--white);
+	background-color: var(--green-400);
 	border-radius: 10px;
-	font-family: $Oswald;
+	font-family: var(--Oswald);
 	font-size: 12px;
 	font-weight: 600;
 	line-height: 20px;

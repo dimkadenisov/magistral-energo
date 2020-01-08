@@ -9,7 +9,7 @@
 	position: relative;
 	padding-right: 0.1em;
 	padding-left: 0.1em;
-	color: $gray-350;
+	color: var(--gray-350);
 	font-size: 16px;
 	cursor: pointer;
 }
@@ -27,7 +27,7 @@
 		display: block;
 		position: absolute;
 		left: 0.1em;
-		color: $orange-300;
+		color: var(--orange-300);
 	}
 
 	.rating__star:hover,
@@ -42,5 +42,5 @@
 	display: block;
 	position: absolute;
 	left: 0.1em;
-	color: $orange-300;
+	color: var(--orange-300);
 }
