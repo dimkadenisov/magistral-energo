@@ -6,6 +6,7 @@
 	&_fixed {
 		position: fixed;
 		top: 64px;
+		transform: translateX(50px);
 	}
 }
 
@@ -15,7 +16,8 @@
 		width: 210px;
 
 		&_fixed {
-			top: 64px;
+      top: 64px;
+      transform: translateX(80px);
 		}
 	}
 }
