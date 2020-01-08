@@ -1,5 +1,5 @@
 const reviewsSwiperConfig = {
-	init: true,
+	// init: true,
 	slideClass: 'reviews-swiper__item',
 	slidesPerView: 1,
 	spaceBetween: 0,
@@ -27,8 +27,25 @@ let reviewsSwiper = generateSwipers({
 	swiperConfig: reviewsSwiperConfig,
 });
 
-updateSwiperOnBreakpoint({
-	swiperClass: 'reviews-swiper',
-	swiperConfig: reviewsSwiperConfig,
-	maxWidthsArray: [767, 991, 1199],
-});
+const reviewsSwiperBreakpoints = [
+	{
+		breakpoint: window.matchMedia('(min-width: 768px)'),
+		callback: swiper => {
+			swiper.update();
+			swiper.destroy(true, true);
+		},
+	},
+	{
+		breakpoint: window.matchMedia('(max-width: 767px)'),
+		callback: swiper => {
+			if (swiper.destroyed) {
+				reviewsSwiper = generateSwipers({
+					swiperClass: 'reviews-swiper',
+					swiperConfig: reviewsSwiperConfig,
+				});
+			}
+		},
+	},
+];
+
+updateSwiperOnBreakpoint(reviewsSwiperBreakpoints, reviewsSwiper);

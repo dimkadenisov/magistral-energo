@@ -30,8 +30,25 @@ let imagesSwiper = generateSwipers({
 	swiperConfig: imagesSwiperConfig,
 });
 
-updateSwiperOnBreakpoint({
-	swiperClass: 'images-swiper',
-	swiperConfig: imagesSwiperConfig,
-	maxWidthsArray: [575, 767, 991, 1199],
-});
+const imagesSwiperBreakpoints = [
+	{
+		breakpoint: window.matchMedia('(min-width: 768px)'),
+		callback: swiper => {
+			swiper.update();
+			swiper.destroy(true, true);
+		},
+	},
+	{
+		breakpoint: window.matchMedia('(max-width: 767px)'),
+		callback: swiper => {
+			if (swiper.destroyed) {
+				imagesSwiper = generateSwipers({
+					swiperClass: 'images-swiper',
+					swiperConfig: imagesSwiperConfig,
+				});
+			}
+		},
+	},
+];
+
+updateSwiperOnBreakpoint(imagesSwiperBreakpoints, imagesSwiper);
