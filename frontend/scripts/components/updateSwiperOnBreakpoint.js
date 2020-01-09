@@ -40,12 +40,50 @@
 // 	return swipers;
 // }
 
-function updateSwiperOnBreakpoint(breakpoints, swipers) {
-	breakpoints.forEach(({ breakpoint, callback }) => {
-		breakpoint.addListener(() => {
-			if (breakpoint.matches) {
+// function updateSwiperOnBreakpoint(breakpoints, swipers) {
+// 	breakpoints.forEach(({ breakpoint, callback }) => {
+// 		breakpoint.addListener(() => {
+// 			if (breakpoint.matches) {
+// 				swipers.forEach(swiper => {
+// 					callback(swiper);
+// 				});
+// 			}
+// 		});
+// 	});
+// }
+
+function updateSwiperOnBreakpoint(
+	breakpointsToDestroy,
+	breakpointsToInit,
+	swipers,
+	swiperClass,
+	swiperConfig,
+) {
+	breakpointsToDestroy.forEach(breakpoint => {
+		window.matchMedia(breakpoint).addListener(() => {
+			if (window.matchMedia(breakpoint).matches) {
 				swipers.forEach(swiper => {
-					callback(swiper);
+					swiper.destroy();
+				});
+			}
+		});
+		if (window.matchMedia(breakpoint).matches) {
+			swipers.forEach(swiper => {
+				swiper.destroy();
+			});
+		}
+	});
+
+	breakpointsToInit.forEach(breakpoint => {
+		window.matchMedia(breakpoint).addListener(() => {
+			if (window.matchMedia(breakpoint).matches) {
+				swipers.forEach(swiper => {
+					if (swiper.destroyed) {
+						swipers = generateSwipers({
+							swiperClass,
+							swiperConfig,
+						});
+					}
 				});
 			}
 		});

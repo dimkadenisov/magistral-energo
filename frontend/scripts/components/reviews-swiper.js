@@ -27,25 +27,10 @@ let reviewsSwiper = generateSwipers({
 	swiperConfig: reviewsSwiperConfig,
 });
 
-const reviewsSwiperBreakpoints = [
-	{
-		breakpoint: window.matchMedia('(min-width: 768px)'),
-		callback: swiper => {
-			swiper.update();
-			swiper.destroy(true, true);
-		},
-	},
-	{
-		breakpoint: window.matchMedia('(max-width: 767px)'),
-		callback: swiper => {
-			if (swiper.destroyed) {
-				reviewsSwiper = generateSwipers({
-					swiperClass: 'reviews-swiper',
-					swiperConfig: reviewsSwiperConfig,
-				});
-			}
-		},
-	},
-];
-
-updateSwiperOnBreakpoint(reviewsSwiperBreakpoints, reviewsSwiper);
+updateSwiperOnBreakpoint(
+	['(min-width: 768px)'],
+	['(max-width: 767px)'],
+	reviewsSwiper,
+	'reviews-swiper',
+	reviewsSwiperConfig,
+);

@@ -40,24 +40,7 @@ var certificatesSwiper = generateSwipers({
   swiperClass: 'certificates-swiper',
   swiperConfig: certificatesSwiperConfig
 });
-var certificatesSwiperBreakpoints = [{
-  breakpoint: window.matchMedia('(min-width: 768px)'),
-  callback: function callback(swiper) {
-    swiper.update();
-    swiper.destroy(true, true);
-  }
-}, {
-  breakpoint: window.matchMedia('(max-width: 767px)'),
-  callback: function callback(swiper) {
-    if (swiper.destroyed) {
-      certificatesSwiper = generateSwipers({
-        swiperClass: 'certificates-swiper',
-        swiperConfig: certificatesSwiperConfig
-      });
-    }
-  }
-}];
-updateSwiperOnBreakpoint(certificatesSwiperBreakpoints, certificatesSwiper);
+updateSwiperOnBreakpoint(['(min-width: 768px)'], ['(max-width: 767px)'], certificatesSwiper, 'certificates-swiper', certificatesSwiperConfig);
 "use strict";
 
 $('.header-search-line .button_primary').click(function () {
@@ -188,24 +171,7 @@ var imagesSwiper = generateSwipers({
   swiperClass: 'images-swiper',
   swiperConfig: imagesSwiperConfig
 });
-var imagesSwiperBreakpoints = [{
-  breakpoint: window.matchMedia('(min-width: 768px)'),
-  callback: function callback(swiper) {
-    swiper.update();
-    swiper.destroy(true, true);
-  }
-}, {
-  breakpoint: window.matchMedia('(max-width: 767px)'),
-  callback: function callback(swiper) {
-    if (swiper.destroyed) {
-      imagesSwiper = generateSwipers({
-        swiperClass: 'images-swiper',
-        swiperConfig: imagesSwiperConfig
-      });
-    }
-  }
-}];
-updateSwiperOnBreakpoint(imagesSwiperBreakpoints, imagesSwiper);
+updateSwiperOnBreakpoint(['(min-width: 768px)'], ['(max-width: 767px)'], imagesSwiper, 'images-swiper', imagesSwiperConfig);
 "use strict";
 
 var itemsSwiperConfig = {
@@ -414,24 +380,7 @@ var reviewsSwiper = generateSwipers({
   swiperClass: 'reviews-swiper',
   swiperConfig: reviewsSwiperConfig
 });
-var reviewsSwiperBreakpoints = [{
-  breakpoint: window.matchMedia('(min-width: 768px)'),
-  callback: function callback(swiper) {
-    swiper.update();
-    swiper.destroy(true, true);
-  }
-}, {
-  breakpoint: window.matchMedia('(max-width: 767px)'),
-  callback: function callback(swiper) {
-    if (swiper.destroyed) {
-      reviewsSwiper = generateSwipers({
-        swiperClass: 'reviews-swiper',
-        swiperConfig: reviewsSwiperConfig
-      });
-    }
-  }
-}];
-updateSwiperOnBreakpoint(reviewsSwiperBreakpoints, reviewsSwiper);
+updateSwiperOnBreakpoint(['(min-width: 768px)'], ['(max-width: 767px)'], reviewsSwiper, 'reviews-swiper', reviewsSwiperConfig);
 "use strict";
 
 function addScrollHeader() {
@@ -524,22 +473,8 @@ $(window).scroll(function () {
 
 cssVars({
   watch: true,
-  include: 'link:not([data-ignore])'
-}); // // const newTheme = {
-// // 	'--color-primary': 'teal',
-// // 	'--color-secondary': 'hotpink',
-// // 	'--color-background': '#333333',
-// // 	'--color-text': '#f5f5f5',
-// // };
-// // const button = document.querySelector('.q');
-// // button.addEventListener('click', () => {
-// // 	Object.entries(newTheme).forEach(([key, value]) => {
-// // 		document.documentElement.style.setProperty(`${key}`, `${value}`);
-// // 	});
-// // });
-// document.querySelector('.q').addEventListener('click', () => {
-// 	document.documentElement.style.setProperty('--color-background', 'red');
-// });
+  include: 'style,link:not([data-ignore])'
+});
 "use strict";
 
 // function updateSwiperOnBreakpoint({
@@ -576,14 +511,43 @@ cssVars({
 // 	breakpointChecker();
 // 	return swipers;
 // }
-function updateSwiperOnBreakpoint(breakpoints, swipers) {
-  breakpoints.forEach(function (_ref) {
-    var breakpoint = _ref.breakpoint,
-        callback = _ref.callback;
-    breakpoint.addListener(function () {
-      if (breakpoint.matches) {
+// function updateSwiperOnBreakpoint(breakpoints, swipers) {
+// 	breakpoints.forEach(({ breakpoint, callback }) => {
+// 		breakpoint.addListener(() => {
+// 			if (breakpoint.matches) {
+// 				swipers.forEach(swiper => {
+// 					callback(swiper);
+// 				});
+// 			}
+// 		});
+// 	});
+// }
+function updateSwiperOnBreakpoint(breakpointsToDestroy, breakpointsToInit, swipers, swiperClass, swiperConfig) {
+  breakpointsToDestroy.forEach(function (breakpoint) {
+    window.matchMedia(breakpoint).addListener(function () {
+      if (window.matchMedia(breakpoint).matches) {
         swipers.forEach(function (swiper) {
-          callback(swiper);
+          swiper.destroy();
+        });
+      }
+    });
+
+    if (window.matchMedia(breakpoint).matches) {
+      swipers.forEach(function (swiper) {
+        swiper.destroy();
+      });
+    }
+  });
+  breakpointsToInit.forEach(function (breakpoint) {
+    window.matchMedia(breakpoint).addListener(function () {
+      if (window.matchMedia(breakpoint).matches) {
+        swipers.forEach(function (swiper) {
+          if (swiper.destroyed) {
+            swipers = generateSwipers({
+              swiperClass: swiperClass,
+              swiperConfig: swiperConfig
+            });
+          }
         });
       }
     });
@@ -617,21 +581,4 @@ var videosSwiper = generateSwipers({
   swiperClass: 'videos-swiper',
   swiperConfig: videosSwiperConfig
 });
-var videosSwiperBreakpoints = [{
-  breakpoint: window.matchMedia('(min-width: 768px)'),
-  callback: function callback(swiper) {
-    swiper.update();
-    swiper.destroy(true, true);
-  }
-}, {
-  breakpoint: window.matchMedia('(max-width: 767px)'),
-  callback: function callback(swiper) {
-    if (swiper.destroyed) {
-      videosSwiper = generateSwipers({
-        swiperClass: 'videos-swiper',
-        swiperConfig: videosSwiperConfig
-      });
-    }
-  }
-}];
-updateSwiperOnBreakpoint(videosSwiperBreakpoints, videosSwiper);
+updateSwiperOnBreakpoint(['(min-width: 768px)'], ['(max-width: 767px)'], videosSwiper, 'videos-swiper', videosSwiperConfig);

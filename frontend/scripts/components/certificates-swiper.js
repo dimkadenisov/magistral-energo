@@ -30,25 +30,10 @@ let certificatesSwiper = generateSwipers({
 	swiperConfig: certificatesSwiperConfig,
 });
 
-const certificatesSwiperBreakpoints = [
-	{
-		breakpoint: window.matchMedia('(min-width: 768px)'),
-		callback: swiper => {
-			swiper.update();
-			swiper.destroy(true, true);
-		},
-	},
-	{
-		breakpoint: window.matchMedia('(max-width: 767px)'),
-		callback: swiper => {
-			if (swiper.destroyed) {
-				certificatesSwiper = generateSwipers({
-					swiperClass: 'certificates-swiper',
-					swiperConfig: certificatesSwiperConfig,
-				});
-			}
-		},
-	},
-];
-
-updateSwiperOnBreakpoint(certificatesSwiperBreakpoints, certificatesSwiper);
+updateSwiperOnBreakpoint(
+	['(min-width: 768px)'],
+	['(max-width: 767px)'],
+	certificatesSwiper,
+	'certificates-swiper',
+	certificatesSwiperConfig,
+);

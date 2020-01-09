@@ -30,25 +30,10 @@ let imagesSwiper = generateSwipers({
 	swiperConfig: imagesSwiperConfig,
 });
 
-const imagesSwiperBreakpoints = [
-	{
-		breakpoint: window.matchMedia('(min-width: 768px)'),
-		callback: swiper => {
-			swiper.update();
-			swiper.destroy(true, true);
-		},
-	},
-	{
-		breakpoint: window.matchMedia('(max-width: 767px)'),
-		callback: swiper => {
-			if (swiper.destroyed) {
-				imagesSwiper = generateSwipers({
-					swiperClass: 'images-swiper',
-					swiperConfig: imagesSwiperConfig,
-				});
-			}
-		},
-	},
-];
-
-updateSwiperOnBreakpoint(imagesSwiperBreakpoints, imagesSwiper);
+updateSwiperOnBreakpoint(
+	['(min-width: 768px)'],
+	['(max-width: 767px)'],
+	imagesSwiper,
+	'images-swiper',
+	imagesSwiperConfig,
+);
