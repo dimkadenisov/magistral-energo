@@ -61,9 +61,9 @@ html(lang="ru")
   body
     object(data="assets/img/icons/sprite.svg" type="image/svg+xml" style="width: 0; height: 0; display: none;")
       include ../../assets/icons/sprite/symbol/svg/sprite.symbol.svg
-    +header
+    +header(data-print="hide")
     block content
-    +footer
+    +footer(data-print="hide")
 
     script(src="scripts/libraries/jquery.min.js")
     script(src="scripts/libraries/swiper.min.js")

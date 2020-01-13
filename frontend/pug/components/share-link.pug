@@ -6,13 +6,13 @@ mixin share-link(props = {})
   case icon
 
     default
-      a(href="#" class= `share-link share-link_${icon} ${classes}`)
+      a(href="#" class= `share-link share-link_${icon}`)&attributes(attributes)
         svg.share-link__icon
           use(xlink:href=`#${icon}`)
 
     when 'email'
       .share-link__wrapper
-        button(type="button" class= `share-link share-link_${icon} ${classes}`)
+        button(type="button" class= `share-link share-link_${icon}`)&attributes(attributes)
           svg.share-link__icon
             use(xlink:href=`#${icon}`)
         +email-form

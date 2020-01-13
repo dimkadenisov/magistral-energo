@@ -1,11 +1,10 @@
 mixin product-name(props = {})
-  - const {classes = ''} = props;
 
-  div(class= `product-name ${classes}`)
+  .product-name&attributes(attributes)
     .container
       .row
         .col-7.col-sm-4.col-md-3.col-lg-2
-          img(src="assets/img/siemens.jpg", alt="siemens").product-name__logo
+          img(src="assets/img/siemens.jpg" alt="siemens").product-name__logo
           a(href="#").product-name__link
             span Официальный поставщик
         .col-12.col-lg-10
