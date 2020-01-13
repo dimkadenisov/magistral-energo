@@ -49,6 +49,25 @@
 			right: 0;
 		}
 	}
+
+	&__stamp {
+		position: absolute;
+		top: 2%;
+		left: 2%;
+		width: 30%;
+		padding-top: 30%;
+		z-index: 2;
+
+		img {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			max-width: 100%;
+			max-height: 100%;
+			object-fit: contain;
+			transform: translate(-50%, -50%);
+		}
+	}
 }
 
 @media screen and (max-width: 1199px) {

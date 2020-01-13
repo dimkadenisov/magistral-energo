@@ -62,3 +62,9 @@
 		width: max-content;
 	}
 }
+
+@media screen and (max-width: 767px) {
+	.search-sections {
+		display: none;
+	}
+}
