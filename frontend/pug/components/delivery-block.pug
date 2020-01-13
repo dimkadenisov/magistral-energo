@@ -1,8 +1,7 @@
 mixin delivery-block(props = {})
   include deliveries-list
-  - const {classes = ''} = props;
 
-  div(class= `delivery-block ${classes}`)
+  .delivery-block&attributes(attributes)
     span.delivery-block__text Доставка в
     |
     |

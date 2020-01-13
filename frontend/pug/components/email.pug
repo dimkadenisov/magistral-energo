@@ -1,5 +1,5 @@
 mixin email(props = {})
-  - const {classes = '', email } = props;
+  - const { email } = props;
 
-  a(href=`mailto:${email}` class= `email ${classes}`)
+  a(href=`mailto:${email}`).email&attributes(attributes)
     span.email__text= email

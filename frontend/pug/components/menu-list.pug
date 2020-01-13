@@ -2,9 +2,8 @@ mixin menu-list(props = {})
   include menu-item
   include submenu-list
 
-  - const { classes = '' } = props;
 
-  ul(class = `menu-list ${classes}`)
+  ul.menu-list&attributes(attributes)
     li.menu-list__item
       +menu-item
         |Кабель, провод

@@ -1,16 +1,14 @@
 mixin social-block(props = {})
   include social-link
 
-  - const {classes = ''} = props;
-
-  ul(class= `social-block ${classes}`)
+  ul.social-block&attributes(attributes)
     li.social-block__item
-      +social-link({iconId: 'vk', classes: 'social-link_vk'})
+      +social-link({iconId: 'vk'})(class='social-link_vk')
     li.social-block__item
-      +social-link({iconId: 'facebook', classes: 'social-link_facebook'})
+      +social-link({iconId: 'facebook'})(class='social-link_facebook')
     li.social-block__item
-      +social-link({iconId: 'viber', classes: 'social-link_viber'})
+      +social-link({iconId: 'viber'})(class='social-link_viber')
     li.social-block__item
-      +social-link({iconId: 'whatsapp', classes: 'social-link_whatsapp'})
+      +social-link({iconId: 'whatsapp'})(class='social-link_whatsapp')
     li.social-block__item
-      +social-link({iconId: 'youtube', classes: 'social-link_youtube'})
+      +social-link({iconId: 'youtube'})(class='social-link_youtube')

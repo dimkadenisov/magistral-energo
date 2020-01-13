@@ -2,10 +2,9 @@ mixin header-actions(props = {})
 
   include action
 
-  - const { classes = '' } = props;
 
 
-  ul(class = `header-actions ${classes}`)
+  ul.header-actions&attributes(attributes)
     li.header-actions__item
       +action
         |Быстрый заказ
@@ -13,7 +12,7 @@ mixin header-actions(props = {})
       +action
         |Импорт списка из XLS
     li.header-actions__item
-      +action({classes: 'action_orange'})
+      +action(class='action_orange')
         |Мой бонус!
     li.header-actions__item
       +action

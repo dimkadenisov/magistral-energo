@@ -1,8 +1,7 @@
 mixin buy-buttons-block(props = {})
   include button
-  - const {classes = ''} = props;
 
-  div(class= `buy-buttons-block ${classes}`)
+  .buy-buttons-block&attributes(attributes)
     .buy-buttons-block__content
       +button({border: 'primary'})
         |В заказ

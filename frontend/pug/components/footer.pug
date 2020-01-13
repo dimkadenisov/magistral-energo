@@ -15,21 +15,21 @@ mixin footer
       .row
         .d-none.d-sm-block.col-6
           +footer-section({name: 'Каталог', colums: true, items: ['Категория товаров 1', 'Категория товаров с очень длинным названием как у Сименс', 'Категория товаров 1', 'Категория товаров с очень длинным названием как у Сименс', 'Категория товаров 1', 'Категория товаров с очень длинным названием как у Сименс', 'Категория товаров 1', 'Категория товаров 1', 'Категория товаров с очень длинным названием как у Сименс', 'Категория товаров 1', 'Категория товаров с очень длинным названием как у Сименс', 'Категория товаров 1', 'Категория товаров с очень длинным названием как у Сименс', 'Категория товаров 1']})
-            +logo({classes: 'd-lg-none'})
-            +text-small({classes: 'd-lg-none'})
+            +logo(class='d-lg-none')
+            +text-small(class='d-lg-none')
               |МагистральЭнергоИнжиниринг
-            +text-small({classes: 'd-lg-none'})
+            +text-small(class='d-lg-none')
               |Создание сайта -
               a(href="#") Айти Эскорт
         .d-none.d-lg-block.col-lg-3
           +footer-section({name: 'Покупателю', items: ['Юридическим лицам', 'Бонусная система', 'Доставка и оплата', 'Производители', 'О компании', 'Контакты', 'Политика обработки персональных данных']})
         .col-auto.col-lg-3.ml-0.ml-sm-auto
           +footer-section({name: 'Контакты'})
-            +logo({classes: 'd-none d-lg-block'})
+            +logo(class='d-none d-lg-block')
             +hot-line({iconId: 'phone'})
             +text-small
               |Единый телефон для Ваших заявок
             +email({email: 'zakaz@magistrenergo.ru'})
             +social-block
-    +footer-copyright({classes: 'd-none d-lg-block'})
+    +footer-copyright(class='d-none d-lg-block')
     +footer-bottom-line

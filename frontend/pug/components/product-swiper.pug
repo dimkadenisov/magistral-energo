@@ -1,8 +1,7 @@
 mixin product-swiper(props = {})
   include swiper-button
-  - const {classes = ''} = props;
 
-  div(class= `product-swiper ${classes}`)
+  .product-swiper&attributes(attributes)
     .product-swiper__content
       .swiper-wrapper
         a(href="assets/img/product-image.jpg" data-fancybox="product").product-swiper__item

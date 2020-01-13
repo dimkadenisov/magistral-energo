@@ -1,6 +1,5 @@
 mixin bold-link(props = {})
-  - const {classes = ''} = props;
 
-  a(href="#" class= `bold-link ${classes}`)
+  a(href="#").bold-link&attributes(attributes)
     b
       block

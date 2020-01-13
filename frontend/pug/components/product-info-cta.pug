@@ -1,9 +1,9 @@
 mixin product-info-cta(props = {})
   include button
-  - const {classes = ''} = props;
 
-  div(class= `product-info-cta ${classes}`)
-    +button({border: 'primary'})
-      |Заказать звонок
+  .product-info-cta&attributes(attributes)
+    +button({border: 'primary', tag: 'a'})(href="tel:88002507657" id="callback-button")
+      span.d-none.d-md-inline-block Заказать звонок
+      span.d-md-none Позвонить
     +button({border: 'gray-400'})
       |Написать

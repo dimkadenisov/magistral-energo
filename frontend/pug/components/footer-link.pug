@@ -1,6 +1,5 @@
 mixin footer-link(props = {})
-  - const {classes = ''} = props;
 
-  a(href="#" class= `footer-link ${classes}`)
+  a(href="#").footer-link&attributes(attributes)
     span
       block

@@ -5,7 +5,7 @@ mixin header-search
   include search-results
 
   form.header-search
-    +search-sections({classes: 'd-none d-md-flex'})
+    +search-sections(class='d-none d-md-flex')
     input(type="text" placeholder="Для поиска введите артикул или название товара...").header-search__input
     +header-search-button
     +search-results

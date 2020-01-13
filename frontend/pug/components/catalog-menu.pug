@@ -2,10 +2,7 @@ mixin catalog-menu(props = {})
 
   include menu-list
 
-  - const { classes = '' } = props;
-  - const classlist = 'catalog-menu ' + classes;
-
-  div(class= classlist)
+  .catalog-menu&attributes(attributes)
     button(type="button").catalog-menu__name.d-lg-none
       span.catalog-menu__text Каталог
-    +menu-list({classes: 'd-none d-lg-block'})
+    +menu-list(class="d-none d-lg-block")

@@ -1,8 +1,7 @@
 mixin deliveries-list(props = {})
   include transport-company
-  - const {classes = ''} = props;
 
-  ul(class= `deliveries-list ${classes}`)
+  ul.deliveries-list&attributes(attributes)
     li.deliveries-list__item
       +transport-company({logoUrl: 'assets/img/delovie-linii.png', name: 'Деловые линии', price: '1999', time: '3'})
     li.deliveries-list__item

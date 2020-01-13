@@ -7,9 +7,7 @@ mixin product-price-block(props = {})
   include quick-order-button
   include delivery-block
 
-  - const {classes = ''} = props;
-
-  div(class= `product-price-block ${classes}`)
+  .product-price-block&attributes(attributes)
     .product-price-block__content
       button.button.button_icon.button_star(type="button")
         svg.button__icon
@@ -20,7 +18,7 @@ mixin product-price-block(props = {})
       +additional-info
       .d-flex.mb-3
         +amount-block
-        +button({type: 'icon_left', variant: 'primary', iconId: 'truck', classes: 'button_order'})
+        +button({type: 'icon_left', variant: 'primary', iconId: 'truck'})(class='button_order')
           |в заказ
       .d-flex.mb-3
         +bonuses

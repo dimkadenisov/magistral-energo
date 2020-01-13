@@ -1,8 +1,7 @@
 mixin social-share(props = {})
   include share-link
-  - const {classes = ''} = props;
 
-  div(class= `social-share ${classes}`)
+  .social-share&attributes(attributes)
     span.social-share__text
       |Отправить
       br

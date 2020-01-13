@@ -1,7 +1,7 @@
 mixin swiper-button(props = {})
-  - const {classes = '', side} = props;
+  - const {side} = props;
 
-  button(type="button" class= `swiper-button swiper-button_${side} ${classes}`)
+  button(type="button" class= `swiper-button swiper-button_${side}`)&attributes(attributes)
     case side
       when 'left'
         svg.swiper-button__icon

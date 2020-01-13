@@ -14,6 +14,26 @@ $('.button-to-top').click(function () {
 });
 "use strict";
 
+$('#callback-button').click(function (e) {
+  if (window.matchMedia('(min-width: 768px)').matches) {
+    e.preventDefault();
+    $.fancybox.open({
+      src: '#callback-popup',
+      type: 'inline',
+      touch: false,
+      opts: {
+        closeBtn: false,
+        smallBtn: false,
+        buttons: []
+      }
+    });
+  }
+});
+$('#callback-popup .popup-button-close').click(function () {
+  $.fancybox.close(true);
+});
+"use strict";
+
 var certificatesSwiperConfig = {
   init: true,
   slideClass: 'certificates-swiper__item',

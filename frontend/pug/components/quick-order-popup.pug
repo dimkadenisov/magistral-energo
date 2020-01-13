@@ -3,12 +3,13 @@ mixin quick-order-popup(props = {})
   include quick-order-form
   include popup-button-close
 
+  - const {callback = false } = props;
 
   .quick-order-popup__wrapper&attributes(attributes)
     .quick-order-popup
-      img(src="assets/img/quick-order-image.jpg", alt="Изображение").quick-order-popup__img
+      img(src="assets/img/quick-order-image.jpg" alt="Изображение").quick-order-popup__img
       +popup-button-close
       .quick-order-popup__content
         +heading
-          |Быстрый заказ
-        +quick-order-form
+          |Обратный звонок
+        +quick-order-form({callback})

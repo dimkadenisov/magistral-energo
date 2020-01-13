@@ -1,9 +1,7 @@
 mixin footer-copyright(props = {})
   include text-small
 
-  - const {classes = ''} = props;
-
-  div(class= `footer-copyright ${classes}`)
+  .footer-copyright&attributes(attributes)
     .container
       .row
         .col-12

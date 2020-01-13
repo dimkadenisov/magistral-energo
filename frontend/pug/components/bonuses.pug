@@ -1,8 +1,7 @@
 mixin bonuses(props = {})
   include question
-  - const {classes = ''} = props;
 
-  div(class= `bonuses ${classes}`)
+  .bonuses&attributes(attributes)
     span.bonuses__text Начислим бонусов:
     |
     |

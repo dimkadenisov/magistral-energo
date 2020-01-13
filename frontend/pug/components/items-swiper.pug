@@ -2,14 +2,14 @@ mixin items-swiper(props = {})
   include swiper-button
   include price
   include heading
-  - const {heading = '', name = '', classes = ''} = props;
+  - const {heading = '', name = ''} = props;
 
-  div(class= `items-swiper ${classes}`)
+  .items-swiper&attributes(attributes)
     .items-swiper__header
       +heading= heading
       .items-swiper__buttons
-        +swiper-button({side: 'left', classes: 'swiper-button_stroke'})
-        +swiper-button({side: 'right', classes: 'swiper-button_stroke'})
+        +swiper-button({side: 'left'})(class='swiper-button_stroke')
+        +swiper-button({side: 'right'})(class='swiper-button_stroke')
 
     .items-swiper__content
       .swiper-wrapper

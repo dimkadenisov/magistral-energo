@@ -14,6 +14,25 @@
 				margin-bottom: 7px;
 			}
 		}
+
+		.button_border_primary {
+			.button__text {
+				span {
+					color: inherit;
+					text-decoration: inherit;
+				}
+			}
+
+			&:hover,
+			&:focus {
+				.button__text {
+					span {
+						color: inherit;
+						text-decoration: inherit;
+					}
+				}
+			}
+		}
 	}
 }
 

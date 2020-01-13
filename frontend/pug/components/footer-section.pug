@@ -2,9 +2,9 @@ mixin footer-section(props = {})
   include footer-section-name
   include footer-section-list
 
-  - const {classes = '', name= '', items = '', colums = false} = props;
+  - const {name= '', items = '', colums = false} = props;
 
-  section(class= `footer-section ${classes}`)
+  section.footer-section&attributes(attributes)
     if name !== ''
       +footer-section-name(class='d-none d-lg-block')= name
     if items !== ''

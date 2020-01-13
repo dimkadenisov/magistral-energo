@@ -1,6 +1,6 @@
 mixin button(props = {})
 
-  - let {type='', variant='', tag='button', size='', iconId='', border='', classes=''} = props
+  - let {type='', variant='', tag='button', size='', iconId='', border=''} = props
 
   - let classList= 'button'
 
@@ -15,9 +15,6 @@ mixin button(props = {})
 
   - if (border != '')
     - classList+= ` button_border_${border}`
-
-  - if (classes != '')
-    - classList+= ` ${classes}`
 
 
   case type

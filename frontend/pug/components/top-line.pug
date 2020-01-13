@@ -16,10 +16,10 @@ mixin top-line
       .row
         .col-12
           .top-line__content
-            +button({type: 'icon', iconId: 'burger', classes: 'button_burger d-lg-none'})
+            +button({type: 'icon', iconId: 'burger'})(class='button_burger d-lg-none')
 
             .top-line__left
-              +header-link({iconId: 'pin', classes: 'd-none d-lg-inline-flex'})
+              +header-link({iconId: 'pin'})(class='d-none d-lg-inline-flex')
                 |Санкт-Петербург
               +hot-line({iconId: 'phone', textClasses: 'd-inline d-md-none d-lg-inline'})
 

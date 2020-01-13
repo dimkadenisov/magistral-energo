@@ -4,9 +4,7 @@ mixin product-info(props = {})
   include product-info-cta
   include social-share
 
-  - const {classes = ''} = props;
-
-  div(class= `product-info ${classes}`)
+  .product-info&attributes(attributes)
     .product-info__content
       +info-list
       +bold-link

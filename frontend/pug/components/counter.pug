@@ -1,5 +1,4 @@
 mixin counter(props = {})
-  - const {classes = ''} = props;
 
-  span(class= `counter ${classes}`)
+  span.counter&attributes(attributes)
     block

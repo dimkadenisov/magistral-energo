@@ -3,9 +3,7 @@ mixin footer-bottom-line(props = {})
   include footer-bottom-line-item
   include button-to-top
 
-  - const {classes = ''} = props;
-
-  div(class= `footer-bottom-line__wrapper ${classes}`)
+  .footer-bottom-line__wrapper&attributes(attributes)
     .footer-bottom-line
       .container
         .row

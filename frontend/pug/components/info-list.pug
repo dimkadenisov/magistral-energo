@@ -1,7 +1,6 @@
 mixin info-list(props = {})
-  - const {classes = ''} = props;
 
-  ul(class= `info-list ${classes}`)
+  ul.info-list&attributes(attributes)
     li.info-list__item
       b Артикул:
       |
