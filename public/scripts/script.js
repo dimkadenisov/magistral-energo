@@ -461,7 +461,7 @@ $('.tab-heading').click(function () {
 "use strict";
 
 $(window).scroll(function () {
-  var offset = $(window).width > 991 ? 64 : 142;
+  var offset = $(window).width() <= 991 ? 142 : 64;
 
   if (document.querySelector('.tabs__wrapper').getBoundingClientRect().top <= offset && document.querySelector('#tabs').getBoundingClientRect().bottom > offset + 100) {
     $('.tabs').addClass('tabs_fixed');
