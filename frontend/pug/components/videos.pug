@@ -2,10 +2,13 @@ mixin videos(props = {})
   include tab-heading
   include videos-swiper
 
+  - const { fullWidth = true } = props;
+  - const colums = fullWidth ? 'col-12 col-xl-9' : 'col-12';
+
   .videos&attributes(attributes)
     +tab-heading
       |Видео
     .tab-content
       .row
-        .col-12.col-xl-9
+        div(class= colums)
           +videos-swiper

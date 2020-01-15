@@ -1,0 +1,7 @@
+mixin category(props = {})
+  include separate-image
+
+  .category&attributes(attributes)
+    +separate-image
+    span.category__text
+      block

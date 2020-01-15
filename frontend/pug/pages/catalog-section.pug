@@ -1,0 +1,105 @@
+extends ../components/page
+
+include ../components/breadcrumbs
+include ../components/product-name
+include ../components/product-swiper
+include ../components/product-info
+include ../components/product-price-block
+include ../components/items-swiper
+include ../components/buy-buttons-block
+include ../components/tabs
+include ../components/characteristics
+include ../components/overview
+include ../components/tech-info
+include ../components/manuals
+include ../components/reviews
+include ../components/certificates
+include ../components/videos
+include ../components/images
+include ../components/quick-order-popup
+include ../components/price-tab
+
+block title
+  |Раздел каталога
+
+block content
+  +breadcrumbs
+  +product-name({share: true})
+    |Низковольтное оборудование
+  .container
+    .row
+      .col-12.col-lg-3
+        sidebar
+          span biba
+      .col-12.col-lg-9
+        main.main
+          +tabs({
+            tabs: [
+              {
+                href: '#prices',
+                name: 'цены'
+              },
+              {
+                href: '#overview',
+                name: 'Обзор'
+              },
+              {
+                href: '#tech-info',
+                name: 'Тех. информация'
+              },
+              {
+                href: '#manuals',
+                name: 'Мануалы'
+              },
+              {
+                href: '#certificate',
+                name: 'Сертификаты'
+              },
+              {
+                href: '#video',
+                name: 'Видео'
+              },
+              {
+                href: '#image',
+                name: 'Фото'
+              },
+              {
+                href: '#reviews',
+                name: 'Отзывы'
+              }
+            ]
+          })(class="d-none d-md-flex tabs_col-9")
+
+          #tabs
+            .container
+              .row
+                .col-12.mb-5.mb-md-0
+
+                  +price-tab(id="prices")
+
+                  +overview({fullWidth: false})(id="overview" data-print="hide")
+
+                  +tech-info({fullWidth: false})(id="tech-info" data-print="hide")
+
+                  +manuals({fullWidth: false})(id="manuals" data-print="hide")
+
+                  +certificates({fullWidth: false})(id="certificate" data-print="hide")
+
+                  +videos({fullWidth: false})(id="video" data-print="hide")
+
+                  +images({fullWidth: false})(id="image" data-print="hide")
+
+                  +reviews(id="reviews" data-print="hide")
+
+    //- .container(data-print="hide")
+    //-   .row
+    //-     .col-12
+
+    //-       +items-swiper({heading: 'С этим товаром покупают', name: 'SIMATIC S7-300, SM321, МОДУЛЬ ВВОДА ДИСКРЕТНЫХ СИГНАЛОВ'})
+
+    //-       +items-swiper({heading: 'Просмотренные товары', name: 'SIMATIC S7-300, SM321, МОДУЛЬ ВВОДА ДИСКРЕТНЫХ СИГНАЛОВ'})
+
+    //-       +buy-buttons-block
+
+    //-       +quick-order-popup(id="quick-order-popup" style="display: none;")
+    //-       +quick-order-popup({callback: true})(id="callback-popup" style="display: none;")

@@ -1,0 +1,11 @@
+mixin categories-swiper(props = {})
+  include category
+
+  - const { categories = [] } = props;
+
+  .categories-swiper&attributes(attributes)
+    .swiper-wrapper
+      each category in categories
+        .categories-swiper__item
+          +category= category
+    .d-md-none.swiper-pagination

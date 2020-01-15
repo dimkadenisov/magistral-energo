@@ -24,6 +24,10 @@
 		width: 1110px;
 		z-index: 3;
 	}
+
+	&_col-9.tabs_fixed {
+		width: 825px;
+	}
 }
 
 @media screen and (max-width: 1199px) {
@@ -45,6 +49,10 @@
 
 		&_fixed {
 			width: 930px;
+		}
+
+		&_col-9.tabs_fixed {
+			width: 690px;
 		}
 	}
 }

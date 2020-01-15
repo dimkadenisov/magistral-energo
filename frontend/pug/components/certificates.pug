@@ -2,10 +2,13 @@ mixin certificates(props = {})
   include tab-heading
   include certificates-swiper
 
+  - const { fullWidth = true } = props;
+  - const colums = fullWidth ? 'col-12 col-xl-9' : 'col-12';
+
   .certificates&attributes(attributes)
     +tab-heading
       |Сертификаты
     .tab-content
       .row
-        .col-12.col-xl-9
+        div(class= colums)
           +certificates-swiper

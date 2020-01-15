@@ -2,13 +2,16 @@ mixin tech-info(props = {})
   include tab-heading
   include download-file
 
+  - const { fullWidth = true } = props;
+  - const colums = fullWidth ? 'col-12 col-xl-9' : 'col-12';
+
   .tech-info&attributes(attributes)
     +tab-heading
-      |Техничесаая информация
+      |Техническая информация
 
     .tab-content
       .row
-        .col-12.col-xl-9
+        div(class= colums)
           +download-file({name: 'Каталог продукции «Аппараты защиты: автоматичеcкие выключатели и реле перегрузки Sirius»', size: '13.33 Мб'})
           +download-file({name: 'Брошюра «Низковольтные коммутационные аппараты Sirius Innovations»', size: '13.33 Мб'})
           +download-file({name: 'Каталог продукции «Аппараты защиты: автоматичеcкие выключатели и реле перегрузки Sirius»', size: '13.33 Мб'})

@@ -14,7 +14,10 @@ $('.tab-button').click(function(e) {
 });
 
 $(window).scroll(function() {
-	if (window.matchMedia('(min-width: 768px)').matches) {
+	if (
+		$('.tab-button').length &&
+		window.matchMedia('(min-width: 768px)').matches
+	) {
 		const offset = $(window).width() > 991 ? 166 : 245;
 		$('.tab-button').each(function(_, el) {
 			if ($(el).hasClass('tab-button_active')) return;

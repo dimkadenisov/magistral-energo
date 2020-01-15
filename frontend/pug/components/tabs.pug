@@ -1,32 +1,13 @@
 mixin tabs(props = {})
   include tab-button
 
-  .tabs__wrapper&attributes(attributes)
+  - const { tabs= [] } = props;
+
+  .tabs__wrapper.d-none.d-md-flex
     .container
       .row
         .col-12
-          ul.tabs
-            li.tabs__item
-              +tab-button(href="#characteristics" class="tab-button_active")
-                |Характеристики
-            li.tabs__item
-              +tab-button(href="#overview")
-                |Обзор
-            li.tabs__item
-              +tab-button(href="#tech-info")
-                |Тех. информация
-            li.tabs__item
-              +tab-button(href="#manuals")
-                |Мануалы
-            li.tabs__item
-              +tab-button(href="#certificate")
-                |Сертификаты
-            li.tabs__item
-              +tab-button(href="#video")
-                |Видео
-            li.tabs__item
-              +tab-button(href="#image")
-                |Фото
-            li.tabs__item
-              +tab-button(href="#reviews")
-                |Отзывы
+          ul.tabs&attributes(attributes)
+            each tab, index in tabs
+              li.tabs__item
+                +tab-button(href= tab.href class= index ? '' : "tab-button_active")= tab.name

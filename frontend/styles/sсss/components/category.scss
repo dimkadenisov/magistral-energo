@@ -1,0 +1,17 @@
+.category {
+	margin-bottom: 25px;
+
+	.separate-image {
+		margin-bottom: 10px;
+	}
+
+	&__text {
+		display: block;
+		padding-right: 6px;
+		padding-left: 6px;
+		font-size: 14px;
+		text-align: center;
+		word-wrap: break-word;
+		white-space: pre-wrap;
+	}
+}

@@ -25,6 +25,7 @@ block content
   +breadcrumbs
   main.main
     +product-name
+      |БЕСПРЕДОХРАНИТЕЛЬНАЯ ФИДЕРНАЯ СБОРКА ПРЯМОГО ПУСКА, AC 400V, ТИПОРАЗМЕР S00, 0.14.. .0.2A, AC 230V, ВИНТОВЫЕ КЛЕММЫ, ДЛЯ МОНТАЖА НА СТАНДАРТНОЙ МОНТАЖ
     .container
       .row
         .col-12.col-md-6.col-lg-4.mr-5.mr-lg-0
@@ -34,7 +35,42 @@ block content
         .col-12.col-md-6.col-lg-4
           +product-price-block
 
-    +tabs(class="d-none d-md-flex")
+    +tabs({
+      tabs: [
+        {
+          href: '#characteristics',
+          name: 'Характеристики'
+        },
+        {
+          href: '#overview',
+          name: 'Обзор'
+        },
+        {
+          href: '#tech-info',
+          name: 'Тех. информация'
+        },
+        {
+          href: '#manuals',
+          name: 'Мануалы'
+        },
+        {
+          href: '#certificate',
+          name: 'Сертификаты'
+        },
+        {
+          href: '#video',
+          name: 'Видео'
+        },
+        {
+          href: '#image',
+          name: 'Фото'
+        },
+        {
+          href: '#reviews',
+          name: 'Отзывы'
+        }
+      ]
+    })
 
     #tabs
       .container

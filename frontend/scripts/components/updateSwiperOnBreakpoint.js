@@ -5,6 +5,7 @@ function updateSwiperOnBreakpoint(
 	swiperClass,
 	swiperConfig,
 ) {
+	if (!swipers) return;
 	breakpointsToDestroy.forEach(breakpoint => {
 		window.matchMedia(breakpoint).addListener(() => {
 			if (window.matchMedia(breakpoint).matches) {

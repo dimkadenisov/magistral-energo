@@ -2,10 +2,13 @@ mixin images(props = {})
   include tab-heading
   include images-swiper
 
+  - const { fullWidth = true } = props;
+  - const colums = fullWidth ? 'col-12 col-xl-9' : 'col-12';
+
   .images&attributes(attributes)
     +tab-heading
       |Фото
     .tab-content
       .row
-        .col-12.col-xl-9
+        div(class= colums)
           +images-swiper

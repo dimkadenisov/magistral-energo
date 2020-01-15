@@ -34,6 +34,25 @@ $('#callback-popup .popup-button-close').click(function () {
 });
 "use strict";
 
+var categoriesSwiperConfig = {
+  slideClass: 'categories-swiper__item',
+  slidesPerView: 2,
+  spaceBetween: 30,
+  observer: true,
+  observerParents: true,
+  observeSlideChildren: true,
+  allowTouchMove: true,
+  pagination: {
+    el: '.swiper-pagination'
+  }
+};
+var categoriesSwiper = generateSwipers({
+  swiperClass: 'categories-swiper',
+  swiperConfig: categoriesSwiperConfig
+});
+updateSwiperOnBreakpoint(['(min-width: 768px)'], ['(max-width: 767px)'], categoriesSwiper, 'categories-swiper', categoriesSwiperConfig);
+"use strict";
+
 var certificatesSwiperConfig = {
   init: true,
   slideClass: 'certificates-swiper__item',
@@ -457,7 +476,7 @@ $('.tab-button').click(function (e) {
   }, 300);
 });
 $(window).scroll(function () {
-  if (window.matchMedia('(min-width: 768px)').matches) {
+  if ($('.tab-button').length && window.matchMedia('(min-width: 768px)').matches) {
     var offset = $(window).width() > 991 ? 166 : 245;
     $('.tab-button').each(function (_, el) {
       if ($(el).hasClass('tab-button_active')) return;
@@ -473,9 +492,7 @@ $(window).scroll(function () {
 
 $('.tab-heading').click(function () {
   if (window.matchMedia('(max-width: 767px)').matches) {
-    $(this).toggleClass('tab-heading_opened'); // $(this)
-    // 	.next()
-    // 	.toggleClass('d-none');
+    $(this).toggleClass('tab-heading_opened');
   }
 });
 "use strict";
@@ -498,6 +515,7 @@ cssVars({
 "use strict";
 
 function updateSwiperOnBreakpoint(breakpointsToDestroy, breakpointsToInit, swipers, swiperClass, swiperConfig) {
+  if (!swipers) return;
   breakpointsToDestroy.forEach(function (breakpoint) {
     window.matchMedia(breakpoint).addListener(function () {
       if (window.matchMedia(breakpoint).matches) {

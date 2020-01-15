@@ -1,0 +1,38 @@
+.categories-swiper {
+	.swiper-wrapper {
+		flex-wrap: wrap;
+	}
+
+	&__item {
+		width: 16.6666%;
+		flex-grow: 0;
+	}
+}
+
+@media screen and (max-width: 1199px) {
+	.categories-swiper {
+		&__item {
+			width: 20%;
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.categories-swiper {
+		&__item {
+			width: 25%;
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.categories-swiper {
+		.swiper-wrapper {
+			flex-wrap: nowrap;
+		}
+
+		&__item {
+			width: 50%;
+		}
+	}
+}
