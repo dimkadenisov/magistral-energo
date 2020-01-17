@@ -1,0 +1,14 @@
+mixin sort-block(props = {})
+  include sort-group
+  include button
+
+  .sort-block&attributes(attributes)
+    .d-flex.flex-column.flex-md-row.flex-shrink-0
+      +sort-group({options: ['Названию', 'Новизне', 'Возрастанию цены', 'Убыванию цены']})
+        |Сортировать по:
+      +sort-group({options: ['16', '24', '36', '48']})
+        |Показывать по:
+    .sort-block__buttons
+      +button({type: 'icon', iconId: 'xls'})(class="xls")
+      +button({type: 'icon', iconId: 'burger'})(class="layout_rows")
+      +button({type: 'icon', iconId: 'multi-layout'})(class="layout_multi")

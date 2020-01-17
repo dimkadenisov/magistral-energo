@@ -1,0 +1,10 @@
+mixin select(props = {})
+
+  - const { options } = props;
+
+  .select&attributes(attributes)
+    select.select__select
+      each option in options
+        option.select__option(value=option)= option
+    svg.select__arrow
+      use(xlink:href="#arrow-down")

@@ -1,0 +1,121 @@
+.sort-block {
+	display: flex;
+	align-items: center;
+	padding: 10px 30px;
+	margin-bottom: 35px;
+	background-color: var(--gray-100);
+
+	.sort-group {
+		margin-right: 40px;
+	}
+
+	&__buttons {
+		display: flex;
+		align-items: center;
+		margin-left: auto;
+	}
+
+	.button_icon {
+		min-height: auto;
+		padding: 0;
+		border: none;
+		color: var(--gray-400);
+
+		&:hover,
+		&:focus {
+			color: var(--green-400);
+		}
+	}
+
+	.xls {
+		width: 28px;
+		height: 28px;
+		margin-right: 38px;
+
+		.button__icon {
+			width: 28px;
+			height: 28px;
+		}
+	}
+
+	.layout_rows {
+		width: 22px;
+		height: 22px;
+		margin-right: 20px;
+
+		.button__icon {
+			width: 22px;
+			height: 22px;
+		}
+	}
+
+	.layout_multi {
+		width: 15px;
+		height: 15px;
+
+		.button__icon {
+			width: 15px;
+			height: 15px;
+		}
+	}
+}
+
+@media screen and (max-width: 1199px) {
+	.sort-block {
+		margin-right: -15px;
+		margin-left: -15px;
+
+		.sort-group {
+			margin-right: 20px;
+		}
+
+		.xls {
+			margin-right: 15px;
+		}
+
+		.layout_rows {
+			margin-right: 15px;
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.sort-block {
+		.sort-group {
+			&:first-of-type {
+				margin-bottom: 8px;
+			}
+		}
+
+		&__buttons {
+			justify-content: flex-end;
+			align-items: center;
+			flex-wrap: wrap;
+			width: 64px;
+		}
+
+		.xls {
+			order: 1;
+			margin-top: 16px;
+			margin-right: 0;
+		}
+
+		.layout_multi {
+			margin-right: 6px;
+		}
+	}
+}
+
+@media screen and (max-width: 575px) {
+	.sort-block {
+		position: relative;
+		height: 92px;
+
+		&__content {
+			position: absolute;
+			right: -15px;
+			left: -15px;
+			z-index: 2;
+		}
+	}
+}

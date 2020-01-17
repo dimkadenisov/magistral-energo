@@ -1,0 +1,9 @@
+mixin sort-group(props = {})
+  include select
+
+  - const { options } = props;
+
+  .sort-group&attributes(attributes)
+    b.sort-group__text.d-none.d-md-inline-block
+      block
+    +select({options: options})

@@ -2,6 +2,7 @@ mixin price-tab(props = {})
   include tab-heading
   include separate-image
   include categories-swiper
+  include sort-block
 
   .characteristics&attributes(attributes)
     +tab-heading(class="tab-heading_opened")
@@ -31,3 +32,5 @@ mixin price-tab(props = {})
             'Устройства оптической (световой) и акустической (звуковой) сигнализации',
             'Элементы управления для светосигнальной арматуры'
           ]})
+        .col-12
+          +sort-block
