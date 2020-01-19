@@ -1,0 +1,12 @@
+mixin recently-viewed(props = {})
+  include viewed-item
+
+  .recently-viewed&attributes(attributes)
+    span.recently-viewed__heading Просмотренные товары
+    ul.recently-viewed__list
+      li.recently-viewed__item
+        +viewed-item
+          |LOGO! POWER 1,3, СТАБИЛИЗИР. БЛОК ПИТАНИЯ: ГАЛЬВАН. РАЗД. ВХОД. И ВЫХОД. ЦЕПЕЙ; 1-ФАЗН. ВХОДН. НАПР. ~85 ... 264 В,
+      li.recently-viewed__item
+        +viewed-item
+          |LOGO! POWER 1,3, СТАБИЛИЗИР. БЛОК ПИТАНИЯ: ГАЛЬВАН. РАЗД. ВХОД. И ВЫХОД. ЦЕПЕЙ; 1-ФАЗН. ВХОДН. НАПР. ~85 ... 264 В,

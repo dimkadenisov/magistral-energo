@@ -9,6 +9,6 @@ mixin sort-block(props = {})
       +sort-group({options: ['16', '24', '36', '48']})
         |Показывать по:
     .sort-block__buttons
-      +button({type: 'icon', iconId: 'xls'})(class="xls")
-      +button({type: 'icon', iconId: 'burger'})(class="layout_rows")
-      +button({type: 'icon', iconId: 'multi-layout'})(class="layout_multi")
+      +button({type: 'icon', iconId: 'xls'})(class="button_xls")
+      +button({type: 'icon', iconId: 'burger'})(class="button_layout button_layout_rows button_layout_active")
+      +button({type: 'icon', iconId: 'multi-layout'})(class="button_layout button_layout_multi")

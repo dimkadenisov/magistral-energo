@@ -1,0 +1,37 @@
+mixin product-card(props = {})
+  include separate-image
+  include product-links
+  include price
+  include amount-block
+  include button
+  include button-star
+
+  -
+    const {
+      name = 'SIMATIC S7-300, SM321, МОДУЛЬ ВВОДА ДИСКРЕТНЫХ СИГНАЛОВ: ОПТОЭЛЕКТРОНННОЕ',
+      vendoreCode = '54HFDJ532LH4B',
+    } = props;
+
+  .product-card&attributes(attributes)
+    +separate-image
+    span.product-card__name= name
+    .product-card__vendor-code
+      b Артикул:
+      |
+      |
+      span= vendoreCode
+    +product-links({links: [
+      'Характеристики',
+      'Обзор',
+      'Тех. информация',
+      'Мануалы',
+      'Сертификаты',
+      'Видео',
+      'Фото',
+      'Отзывы'
+    ]})
+    +price(class="price_vertical-reverse")
+    .product-card__buy
+      +amount-block(class="amount-block_border amount-block_small")
+      +button({variant: 'primary', type: 'icon', iconId: 'truck'})
+    +button-star

@@ -1,5 +1,6 @@
 mixin product-price-block(props = {})
   include amount-block
+  include button-star
   include button
   include price
   include additional-info
@@ -9,11 +10,7 @@ mixin product-price-block(props = {})
 
   .product-price-block&attributes(attributes)
     .product-price-block__content
-      button.button.button_icon.button_star(type="button")
-        svg.button__icon
-          use(xlink:href= '#star-stroke')
-        svg.button__icon
-          use(xlink:href= '#star-filled')
+      +button-star
       +price
       +additional-info
       .d-flex.mb-3

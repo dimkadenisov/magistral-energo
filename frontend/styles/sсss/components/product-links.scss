@@ -1,0 +1,11 @@
+.product-links {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+
+	&__item {
+		&:nth-last-child(n + 2) {
+			margin-right: 10px;
+		}
+	}
+}

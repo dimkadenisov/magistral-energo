@@ -1,0 +1,12 @@
+mixin site-pagination-link(props = {})
+
+  - const { prev = false, next = false } = props
+
+  if prev || next
+    a(href="#").site-pagination-link&attributes(attributes)
+      svg.site-pagination-link__icon
+        use(xlink:href= prev ? '#arrow-left' : '#arrow-right')
+
+  else
+    a(href="#").site-pagination-link&attributes(attributes)
+      block

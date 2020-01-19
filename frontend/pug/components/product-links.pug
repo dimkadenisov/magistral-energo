@@ -1,0 +1,9 @@
+mixin product-links(props = {})
+  include link
+
+  - const { links } = props
+
+  ul.product-links&attributes(attributes)
+    each link in links
+      li.product-links__item
+        +link= link

@@ -1,0 +1,26 @@
+mixin site-pagination(props = {})
+  include site-pagination-link
+
+  ul.site-pagination&attributes(attributes)
+    li.site-pagination__item
+      +site-pagination-link({prev: true})
+    li.site-pagination__item
+      +site-pagination-link
+        |1
+    li.site-pagination__item
+      +site-pagination-link
+        |2
+    li.site-pagination__item
+      +site-pagination-link
+        |3
+    li.site-pagination__item
+      +site-pagination-link
+        |4
+    li.site-pagination__item
+      +site-pagination-link
+        |...
+    li.site-pagination__item
+      +site-pagination-link
+        |14
+    li.site-pagination__item
+      +site-pagination-link({next: true})

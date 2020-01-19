@@ -1,4 +1,6 @@
 .categories-swiper {
+	position: relative;
+	margin-bottom: 40px;
 	overflow: hidden;
 
 	.swiper-wrapper {
@@ -8,6 +10,7 @@
 	&__item {
 		width: 16.6666%;
 		flex-grow: 0;
+		margin-bottom: 25px;
 	}
 }
 

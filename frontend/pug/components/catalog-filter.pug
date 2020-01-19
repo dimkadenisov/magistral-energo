@@ -1,0 +1,194 @@
+mixin catalog-filter(props = {})
+
+  .catalog-filter
+    .catalog-smart-filter.bx-filter
+      .filter-heading Подбор по параметрам:
+      form.smartfilter(name='_form' action='/catalog/bolty_3/' method='get')
+        .filter-row.bx-filter-parameters-box.active
+          .filter-row-caption
+            a.filter-row-trigger(href='#')
+              span Цена
+          .filter-row-fields.bx-filter-block
+            span.bx-filter-container-modef
+              #modef.bx-filter-popup-result.right
+                | Выбрано:
+                |
+                |
+                span#modef_num 71
+                span.arrow
+                br
+                a(href='#' target='') Показать
+            .row.bx-filter-parameters-box-container
+              .col-6.bx-filter-parameters-box-container-block.bx-left
+                span.bx-ft-sub От
+                .bx-filter-input-container
+                  input#arrFilter_P3_MIN.min-price(type='text')
+              .col-6.bx-filter-parameters-box-container-block.bx-right
+                span.bx-ft-sub До
+                .bx-filter-input-container
+                  input#arrFilter_P3_MAX.max-price(type='text' name='arrFilter_P3_MAX' value='' size='5' onkeyup='smartFilter.keyup(this)')
+              .col-12.bx-ui-slider-track-container
+                #drag_track_eccbc87e4b5ce2fe28308fd9f2a7baf3.bx-ui-slider-track
+                  #colorUnavailableActive_eccbc87e4b5ce2fe28308fd9f2a7baf3.bx-ui-slider-pricebar-vd
+                  #colorAvailableInactive_eccbc87e4b5ce2fe28308fd9f2a7baf3.bx-ui-slider-pricebar-vn
+                  #colorAvailableActive_eccbc87e4b5ce2fe28308fd9f2a7baf3.bx-ui-slider-pricebar-v
+                  #drag_tracker_eccbc87e4b5ce2fe28308fd9f2a7baf3.bx-ui-slider-range
+                    a#left_slider_eccbc87e4b5ce2fe28308fd9f2a7baf3.bx-ui-slider-handle.left(style="left: 5px" data-value="12")
+                    a#right_slider_eccbc87e4b5ce2fe28308fd9f2a7baf3.bx-ui-slider-handle.right(style="right: 5px" data-value="67")
+        .filter-row.bx-filter-parameters-box.active
+          .filter-row-caption
+            a.filter-row-trigger(href='#')
+              span Напряжение
+          .filter-row-fields.bx-filter-block
+            span.bx-filter-container-modef
+            .row.bx-filter-parameters-box-container
+              .col-12.multiple-columns
+                .checkbox
+                  label.bx-filter-param-label
+                    span.bx-filter-input-checkbox
+                      input#arrFilter_118_3711360258(type='checkbox').visually-hidden
+                      span.bx-filter-param-text.field-text(title='1/2"') 112
+                .checkbox
+                  label.bx-filter-param-label
+                    span.bx-filter-input-checkbox
+                      input(type='checkbox').visually-hidden
+                      span.bx-filter-param-text.field-text(title='1/4"') 12
+                .checkbox
+                  label.bx-filter-param-label
+                    span.bx-filter-input-checkbox
+                      input(type='checkbox').visually-hidden
+                      span.bx-filter-param-text.field-text(title='3/4"') 3/4&quot;
+                .checkbox
+                  label.bx-filter-param-label
+                    span.bx-filter-input-checkbox
+                      input(type='checkbox').visually-hidden
+                      span.bx-filter-param-text.field-text(title='3/8"') 3/8&quot;
+                .checkbox
+                  label.bx-filter-param-label
+                    span.bx-filter-input-checkbox
+                      input(type='checkbox').visually-hidden
+                      span.bx-filter-param-text.field-text(title='5/16"') 5/16&quot;
+        .filter-row.bx-filter-parameters-box.active
+          .filter-row-caption
+            a.filter-row-trigger(href='#')
+              span Ширина
+          .filter-row-fields.bx-filter-block
+            span.bx-filter-container-modef
+            .row.bx-filter-parameters-box-container
+              .col-12.multiple-columns
+                .checkbox
+                  label.bx-filter-param-label
+                    span.bx-filter-input-checkbox
+                      input(type='checkbox').visually-hidden
+                      span.bx-filter-param-text.field-text(title='1 1/2"') 1 1/2&quot;
+                .checkbox
+                  label.bx-filter-param-label
+                    span.bx-filter-input-checkbox
+                      input(type='checkbox').visually-hidden
+                      span.bx-filter-param-text.field-text(title='1 1/4"') 1 1/4&quot;
+                .checkbox
+                  label.bx-filter-param-label
+                    span.bx-filter-input-checkbox
+                      input(type='checkbox').visually-hidden
+                      span.bx-filter-param-text.field-text(title='1"') 1&quot;
+                .checkbox
+                  label.bx-filter-param-label
+                    span.bx-filter-input-checkbox
+                      input(type='checkbox').visually-hidden
+                      span.bx-filter-param-text.field-text(title='1/2"') 1/2&quot;
+                .checkbox
+                  label.bx-filter-param-label
+                    span.bx-filter-input-checkbox
+                      input(type='checkbox').visually-hidden
+                      span.bx-filter-param-text.field-text(title='1/4"') 1/4&quot;
+                .checkbox
+                  label.bx-filter-param-label
+                    span.bx-filter-input-checkbox
+                      input(type='checkbox').visually-hidden
+                      span.bx-filter-param-text.field-text(title='125') 125
+                .checkbox
+                  label.bx-filter-param-label
+                    span.bx-filter-input-checkbox
+                      input(type='checkbox').visually-hidden
+                      span.bx-filter-param-text.field-text(title='190') 190
+        .filter-row.bx-filter-parameters-box.active
+          .filter-row-caption
+            a.filter-row-trigger(href='#')
+              span Высота
+          .filter-row-fields.bx-filter-block
+            span.bx-filter-container-modef
+            .row.bx-filter-parameters-box-container
+              .col-12.multiple-columns
+                .checkbox
+                  label.bx-filter-param-label
+                    span.bx-filter-input-checkbox
+                      input#arrFilter_118_3711360258(type='checkbox').visually-hidden
+                      span.bx-filter-param-text.field-text(title='1/2"') 1/2&quot;
+                .checkbox
+                  label.bx-filter-param-label
+                    span.bx-filter-input-checkbox
+                      input(type='checkbox').visually-hidden
+                      span.bx-filter-param-text.field-text(title='1/4"') 1/4&quot;
+                .checkbox
+                  label.bx-filter-param-label
+                    span.bx-filter-input-checkbox
+                      input(type='checkbox').visually-hidden
+                      span.bx-filter-param-text.field-text(title='3/4"') 3/4&quot;
+                .checkbox
+                  label.bx-filter-param-label
+                    span.bx-filter-input-checkbox
+                      input(type='checkbox').visually-hidden
+                      span.bx-filter-param-text.field-text(title='3/8"') 3/8&quot;
+                .checkbox
+                  label.bx-filter-param-label
+                    span.bx-filter-input-checkbox
+                      input(type='checkbox').visually-hidden
+                      span.bx-filter-param-text.field-text(title='5/16"') 5/16
+        .filter-row.bx-filter-parameters-box.active
+          .filter-row-caption
+            a.filter-row-trigger(href='#')
+              span Температура
+          .filter-row-fields.bx-filter-block
+            span.bx-filter-container-modef
+            .row.bx-filter-parameters-box-container
+              .col-12.multiple-columns
+                .checkbox
+                  label.bx-filter-param-label
+                    span.bx-filter-input-checkbox
+                      input(type='checkbox').visually-hidden
+                      span.bx-filter-param-text.field-text(title='1 1/2"') 1 1/2
+                .checkbox
+                  label.bx-filter-param-label
+                    span.bx-filter-input-checkbox
+                      input(type='checkbox').visually-hidden
+                      span.bx-filter-param-text.field-text(title='1 1/4"') 1 1/4
+                .checkbox
+                  label.bx-filter-param-label
+                    span.bx-filter-input-checkbox
+                      input(type='checkbox').visually-hidden
+                      span.bx-filter-param-text.field-text(title='1"') 1
+                .checkbox
+                  label.bx-filter-param-label
+                    span.bx-filter-input-checkbox
+                      input(type='checkbox').visually-hidden
+                      span.bx-filter-param-text.field-text 1/2
+                .checkbox
+                  label.bx-filter-param-label
+                    span.bx-filter-input-checkbox
+                      input(type='checkbox').visually-hidden
+                      span.bx-filter-param-text.field-text(title='1/4"') 1/4
+                .checkbox
+                  label.bx-filter-param-label
+                    span.bx-filter-input-checkbox
+                      input(type='checkbox').visually-hidden
+                      span.bx-filter-param-text.field-text(title='125') 125
+                .checkbox
+                  label.bx-filter-param-label
+                    span.bx-filter-input-checkbox
+                      input(type='checkbox').visually-hidden
+                      span.bx-filter-param-text.field-text(title='190') 190
+        .submit-row
+          .bx-filter-parameters-box-container
+            input#set_filter.set-filter-button(type='button' name='set_filter' value='Показать')
+            input#del_filter.reset-filter-button(type='button' name='del_filter' value='Сбросить')
+        .clb

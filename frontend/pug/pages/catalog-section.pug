@@ -18,6 +18,8 @@ include ../components/videos
 include ../components/images
 include ../components/quick-order-popup
 include ../components/price-tab
+include ../components/catalog-filter
+include ../components/recently-viewed
 
 block title
   |Раздел каталога
@@ -30,7 +32,9 @@ block content
     .row
       .col-12.col-lg-3
         sidebar
-          span biba
+          +catalog-filter
+          +recently-viewed(class="d-none d-lg-block")
+
       .col-12.col-lg-9
         main.main
           +tabs({
@@ -91,15 +95,4 @@ block content
 
                   +reviews(id="reviews" data-print="hide")
 
-    //- .container(data-print="hide")
-    //-   .row
-    //-     .col-12
-
-    //-       +items-swiper({heading: 'С этим товаром покупают', name: 'SIMATIC S7-300, SM321, МОДУЛЬ ВВОДА ДИСКРЕТНЫХ СИГНАЛОВ'})
-
-    //-       +items-swiper({heading: 'Просмотренные товары', name: 'SIMATIC S7-300, SM321, МОДУЛЬ ВВОДА ДИСКРЕТНЫХ СИГНАЛОВ'})
-
-    //-       +buy-buttons-block
-
-    //-       +quick-order-popup(id="quick-order-popup" style="display: none;")
-    //-       +quick-order-popup({callback: true})(id="callback-popup" style="display: none;")
+          +items-swiper({heading: 'Просмотренные товары', name: 'SIMATIC S7-300, SM321, МОДУЛЬ ВВОДА ДИСКРЕТНЫХ СИГНАЛОВ'})(class="d-lg-none")

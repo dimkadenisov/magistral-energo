@@ -1,0 +1,39 @@
+.site-pagination-link {
+	display: block;
+	position: relative;
+	width: 30px;
+	height: 30px;
+	color: var(--gray-400);
+	font-family: var(--Oswald);
+	font-size: 13px;
+	line-height: 30px;
+	text-align: center;
+	text-decoration: none;
+
+	&__icon {
+		width: 10px;
+		height: 10px;
+	}
+
+	&:hover,
+	&:focus {
+		color: var(--green-400);
+
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			width: 50%;
+			height: 2px;
+			background-color: var(--green-400);
+			font-weight: bold;
+			transform: translateX(-50%);
+		}
+	}
+
+	&_active {
+		color: var(--gray-700);
+	}
+}

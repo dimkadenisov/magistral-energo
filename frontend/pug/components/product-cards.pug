@@ -1,0 +1,10 @@
+mixin product-cards(props = {})
+  include product-card
+
+  - let { amount = 6 } = props;
+
+  ul.product-cards&attributes(attributes)
+    while amount > 0
+      li.product-cards__item
+        +product-card
+      - amount--

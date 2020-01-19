@@ -1,20 +1,18 @@
-.category {
+.viewed-item {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	color: var(--gray-700);
 	text-decoration: none;
 	cursor: pointer;
 
 	.separate-image {
-		margin-bottom: 10px;
+		margin-bottom: 20px;
 	}
 
-	&__text {
-		display: block;
-		padding-right: 6px;
-		padding-left: 6px;
+	&__name {
 		font-size: 14px;
 		text-align: center;
-		word-wrap: break-word;
-		white-space: pre-wrap;
 	}
 
 	&:hover,

@@ -1,0 +1,7 @@
+mixin button-star(props = {})
+
+  button.button.button_icon.button_star(type="button")&attributes(attributes)
+    svg.button__icon
+      use(xlink:href= '#star-stroke')
+    svg.button__icon
+      use(xlink:href= '#star-filled')

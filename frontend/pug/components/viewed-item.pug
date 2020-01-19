@@ -1,0 +1,7 @@
+mixin viewed-item(props = {})
+  include separate-image
+
+  a(href="#").viewed-item&attributes(attributes)
+    +separate-image
+    .viewed-item__name
+      block

@@ -5,7 +5,8 @@
 
 	&__input {
 		min-width: 1px;
-		height: 48px;
+		height: 100%;
+		padding: 0;
 		border: none;
 		color: var(--gray-400);
 		font-family: var(--Oswald);
@@ -25,5 +26,22 @@
 		line-height: 44px;
 		text-align: center;
 		vertical-align: middle;
+	}
+
+	&_border {
+		border-radius: 2px;
+		border: 1px solid var(--gray-300);
+	}
+
+	&_small {
+		height: 32px;
+
+		.button {
+			min-height: 30px;
+			height: 30px;
+			min-width: 30px;
+			width: 30px;
+			line-height: 24px;
+		}
 	}
 }

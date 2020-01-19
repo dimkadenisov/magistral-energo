@@ -3,6 +3,8 @@ mixin price-tab(props = {})
   include separate-image
   include categories-swiper
   include sort-block
+  include product-cards
+  include site-pagination
 
   .characteristics&attributes(attributes)
     +tab-heading(class="tab-heading_opened")
@@ -34,3 +36,5 @@ mixin price-tab(props = {})
           ]})
         .col-12
           +sort-block
+          +product-cards
+          +site-pagination

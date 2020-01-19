@@ -34,6 +34,20 @@ $('#callback-popup .popup-button-close').click(function () {
 });
 "use strict";
 
+$('.filter-row-trigger').click(function (e) {
+  e.preventDefault();
+
+  if (window.matchMedia('(min-width: 992px)').matches) {
+    $(this).closest('.filter-row').toggleClass('active');
+  }
+});
+$('.catalog-filter .filter-heading').click(function () {
+  if (window.matchMedia('(max-width: 991px)').matches) {
+    $(this).closest('.catalog-filter').toggleClass('active');
+  }
+});
+"use strict";
+
 var categoriesSwiperConfig = {
   slideClass: 'categories-swiper__item',
   slidesPerView: 2,

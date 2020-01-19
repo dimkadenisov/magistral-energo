@@ -32,4 +32,8 @@
 			font-size: 16px;
 		}
 	}
+
+	&_vertical-reverse {
+		flex-direction: column-reverse;
+	}
 }
