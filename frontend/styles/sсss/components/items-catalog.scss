@@ -1,0 +1,19 @@
+.items-catalog {
+	margin-bottom: 50px;
+	padding-top: 40px;
+	border-top: 1px solid var(--gray-200);
+	column-count: 2;
+	list-style: none;
+
+	&__item {
+		margin-bottom: 20px;
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.items-catalog {
+		padding-top: 15px;
+		border-top: none;
+		column-count: 1;
+	}
+}

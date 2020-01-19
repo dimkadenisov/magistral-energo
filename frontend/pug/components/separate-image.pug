@@ -1,4 +1,6 @@
 mixin separate-image(props = {})
 
+  - const { imgSrc = null } = props
+
   .separate-image&attributes(attributes)
-    img.separate-image__img(src="assets/img/some-product.jpg" alt="Описание картинки")
+    img.separate-image__img(src= imgSrc ? imgSrc : "assets/img/some-product.jpg" alt="Описание картинки")

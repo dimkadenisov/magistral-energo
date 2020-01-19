@@ -1,0 +1,9 @@
+mixin items-catalog(props = {})
+  include items-catalog-section
+
+  - const { sections } = props;
+
+  ul.items-catalog&attributes(attributes)
+    each section in sections
+      li.items-catalog__item
+        +items-catalog-section({name: section.name, list: section.list, imgSrc: section.imgSrc, tag: section.tag })

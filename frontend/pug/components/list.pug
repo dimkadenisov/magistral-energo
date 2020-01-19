@@ -1,0 +1,11 @@
+mixin list(props = {})
+
+  - const { list, tag = 'span' } = props
+
+  ul.list&attributes(attributes)
+    each item in list
+      li.list__item
+        if tag === 'a'
+          a(href="#")= item
+        else
+          #{tag}= item

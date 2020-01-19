@@ -1,0 +1,13 @@
+mixin items-catalog-section(props = {})
+  include separate-image
+  include list
+
+  - const { name, list, imgSrc, tag } = props;
+
+  .items-catalog-section&attributes(attributes)
+    +separate-image({imgSrc: imgSrc})
+    .items-catalog-section__text
+      a(href="#").items-catalog-section__name= name
+      +list({list: list, tag: tag})
+      if list.length > 5
+        a(href="#").items-catalog-section__link Все категории
