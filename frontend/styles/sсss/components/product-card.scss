@@ -1,6 +1,7 @@
 .product-card {
 	display: grid;
 	grid-template-columns: 80px 30px 1fr 60px 150px;
+	grid-template-rows: auto auto auto;
 	position: relative;
 	padding: 14px;
 	border: 1px solid var(--gray-300);
@@ -11,6 +12,7 @@
 	}
 
 	&__name {
+		display: block;
 		grid-column: 3 / 4;
 		grid-row: 1 / 2;
 		font-size: 14px;
