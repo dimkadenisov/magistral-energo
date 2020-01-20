@@ -2,6 +2,7 @@ $(window).scroll(function() {
 	const offset = $(window).width() <= 991 ? 142 : 64;
 
 	if (
+		document.querySelector('.tabs__wrapper') &&
 		document.querySelector('.tabs__wrapper').getBoundingClientRect().top <=
 			offset &&
 		document.querySelector('#tabs').getBoundingClientRect().bottom >
