@@ -56,14 +56,6 @@
 			}
 		}
 	}
-
-	.list {
-		&__item {
-			&:nth-child(n + 6) {
-				display: none;
-			}
-		}
-	}
 }
 
 @media screen and (max-width: 575px) {

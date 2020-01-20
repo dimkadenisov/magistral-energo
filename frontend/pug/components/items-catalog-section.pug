@@ -9,5 +9,5 @@ mixin items-catalog-section(props = {})
     .items-catalog-section__text
       a(href="#").items-catalog-section__name= name
       +list({list: list, tag: tag})
-      if list.length > 5
+      if list.length >= 5
         a(href="#").items-catalog-section__link Все категории
