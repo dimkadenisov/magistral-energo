@@ -4,13 +4,19 @@
 	top: 0;
 	left: 100%;
 	min-width: 100%;
-	max-width: 255px;
-	padding-top: 12px;
-	padding-bottom: 22px;
-	background-color: var(--white);
-	box-shadow: 0 0 5px 0 var(--black-alpha-10),
-		0 5px 10px 0 var(--black-alpha-15);
-	list-style: none;
+	height: 100%;
+
+	&__list {
+		width: 255px;
+		height: 100%;
+		padding-top: 12px;
+		padding-bottom: 22px;
+		background-color: var(--white);
+		box-shadow: 0 0 5px 0 var(--black-alpha-10),
+			0 5px 10px 0 var(--black-alpha-15);
+		list-style: none;
+		overflow-y: auto;
+	}
 }
 
 @media screen and (max-width: 991px) {
@@ -18,9 +24,14 @@
 		position: relative;
 		top: auto;
 		left: auto;
-		padding-top: 0;
-		padding-bottom: 20px;
-		box-shadow: none;
-		overflow-y: auto;
+
+		&__list {
+			width: 100%;
+			height: auto;
+			padding-top: 0;
+			padding-bottom: 20px;
+			box-shadow: none;
+			overflow-y: auto;
+		}
 	}
 }
