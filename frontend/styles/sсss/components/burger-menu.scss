@@ -33,6 +33,10 @@
 
 @media screen and (max-width: 767px) {
 	.burger-menu {
-		top: 99px;
+		top: 100px;
+
+		&__content {
+			max-height: calc(100vh - 100px);
+		}
 	}
 }

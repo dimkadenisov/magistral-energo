@@ -1,5 +1,4 @@
 const reviewsSwiperConfig = {
-	// init: true,
 	slideClass: 'reviews-swiper__item',
 	slidesPerView: 1,
 	spaceBetween: 0,

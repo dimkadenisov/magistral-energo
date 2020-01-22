@@ -10,6 +10,21 @@
 	z-index: 2;
 }
 
+@media screen and (min-width: 992px) {
+	.menu-list__item {
+		&_active {
+			& > .menu-item {
+				background-color: var(--gray-200);
+				font-weight: bold;
+			}
+
+			& > .submenu-list {
+				display: block;
+			}
+		}
+	}
+}
+
 @media screen and (max-width: 991px) {
 	.menu-list {
 		width: 100%;
@@ -21,12 +36,16 @@
 		&__item {
 			&_active {
 				position: fixed;
-				top: 78px;
+				top: 75px;
 				right: 0;
 				left: 0;
 				bottom: 0;
 				background-color: var(--black-alpha-30);
 				overflow-y: auto;
+
+				& > .submenu-list {
+					display: block;
+				}
 			}
 		}
 	}
@@ -34,6 +53,6 @@
 
 @media screen and (max-width: 767px) {
 	.menu-list__item_active {
-		top: 99px;
+		top: 100px;
 	}
 }
