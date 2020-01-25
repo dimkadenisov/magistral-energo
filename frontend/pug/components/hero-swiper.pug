@@ -1,0 +1,16 @@
+mixin hero-swiper(props = {})
+  include link-image
+  include swiper-button
+
+  - const { imgSrcs, swiperButtons = true, swiperButtonsColor = null } = props;
+
+  - const swiperButtonClassList = swiperButtonsColor ? `swiper-button_stroke swiper-button_${swiperButtonsColor}` : `swiper-button_stroke`;
+
+  .hero-swiper&attributes(attributes)
+    .swiper-wrapper
+      each imgSrc in imgSrcs
+        .hero-swiper__item
+          +link-image({imgSrc: imgSrc})
+    if swiperButtons
+      +swiper-button({side: 'left'})(class= swiperButtonClassList)
+      +swiper-button({side: 'right'})(class= swiperButtonClassList)

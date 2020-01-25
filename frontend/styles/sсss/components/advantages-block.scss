@@ -1,0 +1,26 @@
+.advantages-block {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-bottom: 40px;
+
+	.advantage {
+		flex-basis: 14.28%;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.advantages-block {
+		.advantage {
+			flex-basis: 25%;
+		}
+	}
+}
+
+@media screen and (max-width: 575px) {
+	.advantages-block {
+		.advantage {
+			flex-basis: 33.3333%;
+		}
+	}
+}

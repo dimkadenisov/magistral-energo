@@ -1,0 +1,18 @@
+.partners {
+	height: 48px;
+	margin-top: 12px;
+	margin-bottom: 30px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	border-radius: 5px;
+	border: 2px solid var(--orange-400);
+	overflow-x: hidden;
+
+	&__item {
+		padding-left: 30px;
+
+		.partner {
+			height: 100%;
+		}
+	}
+}

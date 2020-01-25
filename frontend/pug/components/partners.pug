@@ -1,0 +1,10 @@
+mixin partners(props = {})
+  include partner
+
+  - const { images } = props;
+
+  .partners&attributes(attributes)
+    .swiper-wrapper
+      each image in images
+        .partners__item
+          +partner({src: image})

@@ -1,0 +1,8 @@
+mixin block-heading(props = {})
+
+  - const { heading = null, buttonText = null, buttonIconId = null } = props
+
+  .block-heading&attributes(attributes)
+    span.block-heading__text= heading
+    .block-heading__buttons
+    +link-with-icon({text: buttonText, iconId: buttonIconId })

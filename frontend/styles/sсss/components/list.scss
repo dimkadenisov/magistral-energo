@@ -31,4 +31,12 @@
 			transform: translateY(7px);
 		}
 	}
+
+	&_gray {
+		.list__item {
+			&::before {
+				background-color: var(--gray-400-alpha-30);
+			}
+		}
+	}
 }

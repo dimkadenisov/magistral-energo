@@ -7,34 +7,30 @@
 	padding: 0;
 	background-color: transparent;
 	border: none;
+	color: var(--gray-400);
 	cursor: pointer;
 	z-index: 2;
 
 	&__icon {
 		width: 15px;
 		height: 15px;
-		color: var(--gray-400);
 	}
 
 	&:hover,
 	&:focus {
-		.swiper-button__icon {
-			color: var(--green-400);
-		}
+		color: var(--green-400);
 	}
 
 	&_stroke {
 		border: 1px solid var(--gray-400);
+	}
 
-		&.swiper-button_right {
-			border-top-right-radius: 5px;
-			border-bottom-right-radius: 5px;
-		}
+	&_white {
+		color: var(--white);
+		border-color: var(--white);
+	}
 
-		&.swiper-button_left {
-			border-right: none;
-			border-top-left-radius: 5px;
-			border-bottom-left-radius: 5px;
-		}
+	&-lock {
+		display: none;
 	}
 }

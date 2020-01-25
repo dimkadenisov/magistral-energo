@@ -1,0 +1,23 @@
+.links-swiper-item {
+	display: flex;
+	flex-direction: column;
+	color: var(--gray-700);
+	font-size: 14px;
+	text-decoration: none;
+
+	.separate-image {
+		margin-bottom: 20px;
+	}
+
+	&__name {
+		display: block;
+		padding-right: 15px;
+		padding-left: 15px;
+		text-align: center;
+	}
+
+	&:hover,
+	&:focus {
+		text-decoration: underline;
+	}
+}

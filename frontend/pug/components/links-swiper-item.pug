@@ -1,0 +1,8 @@
+mixin links-swiper-item(props = {})
+  include separate-image
+
+  - const { imgSrc, name } = props;
+
+  a(href="#").links-swiper-item&attributes(attributes)
+    +separate-image({imgSrc: imgSrc})
+    span.links-swiper-item__name= name

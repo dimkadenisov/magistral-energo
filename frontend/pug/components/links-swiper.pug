@@ -1,0 +1,19 @@
+mixin links-swiper(props = {})
+  include swiper-button
+  include block-heading
+  include links-swiper-item
+  include link-with-icon
+
+  - const { heading = null, headerLinkText = null, headerLinkIconId = null, names = null, imgSrcs = null, swiperButtons = true } = props;
+
+  .links-swiper&attributes(attributes)
+    +block-heading({ heading: heading, buttonText: headerLinkText, buttonIconId: headerLinkIconId })
+
+    .links-swiper__content
+      .swiper-wrapper
+        each name, index in names
+          .links-swiper__item
+            +links-swiper-item({name: name, imgSrc: imgSrcs[index] })
+      if swiperButtons
+        +swiper-button({side: 'left'})(class='swiper-button_stroke')
+        +swiper-button({side: 'right'})(class='swiper-button_stroke')

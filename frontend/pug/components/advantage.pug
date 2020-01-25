@@ -1,0 +1,8 @@
+mixin advantage(props = {})
+
+  - const { text, iconId } = props;
+
+  .advantage&attributes(attributes)
+    svg.advantage__icon
+      use(xlink:href=`#${iconId}`)
+    span.advantage__text= text

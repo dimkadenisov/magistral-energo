@@ -1,0 +1,8 @@
+mixin advantages-block(props = {})
+  include advantage
+
+  - const { advantages, iconIds } = props
+
+  .advantages-block&attributes(attributes)
+    each advantage, index in advantages
+      +advantage({text: advantage, iconId: iconIds[index]})

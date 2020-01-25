@@ -64,6 +64,17 @@
 		padding-left: 15px;
 		font-size: 12px;
 	}
+
+	.swiper-button_right {
+		border-top-right-radius: 5px;
+		border-bottom-right-radius: 5px;
+	}
+
+	.swiper-button_left {
+		border-right: none;
+		border-top-left-radius: 5px;
+		border-bottom-left-radius: 5px;
+	}
 }
 
 @media screen and (max-width: 767px) {

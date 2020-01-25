@@ -1,0 +1,257 @@
+extends ../components/page
+
+include ../components/partners
+include ../components/links-swiper
+include ../components/heading
+include ../components/advantages-block
+include ../components/hero-swiper
+include ../components/sidebar-link
+include ../components/list
+
+block title
+  |Главная страница
+
+block content
+  .container
+    .row
+      .col-12
+        +partners({images: [
+          'assets/img/partner-1.jpg',
+          'assets/img/partner-2.jpg',
+          'assets/img/partner-3.jpg',
+          'assets/img/partner-4.jpg',
+          'assets/img/partner-5.jpg',
+          'assets/img/partner-6.jpg',
+          'assets/img/partner-7.jpg',
+          'assets/img/partner-8.jpg',
+          'assets/img/partner-9.jpg',
+        ]})
+  .container
+    .row
+      .col-12.col-lg-3.d-none.d-lg-block
+        sidebar
+          +sidebar-link({tag: 'button', text: 'Pizdos', iconId: 'open-book'})
+            +list({
+              tag: 'a',
+              list: [
+              'Как выбрать автомат защиты двигателя',
+              'Как выбрать автомат защиты двигателя',
+              'Как выбрать автомат защиты двигателя',
+              'Как выбрать автомат защиты двигателя',
+              'Как выбрать автомат защиты двигателя',
+              'Как выбрать автомат защиты двигателя',
+              'Как выбрать автомат защиты двигателя',
+              'Как выбрать автомат защиты двигателя',
+              'Как выбрать автомат защиты двигателя',
+              'Как выбрать автомат защиты двигателя',
+              'Как выбрать автомат защиты двигателя',
+              'Как выбрать автомат защиты двигателя',
+              'Как выбрать автомат защиты двигателя',
+              'Как выбрать автомат защиты двигателя',
+              'Как выбрать автомат защиты двигателя',
+              'Как выбрать автомат защиты двигателя',
+            ]})(class="list_gray")
+          +sidebar-link({tag: 'a', text: 'Pizdos', iconId: 'megaphone'})
+          +sidebar-link({tag: 'a', text: 'Pizdos', iconId: 'information-button'})
+          +sidebar-link({tag: 'a', text: 'Pizdos', iconId: 'gear'})
+          +sidebar-link({tag: 'a', text: 'Pizdos', iconId: 'medal'})
+          +sidebar-link({tag: 'a', text: 'Pizdos', iconId: 'play-button'})
+          +sidebar-link({tag: 'a', text: 'Pizdos', iconId: 'photo-camera'})
+          +sidebar-link({tag: 'button', text: 'Конфигураторы', iconId: 'tool-button'})
+            +list({
+              tag: 'a',
+              list: [
+              'Как выбрать автомат защиты двигателя',
+              'Как выбрать автомат защиты двигателя',
+              'Как выбрать автомат защиты двигателя',
+              'Как выбрать автомат защиты двигателя',
+              'Как выбрать автомат защиты двигателя',
+              'Как выбрать автомат защиты двигателя',
+            ]})(class="list_gray")
+          +sidebar-link({tag: 'a', text: 'Pizdos', iconId: 'comment'})
+
+      .col-12.col-lg-9
+        main.main
+
+          +hero-swiper({
+            imgSrcs: [
+              'assets/img/hero-swiper-image.jpg',
+              'assets/img/hero-swiper-image.jpg',
+              'assets/img/hero-swiper-image.jpg',
+              'assets/img/hero-swiper-image.jpg',
+              'assets/img/hero-swiper-image.jpg',
+              'assets/img/hero-swiper-image.jpg',
+              'assets/img/hero-swiper-image.jpg',
+              'assets/img/hero-swiper-image.jpg',
+            ],
+            swiperButtonsColor: 'white',
+          })(class="hero-swiper_big")
+
+          +hero-swiper({
+            imgSrcs: [
+              'assets/img/hero-swiper-image.jpg',
+              'assets/img/hero-swiper-image.jpg',
+              'assets/img/hero-swiper-image.jpg',
+              'assets/img/hero-swiper-image.jpg',
+              'assets/img/hero-swiper-image.jpg',
+              'assets/img/hero-swiper-image.jpg',
+              'assets/img/hero-swiper-image.jpg',
+              'assets/img/hero-swiper-image.jpg',
+            ]
+          })(class="hero-swiper_small")
+
+          +links-swiper({
+            heading: 'Новинки и тренды',
+            headerLinkText: 'Все новинки товаров',
+            names: [
+              'Кабельные наконечники и соединители (гильзы)',
+              'Кабельные наконечники и соединители (гильзы)',
+              'Кабельные наконечники и соединители (гильзы)',
+              'Кабельные наконечники и соединители (гильзы)',
+            ],
+            imgSrcs: [
+              'assets/img/some-product.jpg',
+              'assets/img/some-product.jpg',
+              'assets/img/some-product.jpg',
+              'assets/img/some-product.jpg',
+            ],
+            swiperButtons: true
+          })(class="links-swiper_orange")
+
+          .items-swiper__header
+            +heading
+              |Наши преимущества
+          +advantages-block({
+            advantages: [
+              'Работаем 24/7',
+              'Доставка за 2 дня',
+              'Умный поиск',
+              'Гарантия 5 лет',
+              'Бонусы',
+              'Cash-back 5%',
+              'Тех. поддержка',
+            ],
+            iconIds: [
+              'clock-2',
+              'delivery-truck',
+              'search-2',
+              'guarantee',
+              'gift',
+              'transfer',
+              'tools',
+            ]
+          })
+
+          +links-swiper({
+            heading: 'Низковольтное оборудование',
+            headerLinkText: 'Конфигуратор',
+            headerLinkIconId: 'controls',
+            names: [
+              'Кабельные наконечники и соединители (гильзы)',
+              'Кабельные наконечники и соединители (гильзы)',
+              'Кабельные наконечники и соединители (гильзы)',
+              'Кабельные наконечники и соединители (гильзы)',
+            ],
+            imgSrcs: [
+              'assets/img/some-product.jpg',
+              'assets/img/some-product.jpg',
+              'assets/img/some-product.jpg',
+              'assets/img/some-product.jpg',
+            ],
+            swiperButtons: true
+          })
+
+          +links-swiper({
+            heading: 'Арматура кабельная, крепеж и аксессуары для кабеля',
+            headerLinkText: 'Конфигуратор',
+            headerLinkIconId: 'controls',
+            names: [
+              'Кабельные наконечники и соединители (гильзы)',
+              'Кабельные наконечники и соединители (гильзы)',
+              'Кабельные наконечники и соединители (гильзы)',
+              'Кабельные наконечники и соединители (гильзы)',
+            ],
+            imgSrcs: [
+              'assets/img/some-product.jpg',
+              'assets/img/some-product.jpg',
+              'assets/img/some-product.jpg',
+              'assets/img/some-product.jpg',
+            ],
+            swiperButtons: true
+          })
+
+          +links-swiper({
+            heading: 'Звонки дверные, домофонные системы',
+            headerLinkText: 'Конфигуратор',
+            headerLinkIconId: 'controls',
+            names: [
+              'Кабельные наконечники и соединители (гильзы)',
+              'Кабельные наконечники и соединители (гильзы)',
+              'Кабельные наконечники и соединители (гильзы)',
+              'Кабельные наконечники и соединители (гильзы)',
+            ],
+            imgSrcs: [
+              'assets/img/some-product.jpg',
+              'assets/img/some-product.jpg',
+              'assets/img/some-product.jpg',
+              'assets/img/some-product.jpg',
+            ],
+            swiperButtons: true
+          })
+
+          +links-swiper({
+            heading: 'Инструмент, измерительные приборы и средства защиты',
+            headerLinkText: 'Конфигуратор',
+            headerLinkIconId: 'controls',
+            names: [
+              'Кабельные наконечники и соединители (гильзы)',
+              'Кабельные наконечники и соединители (гильзы)',
+              'Кабельные наконечники и соединители (гильзы)',
+              'Кабельные наконечники и соединители (гильзы)',
+            ],
+            imgSrcs: [
+              'assets/img/some-product.jpg',
+              'assets/img/some-product.jpg',
+              'assets/img/some-product.jpg',
+              'assets/img/some-product.jpg',
+            ],
+            swiperButtons: true
+          })
+
+          +links-swiper({
+            heading: 'Кабеленесущие системы (системы для прокладки кабеля)',
+            headerLinkText: 'Конфигуратор',
+            headerLinkIconId: 'controls',
+            names: [
+              'Кабельные наконечники и соединители (гильзы)',
+              'Кабельные наконечники и соединители (гильзы)',
+              'Кабельные наконечники и соединители (гильзы)',
+              'Кабельные наконечники и соединители (гильзы)',
+            ],
+            imgSrcs: [
+              'assets/img/some-product.jpg',
+              'assets/img/some-product.jpg',
+              'assets/img/some-product.jpg',
+              'assets/img/some-product.jpg',
+            ],
+            swiperButtons: true
+          })
+
+          +links-swiper({
+            heading: 'Кабель, провод',
+            headerLinkText: 'Конфигуратор',
+            headerLinkIconId: 'controls',
+            names: [
+              'Кабельные наконечники и соединители (гильзы)',
+              'Кабельные наконечники и соединители (гильзы)',
+              'Кабельные наконечники и соединители (гильзы)',
+              'Кабельные наконечники и соединители (гильзы)',
+            ],
+            imgSrcs: [
+              'assets/img/some-product.jpg',
+              'assets/img/some-product.jpg',
+              'assets/img/some-product.jpg',
+              'assets/img/some-product.jpg',
+            ],
+            swiperButtons: true
+          })
