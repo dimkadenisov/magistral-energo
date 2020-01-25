@@ -16,6 +16,11 @@
 		text-decoration: none;
 		cursor: pointer;
 
+		&:hover,
+		&:focus {
+			background-color: var(--gray-400);
+		}
+
 		&:not(:only-child) {
 			&::after {
 				content: '⌃';

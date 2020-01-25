@@ -47,9 +47,9 @@
 			}
 
 			& + .tab-content {
-				max-height: 5000px;
+				max-height: 6000px;
 				margin-bottom: 40px;
-				transition: max-height margin-bottom 0.3s;
+				transition: max-height, margin-bottom 0.3s;
 				overflow: visible;
 			}
 		}

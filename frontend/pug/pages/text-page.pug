@@ -1,0 +1,125 @@
+extends ../components/page
+
+include ../components/breadcrumbs
+include ../components/product-name
+include ../components/sidebar-link
+include ../components/sort-block
+include ../components/product-cards
+include ../components/site-pagination
+include ../components/product-info-cta
+
+block title
+  |Текстовая страница
+
+block content
+  +breadcrumbs
+  .container
+    .row
+      .col-12.col-lg-3.d-none.d-lg-block
+        sidebar
+          +sidebar-link({tag: 'a', text: 'Статьи',})
+          +sidebar-link({tag: 'a', text: 'Обзоры',})
+          +sidebar-link({tag: 'a', text: 'Тех. информация',})
+          +sidebar-link({tag: 'a', text: 'Мануалы',})
+          +sidebar-link({tag: 'a', text: 'Сертификаты',})
+          +sidebar-link({tag: 'a', text: 'Видео',})
+          +sidebar-link({tag: 'a', text: 'Фото',})
+
+      .col-12.col-lg-9
+        main.main.text-page
+          +product-name({share: true, logo: false})
+            |Текстовая страница
+          .overview
+            p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами.
+
+            p Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни. Однажды одна маленькая строчка рыбного текста по имени Lorem ipsum решила выйти в большой мир грамматики. Великий Оксмокс предупреждал ее о злых запятых, диких знаках вопроса и коварных точках с запятой, но текст не дал сбить себя с толку. Он собрал семь своих заглавных букв, подпоясал инициал за пояс и пустился в дорогу.
+
+            h1 Merry Christmas and Happy New Year
+            h2 Merry Christmas and Happy New Year
+            h3 Merry Christmas and Happy New Year
+
+            blockquote
+              p Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца. Я совсем один и блаженствую в здешнем краю, словно созданном для таких, как я. Я так счастлив, мой друг, так упоен ощущением покоя, что искусство мое страдает от этого.
+              cite Дмитрий Новожилов
+
+            figure.image
+              img(src="assets/img/text-page-img.jpg" alt="изображение для статьи")
+              figcaption Очень, очень, очень длинная подпись фотографии в две или три строчки похожая на эту
+
+            ol
+              li Как дела, ребята, уже во всю готовитесь к празднику?
+              li Как дела, ребята, уже во всю готовитесь к празднику?
+              li Как дела, ребята, уже во всю готовитесь к празднику?
+
+            ul
+              li Как дела, ребята, уже во всю готовитесь к празднику?
+              li Как дела, ребята, уже во всю готовитесь к празднику?
+              li Как дела, ребята, уже во всю готовитесь к празднику?
+              li Как дела, ребята, уже во всю готовитесь к празднику?
+              li Как дела, ребята, уже во всю готовитесь к празднику?
+              li Как дела, ребята, уже во всю готовитесь к празднику?
+              li Как дела, ребята, уже во всю готовитесь к празднику?
+              li Как дела, ребята, уже во всю готовитесь к празднику?
+              li Как дела, ребята, уже во всю готовитесь к празднику?
+              li Как дела, ребята, уже во всю готовитесь к празднику?
+              li Как дела, ребята, уже во всю готовитесь к празднику?
+              li Как дела, ребята, уже во всю готовитесь к празднику?
+
+            figure.image-left
+              img(src="assets/img/certificate-2-big.jpg" alt="изображение для статьи")
+              figcaption Очень, очень, очень длинная подпись фотографии в две или три строчки похожая на эту
+
+            p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, dolorum? Repellat recusandae veniam deserunt dolores, fuga exercitationem harum quod sunt perferendis laboriosam sit temporibus!
+              |
+              |
+              a(href="#") Merry Christmas and Happy New Year
+              |
+              |
+              |Quisquam libero pariatur culpa numquam voluptates!Unde at est laborum doloremque quisquam debitis, beatae temporibus, eligendi assumenda aut quibusdam magnam ad aliquid recusandae voluptatibus ipsum, ut enim nihil quidem repellat possimus ipsam numquam culpa. Sunt, eum.Similique mollitia, fuga consequuntur perspiciatis consequatur iure est reiciendis assumenda, ut laboriosam id non molestias ducimus a recusandae labore sequi dolorum consectetur voluptas optio beatae tenetur quia quae quam. Fugit.Reiciendis necessitatibus doloremque incidunt ad expedita est delectus ipsam laudantium sed. Corporis ipsa provident vitae? Doloremque ea voluptates deleniti, officiis hic quidem suscipit culpa id, aut libero dolor molestiae obcaecati.Dolorem esse, enim magni ratione illum sunt voluptates sed, soluta doloribus adipisci itaque quas, vero obcaecati velit dolorum molestiae delectus nulla inventore aut vitae eaque rerum libero expedita. Voluptatibus, dolorum.
+
+            figure.image-right
+              img(src="assets/img/certificate-2-big.jpg" alt="изображение для статьи")
+              figcaption Очень, очень, очень длинная подпись фотографии в две или три строчки похожая на эту
+
+            p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, dolorum? Repellat recusandae veniam deserunt dolores, fuga exercitationem harum quod sunt perferendis laboriosam sit temporibus! Quisquam libero pariatur culpa numquam voluptates!Unde at est laborum doloremque quisquam debitis, beatae temporibus, eligendi assumenda aut quibusdam magnam ad aliquid recusandae voluptatibus ipsum, ut enim nihil quidem repellat possimus ipsam numquam culpa. Sunt, eum.Similique mollitia, fuga consequuntur perspiciatis consequatur iure est reiciendis assumenda, ut laboriosam id non molestias ducimus a recusandae labore sequi dolorum consectetur voluptas optio beatae tenetur quia quae quam. Fugit.Reiciendis necessitatibus doloremque incidunt ad expedita est delectus ipsam laudantium sed. Corporis ipsa provident vitae? Doloremque ea voluptates deleniti, officiis hic quidem suscipit culpa id, aut libero dolor molestiae obcaecati.Dolorem esse, enim magni ratione illum sunt voluptates sed, soluta doloribus adipisci itaque quas, vero obcaecati velit dolorum molestiae delectus nulla inventore aut vitae eaque rerum libero expedita. Voluptatibus, dolorum.
+
+            figure.image-big
+              img(src="assets/img/certificate-2-big.jpg" alt="изображение для статьи")
+              figcaption Очень, очень, очень длинная подпись фотографии в две или три строчки похожая на эту
+
+            .responsive-table
+              table
+                thead
+                  th Название
+                  th Название
+                  th Название
+                  th Название
+                tr
+                  td Пункт
+                  td Пункт
+                  td Пункт
+                  td Пункт
+                tr
+                  td 01.03.17
+                  td 325 355,40
+                  td
+                    a(href="#") 235333 от 01.01.18
+                  td
+                    a(href="#") 235333 от 01.01.18
+                tr
+                  td 01.03.17
+                  td 325 355,40
+                  td
+                    a(href="#") 235333 от 01.01.18
+                  td
+                    a(href="#") 235333 от 01.01.18
+                tr
+                  td Пункт
+                  td Пункт
+                  td Пункт
+                  td Пункт
+
+          +sort-block
+          +product-cards
+          +site-pagination
+          +product-info-cta

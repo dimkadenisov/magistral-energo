@@ -1,11 +1,12 @@
 mixin sidebar-link(props = {})
 
-  - const { tag = 'a', iconId, text } = props
+  - const { tag = 'a', iconId = null, text } = props
   - const tagAttrs = tag === 'a' ? {href: '#'} : tag === 'button' ? {type: 'button'} : null
 
   .sidebar-link&attributes(attributes)
     #{tag}.sidebar-link__link&attributes(tagAttrs)
-      svg.sidebar-link__icon
-        use(xlink:href=`#${iconId}`)
+      if iconId
+        svg.sidebar-link__icon
+          use(xlink:href=`#${iconId}`)
       .sidebar-link__text= text
     block
