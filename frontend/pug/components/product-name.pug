@@ -1,7 +1,7 @@
 mixin product-name(props = {})
   include social-share
 
-  - const { share = false, logo = true } = props;
+  - const { share = false, shareText = 'Поделиться:', logo = true } = props;
 
   .product-name&attributes(attributes)
     .container
@@ -15,16 +15,14 @@ mixin product-name(props = {})
             h1.product-name__text
               block
           .col-auto.ml-sm-auto.order-3
-            +social-share
-              |Поделиться:
+            +social-share= shareText
 
         else if share && !logo
           .col-12.col-md-auto.col-lg-6.col-xl-7.mr-auto
             h1.product-name__text
               block
           .col-auto.mb-4
-            +social-share
-              |Поделиться:
+            +social-share= shareText
 
         else if !share && logo
           .col-7.col-sm-4.col-md-3.col-lg-2
@@ -32,5 +30,10 @@ mixin product-name(props = {})
             a(href="#").product-name__link
               span Официальный поставщик
           .col-12.col-lg-10
+            h1.product-name__text
+              block
+
+        else if !share && !logo
+          .col-12
             h1.product-name__text
               block

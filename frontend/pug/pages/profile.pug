@@ -1,0 +1,55 @@
+extends ../components/page
+
+include ../components/breadcrumbs
+include ../components/product-name
+include ../components/contacts-block
+include ../components/card-block
+include ../components/profile-sections
+
+block title
+  |Каталог
+
+block content
+  +breadcrumbs
+  main.main
+    +product-name({logo: false, share: true, shareText: 'Приведи друга - получи бонус!'})
+      |Контакты
+    .container
+      .row
+        .col-12
+          +profile-sections({sections: [
+            {
+              name: 'Мои бонусы',
+              description: 'Выражаем благодарность сервис-инженерам компании «МагистральЭнергоИнжиниринг»'
+            },
+            {
+              iconId: 'checklist',
+              name: 'Мои заказы',
+              description: 'Информация состоянии заказов'
+            },
+            {
+              iconId: 'file',
+              name: 'Мои документы',
+              description: 'Выражаем благодарность сервис-инженерам компании'
+            },
+            {
+              iconId: 'user-1',
+              name: 'Личные данные',
+              description: 'Выражаем благодарность сервис-инженерам компании «МагистральЭнергоИнжиниринг»'
+            },
+            {
+              iconId: 'rating',
+              name: 'Избранное',
+              description: 'Выражаем благодарность сервис-инженерам компании «МагистральЭнергоИнжиниринг»'
+            },
+            {
+              iconId: 'forklift',
+              name: 'Корзина',
+              description: 'Выражаем благодарность сервис-инженерам компании'
+            },
+            {
+              iconId: 'conversation',
+              name: 'Поддержка',
+              description: 'Выражаем благодарность сервис-инженерам компании «МагистральЭнергоИнжиниринг»'
+            },
+          ]})

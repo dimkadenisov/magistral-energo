@@ -1,0 +1,22 @@
+mixin contacts-list(props = {})
+  include contact-adress
+  include contact-mail
+  include contact-phone
+
+  - const { contacts } = props;
+
+  ul.contacts-list&attributes(attributes)
+    each contact in contacts
+      - const { type } = contact
+      case type
+        when 'adress'
+          li.contacts-list__item
+            +contact-adress(contact)(class="contact__item")
+
+        when 'mail'
+          li.contacts-list__item
+            +contact-mail(contact)(class="contact__item")
+
+        when 'phone'
+          li.contacts-list__item
+            +contact-phone(contact)(class="contact__item")

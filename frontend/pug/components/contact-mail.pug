@@ -1,0 +1,9 @@
+mixin contact-mail(props = {})
+
+  - const { value, description } = props;
+
+  .contact-mail&attributes(attributes)
+    a(href=`mailto:${value}`).contact-mail__value= value
+    |
+    |
+    span.contact-mail__description= description

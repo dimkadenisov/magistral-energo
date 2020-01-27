@@ -1,0 +1,70 @@
+extends ../components/page
+
+include ../components/breadcrumbs
+include ../components/product-name
+include ../components/contacts-block
+include ../components/card-block
+
+block title
+  |Каталог
+
+block content
+  +breadcrumbs
+  main.main
+    +product-name({logo: false, share: false})
+      |Контакты
+    .container
+      .row
+        .col-12
+          +contacts-block({
+            heading: 'ООО «МагистральЭнергоИнжиниринг»',
+            imgSrc: 'assets/img/contact-img-1.jpg',
+            contacts: [
+              {
+                type: 'adress',
+                value:  'г. Москва, Можайское шоссе, 165 стр. 1, гостиница "Можайская"',
+                description: 'Адрес: ',
+              },
+              {
+                type: 'mail',
+                value: 'info@magistrenergo.ru',
+                description: ' - информация о сотрудничестве',
+              },
+              {
+                type: 'mail',
+                value: 'zakaz@magistrenergo.ru',
+                description: ' - для Ваших  заявок',
+              },
+              {
+                type: 'phone',
+                value: '8 800 250-76-57',
+                link: '88002507657',
+                description: 'Номер телефона офиса в Москве:',
+              }
+            ]
+          })
+          hr.separator
+          +contacts-block({
+            heading: 'Склад',
+            imgSrc: 'assets/img/contact-img-1.jpg',
+            contacts: [
+              {
+                type: 'adress',
+                value:  'г. Калуга, ул. Болдина, д.67,',
+                description: 'Адрес: ',
+              },
+              {
+                type: 'phone',
+                value: '+7 (4842) 22-72-11',
+                link: '+74842227211',
+                description: 'Номер телефона склада',
+              },
+              {
+                type: 'phone',
+                value: '+7 (4842) 22-72-11',
+                link: '+74842227211',
+                description: 'Факс',
+              },
+            ]
+          })
+    +card-block

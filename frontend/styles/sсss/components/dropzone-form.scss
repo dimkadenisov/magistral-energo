@@ -1,0 +1,31 @@
+.dropzone-form {
+	.dropzone {
+		margin-bottom: 35px;
+	}
+
+	&__text {
+		display: block;
+		margin-bottom: 35px;
+	}
+
+	&__files-count {
+		display: inline-block;
+		margin-left: 30px;
+		color: var(--gray-400);
+		font-size: 14px;
+	}
+
+	&__submit-block {
+		display: flex;
+		align-items: center;
+		margin-bottom: 100px;
+	}
+}
+
+@media screen and (max-width: 575px) {
+	.dropzone-form {
+		&__submit-block {
+			margin-bottom: 50px;
+		}
+	}
+}

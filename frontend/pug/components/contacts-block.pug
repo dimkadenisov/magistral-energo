@@ -1,0 +1,15 @@
+mixin contacts-block(props = {})
+  include contacts-list
+
+  - const { heading, imgSrc, contacts } = props;
+
+  .contacts-block&attributes(attributes)
+    .row
+      .col-12.col-md-6.order-1
+        b.contacts-block__heading= heading
+
+        +contacts-list({contacts})
+
+      .col-12.col-md-6.order-0.order-md-2
+        .contacts-block__img
+          img(src= imgSrc, alt="Картинка" data-object-fit="cover")

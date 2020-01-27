@@ -4,18 +4,6 @@ const heroSwiperBigConfig = {
 	spaceBetween: 10,
 	watchOverflow: true,
 
-	breakpoints: {
-		576: {
-			slidesPerView: 2,
-		},
-		768: {
-			slidesPerView: 3,
-		},
-		// 1200: {
-		// 	slidesPerView: 6,
-		// },
-	},
-
 	observer: true,
 	observerParents: true,
 	observeSlideChildren: true,

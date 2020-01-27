@@ -3,8 +3,9 @@ const partnersSwiperConfig = {
 	slideClass: 'partners__item',
 	loop: true,
 	allowTouchMove: true,
+	speed: 2000,
 	autoplay: {
-		delay: 2500,
+		delay: 0,
 		disableOnInteraction: false,
 	},
 };

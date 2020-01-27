@@ -1,0 +1,24 @@
+.contact-phone {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+
+	&__value {
+		flex-shrink: 0;
+		color: var(--gray-700);
+		font-family: var(--Oswald);
+		font-size: 18px;
+		font-weight: bold;
+		text-decoration: none;
+
+		&:hover,
+		&:focus {
+			text-decoration: underline;
+		}
+	}
+
+	&__description {
+		flex-shrink: 0;
+		margin-right: 5px;
+	}
+}

@@ -1,0 +1,9 @@
+.contacts-list {
+	list-style: none;
+
+	&__item {
+		&:nth-last-child(n + 2) {
+			margin-bottom: 20px;
+		}
+	}
+}

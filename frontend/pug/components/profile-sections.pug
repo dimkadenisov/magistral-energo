@@ -1,0 +1,13 @@
+mixin profile-sections(props = {})
+  include profile-section
+
+  - const { sections } = props
+
+  ul.profile-sections&attributes(attributes)
+    each section, index in sections
+      if index === 4 || index === 5 || index === 6
+        li.profile-sections__item.profile-sections__item_big
+          +profile-section(section)
+      else
+        li.profile-sections__item
+          +profile-section(section)

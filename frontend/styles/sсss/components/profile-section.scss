@@ -1,0 +1,35 @@
+.profile-section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 15px;
+	background-color: var(--gray-300);
+	color: var(--gray-400);
+	text-decoration: none;
+
+	&__icon {
+		width: 64px;
+		height: 64px;
+		margin-bottom: 40px;
+		color: var(--green-400);
+	}
+
+	&__count {
+		height: 64px;
+		font-family: var(--Oswald);
+		font-size: 44px;
+		color: var(--green-400);
+	}
+
+	&__name {
+		margin-bottom: 25px;
+		text-transform: uppercase;
+		text-align: center;
+	}
+
+	&__description {
+		margin-bottom: 20px;
+		text-align: center;
+	}
+}

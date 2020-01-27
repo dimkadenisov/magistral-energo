@@ -1,0 +1,12 @@
+mixin profile-section(props = {})
+
+  - const { iconId, name, description, } = props;
+
+  a(href="#").profile-section&attributes(attributes)
+    if iconId
+      svg.profile-section__icon
+        use(xlink:href=`#${iconId}`)
+    else
+      span.profile-section__count 45 000
+    b.profile-section__name= name
+    span.profile-section__description= description

@@ -1,0 +1,18 @@
+extends ../components/page
+
+include ../components/breadcrumbs
+include ../components/product-name
+include ../components/dropzone-form
+
+block title
+  |Каталог
+
+block content
+  +breadcrumbs
+  main.main
+    +product-name({logo: false, share: false})
+      |Импорт из списка
+    .container
+      .row
+        .col-12
+          +dropzone-form

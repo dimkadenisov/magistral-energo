@@ -129,6 +129,88 @@ $('.menu-list__item').mouseleave(function () {
 });
 "use strict";
 
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+
+var dropzoneForm = $('.dropzone-form');
+var dropzone = $('.dropzone');
+
+function checkFilesExtensions(files, extensions) {
+  return _toConsumableArray(files).every(function (_ref) {
+    var name = _ref.name;
+    return extensions.includes(name.match(/.(\w*)$/)[1]);
+  });
+}
+
+function renderText(isMultiple, files) {
+  return !isMultiple && files.length > 1 ? 'Можно загрузить только один файл' : _toConsumableArray(files).map(function (file) {
+    return file.name;
+  }).join('');
+}
+
+function showFiles(files, nodeToDisplay) {
+  var isMultiple = !!$(this).closest('.dropzone').find('.dropzone__input').attr('multiple');
+  var extensions = $(this).closest('.dropzone').find('.dropzone__input').attr('data-allowed-files-extensions').split(' ');
+  var text = checkFilesExtensions(files, extensions) ? renderText(isMultiple, files) : "\u041C\u043E\u0436\u043D\u043E \u0437\u0430\u0433\u0440\u0443\u0436\u0430\u0442\u044C \u0444\u0430\u0439\u043B\u044B \u0442\u043E\u043B\u044C\u043A\u043E \u0441 \u0440\u0430\u0441\u0448\u0438\u0440\u0435\u043D\u0438\u044F\u043C\u0438 ".concat(extensions);
+  nodeToDisplay.text(text);
+}
+
+dropzone.on('drag dragstart dragend dragover dragenter dragleave drop', function (e) {
+  e.preventDefault();
+  e.stopPropagation();
+}).on('dragover dragenter', function () {
+  dropzone.addClass('dropzone_dragover');
+}).on('dragleave dragend drop', function () {
+  dropzone.removeClass('dropzone_dragover');
+}).on('drop', function (e) {
+  var files = e.originalEvent.dataTransfer.files;
+  var nodeToDisplay = $(this).closest('.dropzone-form').find('.dropzone-form__files-count');
+  showFiles.call(this, files, nodeToDisplay);
+});
+$('.dropzone__input').on('change', function (e) {
+  var nodeToDisplay = $(this).closest('.dropzone-form').find('.dropzone-form__files-count');
+  showFiles.call(this, e.target.files, nodeToDisplay);
+});
+dropzoneForm.on('submit', function (e) {
+  e.preventDefault();
+  console.log('ti pidoras'); // if (dropzoneForm.hasClass('dropzone_uploading')) return false;
+  // dropzoneForm.addClass('dropzone_uploading').removeClass('fropzone_error');
+  // e.preventDefault();
+  // const ajaxData = new FormData(dropzoneForm.get(0));
+  // // if (droppedFiles) { // check this shit
+  // // 	$.each(droppedFiles, function(i, file) {
+  // // 		ajaxData.append($input.attr('name'), file);
+  // // 	});
+  // // }
+  // $.ajax({
+  // 	url: dropzoneForm.attr('action'),
+  // 	type: dropzoneForm.attr('method'),
+  // 	data: ajaxData,
+  // 	dataType: 'json',
+  // 	cache: false,
+  // 	contentType: false,
+  // 	processData: false,
+  // 	complete: function() {
+  // 		dropzoneForm.removeClass('dropzone_uploading');
+  // 	},
+  // 	success: function(data) {
+  // 		dropzoneForm.addClass(
+  // 			data.success === true ? 'dropzone_success' : 'dropzone_error',
+  // 		);
+  // 		// if (!data.success) $errorMsg.text(data.error); // check this shit
+  // 	},
+  // 	error: function() {
+  // 		console.error('Dropzone Error');
+  // 	},
+  // });
+});
+"use strict";
+
 $('.share-link_email').click(function () {
   $(this).next().show();
   var popper = new Popper(this, $(this).next(), {
@@ -209,17 +291,6 @@ var heroSwiperBigConfig = {
   slidesPerView: 1,
   spaceBetween: 10,
   watchOverflow: true,
-  breakpoints: {
-    576: {
-      slidesPerView: 2
-    },
-    768: {
-      slidesPerView: 3
-    } // 1200: {
-    // 	slidesPerView: 6,
-    // },
-
-  },
   observer: true,
   observerParents: true,
   observeSlideChildren: true,
@@ -445,8 +516,9 @@ var partnersSwiperConfig = {
   slideClass: 'partners__item',
   loop: true,
   allowTouchMove: true,
+  speed: 2000,
   autoplay: {
-    delay: 2500,
+    delay: 0,
     disableOnInteraction: false
   }
 };

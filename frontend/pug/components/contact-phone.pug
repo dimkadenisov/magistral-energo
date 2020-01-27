@@ -1,0 +1,9 @@
+mixin contact-phone(props = {})
+
+  - const { description, value, link } = props;
+
+  .contact-phone&attributes(attributes)
+    span.contact-phone__description= description
+    |
+    |
+    a(href=`tel:${link}`).contact-phone__value= value

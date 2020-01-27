@@ -1,0 +1,9 @@
+mixin contact-adress(props = {})
+
+  - const { value, description = 'Адрес:' } = props;
+
+  .contact-adress&attributes(attributes)
+    span.contact-adress__description= description
+    |
+    |
+    span.contact-adress__value= value
