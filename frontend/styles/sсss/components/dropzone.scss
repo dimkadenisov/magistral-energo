@@ -1,5 +1,6 @@
 .dropzone {
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	height: 158px;
@@ -16,12 +17,6 @@
 		padding-right: 15px;
 		padding-left: 15px;
 		text-align: center;
-	}
-
-	&__uploading,
-	&__success,
-	&__error {
-		display: none;
 	}
 
 	&:hover,

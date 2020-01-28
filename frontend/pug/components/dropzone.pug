@@ -1,8 +1,5 @@
 mixin dropzone(props = {})
 
   label.dropzone&attributes(attributes)
-    input.dropzone__input.visually-hidden(type='file' data-allowed-files-extensions="csv xls xslx" data-caption='Выбрано {count} файла(ов)')
+    input.dropzone__input.visually-hidden(type='file' multiple accept=".csv, .xls, .xslxg" data-caption='Выбрано {count} файла(ов)')
     span.dropzone__placeholder перенесите сюда список (csv, xls, xslx)
-    span.dropzone__uploading Идет загрузка
-    span.dropzone__success Успешно!
-    span.dropzone__error Произошла ошибка
