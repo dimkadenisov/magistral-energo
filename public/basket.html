@@ -51,7 +51,7 @@
     </style>
 </head>
 <link href="styles/main.css" rel="stylesheet" type="text/css" />
-<title>Импорт из списка</title>
+<title>Корзина</title>
 
 <body><object data="assets/img/icons/sprite.svg" type="image/svg+xml" style="width: 0; height: 0; display: none;">
         <?xml version="1.0" encoding="utf-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -698,8 +698,36 @@
         <div class="product-name">
             <div class="container">
                 <div class="row">
-                    <div class="col-12">
+                    <div class="col-12 col-md-auto col-lg-6 col-xl-7 mr-auto">
                         <h1 class="product-name__text">Импорт из списка</h1>
+                    </div>
+                    <div class="col-auto mb-4">
+                        <div class="social-share"><span class="social-share__text">На согласование</span>
+                            <div class="social-share__links"><a class="share-link share-link_vk" href="#"><svg class="share-link__icon">
+                                        <use xlink:href="#vk"></use>
+                                    </svg></a><a class="share-link share-link_facebook" href="#"><svg class="share-link__icon">
+                                        <use xlink:href="#facebook"></use>
+                                    </svg></a><a class="share-link share-link_viber" href="#"><svg class="share-link__icon">
+                                        <use xlink:href="#viber"></use>
+                                    </svg></a><a class="share-link share-link_whatsapp" href="#"><svg class="share-link__icon">
+                                        <use xlink:href="#whatsapp"></use>
+                                    </svg></a>
+                                <div class="share-link__wrapper"><button class="share-link share-link_email" type="button"><svg class="share-link__icon">
+                                            <use xlink:href="#email"></use>
+                                        </svg></button>
+                                    <form class="email-form">
+                                        <div class="email-form__arrow"></div>
+                                        <fieldset class="email-form__fieldset"><input class="email-form__input" type="email" placeholder="Введите email" /><button class="button button_icon button_primary" type="submit"><svg class="button__icon">
+                                                    <use xlink:href="#email"></use>
+                                                </svg></button></fieldset><button class="email-form__button" type="button"><svg class="email-form__icon">
+                                                <use xlink:href="#close"></use>
+                                            </svg></button>
+                                    </form>
+                                </div><a class="share-link share-link_print" href="javascript:(print());"><svg class="share-link__icon">
+                                        <use xlink:href="#print"></use>
+                                    </svg></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -707,17 +735,54 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <form class="row dropzone-form">
-                        <div class="col-12 col-lg-8 order-1"><label class="dropzone"><input class="dropzone__input visually-hidden" type="file" multiple="multiple" accept=".csv, .xls, .xslxg" data-caption="Выбрано {count} файла(ов)" /><span class="dropzone__placeholder">перенесите сюда список (csv, xls, xslx)</span></label></div>
-                        <div class="col-12 col-lg-4 order-0 order-lg-2">
-                            <p class="dropzone-form__text">Далеко-далеко за словесными горами
-                                в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает
-                                ее всеми необходимыми правилами.</p>
-                        </div>
-                        <div class="col-12 order-3">
-                            <div class="dropzone-form__submit-block"><button class="button button_primary" type="submit"><span class="button__text">Загрузить</span></button><span class="dropzone-form__files-count">Файл не выбран</span></div>
-                        </div>
-                    </form>
+                    <table class="basket-table">
+                        <thead class="basket-table__thead">
+                            <tr class="basket-table__tr">
+                                <th class="basket-table__th">№</th>
+                                <th class="basket-table__th">img</th>
+                                <th class="basket-table__th">Артикул</th>
+                                <th class="basket-table__th">Наименование товара</th>
+                                <th class="basket-table__th">Скидка</th>
+                                <th class="basket-table__th">Цена</th>
+                                <th class="basket-table__th"><button>XLS</button><button>Clear Basket</button></th>
+                                <th class="basket-table__th"></th>
+                            </tr>
+                        </thead>
+                        <tbody class="basket-table__tbody">
+                            <tr class="basket-table-product">
+                                <td class="basket-table-product__td"><span class="d-none d-md-inline">21</span></td>
+                                <td class="basket-table-product__td">
+                                    <div class="basket-table-product__info"><img class="basket-table-product__img" src="assets/img/some-product.jpg" alt="Товар" width="90" /></div>
+                                </td>
+                                <td class="basket-table-product__td"><span class="catalog-item__small-text">54HFDJ532LH4B</span></td>
+                                <td class="basket-table-product__td"><a class="basket-table-product__description" href="#">Подставка для ножей 11х22см Оранжевый мрамор с цветной</a>
+                                    <div class="basket-table-product__numbers d-lg-none"></div>
+                                </td>
+                                <td class="basket-table-product__td d-none d-lg-table-cell"><span class="catalog-item__small-text">50%</span></td>
+                                <td class="basket-table-product__td d-none d-lg-table-cell">
+                                    <div class="price price_extra-small price_vertical-reverse"><span class="price__actual">544,72 €</span><span class="price__line-through">995,62</span></div>
+                                </td>
+                                <td class="basket-table-product__td"><span class="catalog-item__small-text">amount Block</span></td>
+                                <td class="basket-table-product__td"><span class="catalog-item__small-text">x</span></td>
+                            </tr>
+                            <tr class="basket-table-product">
+                                <td class="basket-table-product__td"><span class="d-none d-md-inline">21</span></td>
+                                <td class="basket-table-product__td">
+                                    <div class="basket-table-product__info"><img class="basket-table-product__img" src="assets/img/some-product.jpg" alt="Товар" width="90" /></div>
+                                </td>
+                                <td class="basket-table-product__td"><span class="catalog-item__small-text">54HFDJ532LH4B</span></td>
+                                <td class="basket-table-product__td"><a class="basket-table-product__description" href="#">Подставка для ножей 11х22см Оранжевый мрамор с цветной</a>
+                                    <div class="basket-table-product__numbers d-lg-none"></div>
+                                </td>
+                                <td class="basket-table-product__td d-none d-lg-table-cell"><span class="catalog-item__small-text">50%</span></td>
+                                <td class="basket-table-product__td d-none d-lg-table-cell">
+                                    <div class="price price_extra-small price_vertical-reverse"><span class="price__actual">544,72 €</span><span class="price__line-through">995,62</span></div>
+                                </td>
+                                <td class="basket-table-product__td"><span class="catalog-item__small-text">amount Block</span></td>
+                                <td class="basket-table-product__td"><span class="catalog-item__small-text">x</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>

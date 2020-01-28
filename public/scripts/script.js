@@ -167,8 +167,9 @@ dropzoneForm.on('submit', function (e) {
   var form = this;
   if ($(this).hasClass('dropzone_uploading')) return false;
   $(this).addClass('dropzone_uploading').removeClass('dropzone_error');
-  dropzone.find('.dropzone-form__files-count').text('Загрузка');
-  var ajaxData = new FormData(this);
+  dropzone.find('.dropzone-form__files-count').text('Загрузка'); // const ajaxData = new FormData(this);
+
+  var ajaxData = {};
   $.ajax({
     url: $(this).attr('action'),
     type: $(this).attr('method'),

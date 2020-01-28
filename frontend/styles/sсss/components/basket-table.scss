@@ -1,0 +1,17 @@
+.basket-table {
+	width: 100%;
+	border-collapse: collapse;
+
+	&__thead {
+		background-color: var(--gray-200);
+	}
+
+	&__th {
+		padding: 15px;
+		color: var(--gray-400);
+		font-family: var(--Oswald);
+		font-weight: normal;
+		text-align: left;
+		text-transform: uppercase;
+	}
+}

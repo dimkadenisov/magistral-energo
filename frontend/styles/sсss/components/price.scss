@@ -33,6 +33,16 @@
 		}
 	}
 
+	&_extra-small {
+		.price__actual {
+			font-size: 18px;
+		}
+
+		.price__line-through {
+			font-size: 14px;
+		}
+	}
+
 	&_vertical-reverse {
 		flex-direction: column-reverse;
 	}

@@ -2,17 +2,17 @@ extends ../components/page
 
 include ../components/breadcrumbs
 include ../components/product-name
-include ../components/dropzone-form
+include ../components/basket-table
 
 block title
-  |Импорт из списка
+  |Корзина
 
 block content
   +breadcrumbs
   main.main
-    +product-name({logo: false, share: false})
+    +product-name({logo: false, share: true, shareText: 'На согласование'})
       |Импорт из списка
     .container
       .row
         .col-12
-          +dropzone-form
+          +basket-table

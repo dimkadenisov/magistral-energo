@@ -43,7 +43,8 @@ dropzoneForm.on('submit', function(e) {
 		.removeClass('dropzone_error');
 	dropzone.find('.dropzone-form__files-count').text('Загрузка');
 
-	const ajaxData = new FormData(this);
+	// const ajaxData = new FormData(this);
+	const ajaxData = {};
 
 	$.ajax({
 		url: $(this).attr('action'),

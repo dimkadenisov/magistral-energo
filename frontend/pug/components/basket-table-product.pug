@@ -1,0 +1,30 @@
+mixin basket-table-product(props = {})
+  include price
+
+
+  tr.basket-table-product
+    td.basket-table-product__td
+      span.d-none.d-md-inline 21
+
+    td.basket-table-product__td
+      .basket-table-product__info
+        img(src="assets/img/some-product.jpg" alt="Товар" width="90").basket-table-product__img
+
+    td.basket-table-product__td
+      span.catalog-item__small-text 54HFDJ532LH4B
+
+    td.basket-table-product__td
+      a(href="#").basket-table-product__description Подставка для ножей 11х22см Оранжевый мрамор с цветной
+      .basket-table-product__numbers.d-lg-none
+
+    td.basket-table-product__td.d-none.d-lg-table-cell
+      span.catalog-item__small-text 50%
+
+    td.basket-table-product__td.d-none.d-lg-table-cell
+      +price(class="price_extra-small price_vertical-reverse")
+
+    td.basket-table-product__td
+      span.catalog-item__small-text amount Block
+
+    td.basket-table-product__td
+      span.catalog-item__small-text x

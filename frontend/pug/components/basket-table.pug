@@ -1,0 +1,19 @@
+mixin basket-table(props = {})
+  include basket-table-product
+
+  table.basket-table&attributes(attributes)
+    thead.basket-table__thead
+      tr.basket-table__tr
+        th.basket-table__th №
+        th.basket-table__th img
+        th.basket-table__th Артикул
+        th.basket-table__th Наименование товара
+        th.basket-table__th Скидка
+        th.basket-table__th Цена
+        th.basket-table__th
+          button XLS
+          button Clear Basket
+        th.basket-table__th
+    tbody.basket-table__tbody
+      +basket-table-product({basket: basket})
+      +basket-table-product({basket: basket})
