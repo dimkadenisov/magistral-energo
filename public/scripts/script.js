@@ -143,7 +143,7 @@ var dropzone = $('.dropzone');
 function showFiles(files, nodeToDisplay) {
   nodeToDisplay.text(_toConsumableArray(files).map(function (file) {
     return file.name;
-  }).join(''));
+  }).join(' '));
 }
 
 dropzone.on('drag dragstart dragend dragover dragenter dragleave drop', function (e) {
@@ -168,10 +168,11 @@ dropzoneForm.on('submit', function (e) {
   if ($(this).hasClass('dropzone_uploading')) return false;
   $(this).addClass('dropzone_uploading').removeClass('dropzone_error');
   dropzone.find('.dropzone-form__files-count').text('Загрузка');
+  var ajaxData = new FormData(this);
   $.ajax({
     url: $(this).attr('action'),
     type: $(this).attr('method'),
-    data: new FormData(form),
+    data: ajaxData,
     dataType: 'json',
     cache: false,
     contentType: 'form/multipart',

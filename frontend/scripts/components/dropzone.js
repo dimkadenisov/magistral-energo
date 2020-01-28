@@ -2,7 +2,7 @@ const dropzoneForm = $('.dropzone-form');
 const dropzone = $('.dropzone');
 
 function showFiles(files, nodeToDisplay) {
-	nodeToDisplay.text([...files].map(file => file.name).join(''));
+	nodeToDisplay.text([...files].map(file => file.name).join(' '));
 }
 
 dropzone
@@ -43,10 +43,12 @@ dropzoneForm.on('submit', function(e) {
 		.removeClass('dropzone_error');
 	dropzone.find('.dropzone-form__files-count').text('Загрузка');
 
+	const ajaxData = new FormData(this);
+
 	$.ajax({
 		url: $(this).attr('action'),
 		type: $(this).attr('method'),
-		data: new FormData(form),
+		data: ajaxData,
 		dataType: 'json',
 		cache: false,
 		contentType: 'form/multipart',
