@@ -397,7 +397,7 @@ var linksSwiperConfig = {
   }
 };
 var linksSwiper = generateSwipers({
-  swiperClass: 'links-swiper__content',
+  swiperClass: 'links-swiper__content_init',
   swiperConfig: linksSwiperConfig
 });
 "use strict";

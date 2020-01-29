@@ -1,0 +1,9 @@
+mixin summary-item(props = {})
+
+  - const { iconId, name, value } = props
+
+  .summary-item&attributes(attributes)
+    svg.summary-item__icon
+      use(xlink:href=`#${iconId}`)
+    .summary-item__name= name
+    .summary-item__value= value

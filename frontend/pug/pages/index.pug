@@ -7,6 +7,7 @@ include ../components/advantages-block
 include ../components/hero-swiper
 include ../components/sidebar-link
 include ../components/list
+include ../components/items-swiper
 
 block title
   |Главная страница
@@ -115,7 +116,8 @@ block content
               'assets/img/some-product.jpg',
               'assets/img/some-product.jpg',
             ],
-            swiperButtons: true
+            swiperButtons: true,
+            contentClasses: 'links-swiper__content_init'
           })(class="links-swiper_orange")
 
           .items-swiper__header
@@ -151,14 +153,22 @@ block content
               'Кабельные наконечники и соединители (гильзы)',
               'Кабельные наконечники и соединители (гильзы)',
               'Кабельные наконечники и соединители (гильзы)',
+              'Кабельные наконечники и соединители (гильзы)',
+              'Кабельные наконечники и соединители (гильзы)',
+              'Кабельные наконечники и соединители (гильзы)',
+              'Кабельные наконечники и соединители (гильзы)',
             ],
             imgSrcs: [
               'assets/img/some-product.jpg',
               'assets/img/some-product.jpg',
               'assets/img/some-product.jpg',
               'assets/img/some-product.jpg',
+              'assets/img/some-product.jpg',
+              'assets/img/some-product.jpg',
+              'assets/img/some-product.jpg',
+              'assets/img/some-product.jpg',
             ],
-            swiperButtons: true
+            swiperButtons: false
           })
 
           +links-swiper({
@@ -177,7 +187,7 @@ block content
               'assets/img/some-product.jpg',
               'assets/img/some-product.jpg',
             ],
-            swiperButtons: true
+            swiperButtons: false
           })
 
           +links-swiper({
@@ -196,7 +206,7 @@ block content
               'assets/img/some-product.jpg',
               'assets/img/some-product.jpg',
             ],
-            swiperButtons: true
+            swiperButtons: false
           })
 
           +links-swiper({
@@ -215,7 +225,7 @@ block content
               'assets/img/some-product.jpg',
               'assets/img/some-product.jpg',
             ],
-            swiperButtons: true
+            swiperButtons: false
           })
 
           +links-swiper({
@@ -234,7 +244,7 @@ block content
               'assets/img/some-product.jpg',
               'assets/img/some-product.jpg',
             ],
-            swiperButtons: true
+            swiperButtons: false
           })
 
           +links-swiper({
@@ -253,5 +263,5 @@ block content
               'assets/img/some-product.jpg',
               'assets/img/some-product.jpg',
             ],
-            swiperButtons: true
+            swiperButtons: false
           })

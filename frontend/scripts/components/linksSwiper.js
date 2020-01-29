@@ -27,6 +27,6 @@ const linksSwiperConfig = {
 };
 
 let linksSwiper = generateSwipers({
-	swiperClass: 'links-swiper__content',
+	swiperClass: 'links-swiper__content_init',
 	swiperConfig: linksSwiperConfig,
 });

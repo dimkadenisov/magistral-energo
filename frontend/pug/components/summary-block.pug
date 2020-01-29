@@ -1,0 +1,13 @@
+mixin summary-block(props = {})
+  include summary-item
+
+  .summary-block&attributes(attributes)
+    .summary-block__specs
+      +summary-item({iconId: 'weight-tool', name: 'Общий вес заказа:', value: '30 000 кг'})(class="summary-item_small-value mb-4")
+      +summary-item({iconId: 'wallet', name: 'Итого:', value: '30 000 000 €'})
+      +summary-item({iconId: 'black-shop-tag', name: 'Скидка:', value: '15 000 000 €'})
+      +summary-item({iconId: 'percentage', name: 'Итого со скидкой:', value: '15 000 000 €'})(class="summary-item_bold mb-4")
+      +summary-item({iconId: 'gift-box', name: 'Начислим бонусов:', value: '30 000'})(class="summary-item_red")
+
+    +button({variant: 'primary'})
+      |Оформить заказ

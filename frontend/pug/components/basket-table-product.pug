@@ -1,30 +1,31 @@
 mixin basket-table-product(props = {})
   include price
+  include amount-block
+  include button
 
 
   tr.basket-table-product
-    td.basket-table-product__td
-      span.d-none.d-md-inline 21
+    td.basket-table-product__td.basket-table-product__number
+      span.basket-table-product__text 21
 
-    td.basket-table-product__td
-      .basket-table-product__info
-        img(src="assets/img/some-product.jpg" alt="Товар" width="90").basket-table-product__img
+    td.basket-table-product__td.basket-table-product__image
+      img(src="assets/img/some-product.jpg" data-object-fit="contain" alt="Товар" width="90").basket-table-product__img
 
-    td.basket-table-product__td
-      span.catalog-item__small-text 54HFDJ532LH4B
+    td.basket-table-product__td.basket-table-product__vendor-code
+      span.basket-table-product__text 54HFDJ532LH4B
 
-    td.basket-table-product__td
-      a(href="#").basket-table-product__description Подставка для ножей 11х22см Оранжевый мрамор с цветной
-      .basket-table-product__numbers.d-lg-none
+    td.basket-table-product__td.basket-table-product__name
+      a(href="#").basket-table-product__name SIMATIC S7-300, SM321, МОДУЛЬ ВВОДА ДИСКРЕТНЫХ СИГНАЛОВ
 
-    td.basket-table-product__td.d-none.d-lg-table-cell
-      span.catalog-item__small-text 50%
+    td.basket-table-product__td.basket-table-product__sale
+      span.basket-table-product__text 50
 
-    td.basket-table-product__td.d-none.d-lg-table-cell
+    td.basket-table-product__td.basket-table-product__price
       +price(class="price_extra-small price_vertical-reverse")
 
-    td.basket-table-product__td
-      span.catalog-item__small-text amount Block
+    td.basket-table-product__td.basket-table-product__amount
+      +amount-block(class="amount-block_small amount-block_border")
 
-    td.basket-table-product__td
-      span.catalog-item__small-text x
+    td.basket-table-product__td.basket-table-product__delete
+      +button(class="basket-table-product__delete-button")
+        |✕

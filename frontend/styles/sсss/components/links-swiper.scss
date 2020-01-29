@@ -1,10 +1,25 @@
 .links-swiper {
 	margin-bottom: 64px;
 
+	.swiper-wrapper {
+		flex-wrap: wrap;
+	}
+
 	&__content {
 		position: relative;
 		width: 100%;
 		overflow-x: hidden;
+
+		&_init {
+			.swiper-wrapper {
+				flex-wrap: nowrap;
+			}
+		}
+	}
+
+	&__item {
+		width: 16.6666%;
+		margin-bottom: 20px;
 	}
 
 	.swiper-button {
@@ -44,6 +59,22 @@
 	}
 }
 
+@media screen and (max-width: 1199px) {
+	.links-swiper {
+		&__item {
+			width: 20%;
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.links-swiper {
+		&__item {
+			width: 33.3333%;
+		}
+	}
+}
+
 @media screen and (max-width: 767px) {
 	.links-swiper {
 		&__header {
@@ -68,6 +99,10 @@
 			margin-left: -15px;
 			padding-right: 15px;
 			padding-left: 15px;
+		}
+
+		&__item {
+			width: 50%;
 		}
 
 		.link-with-icon {

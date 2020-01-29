@@ -4,12 +4,14 @@ mixin links-swiper(props = {})
   include links-swiper-item
   include link-with-icon
 
-  - const { heading = null, headerLinkText = null, headerLinkIconId = null, names = null, imgSrcs = null, swiperButtons = true } = props;
+  - const { heading = null, headerLinkText = null, headerLinkIconId = null, names = null, imgSrcs = null, swiperButtons = true, contentClasses = null } = props;
+
+  - const contentClassList = contentClasses ? `links-swiper__content ${contentClasses}` : `links-swiper__content`;
 
   .links-swiper&attributes(attributes)
     +block-heading({ heading: heading, buttonText: headerLinkText, buttonIconId: headerLinkIconId })
 
-    .links-swiper__content
+    div(class= contentClassList)
       .swiper-wrapper
         each name, index in names
           .links-swiper__item

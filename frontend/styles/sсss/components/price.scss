@@ -45,5 +45,13 @@
 
 	&_vertical-reverse {
 		flex-direction: column-reverse;
+
+		.price__actual {
+			margin-right: 0;
+		}
+
+		.price__line-through {
+			margin-top: 0;
+		}
 	}
 }

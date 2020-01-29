@@ -3,6 +3,7 @@ extends ../components/page
 include ../components/breadcrumbs
 include ../components/product-name
 include ../components/basket-table
+include ../components/summary-block
 
 block title
   |Корзина
@@ -16,3 +17,5 @@ block content
       .row
         .col-12
           +basket-table
+        .col-12.offset-0.col-md-6.offset-md-6.col-lg-5.offset-lg-7.col-xl-4.offset-xl-8
+          +summary-block

@@ -1,19 +1,24 @@
 mixin basket-table(props = {})
   include basket-table-product
+  include button
 
   table.basket-table&attributes(attributes)
+
     thead.basket-table__thead
       tr.basket-table__tr
-        th.basket-table__th №
-        th.basket-table__th img
-        th.basket-table__th Артикул
-        th.basket-table__th Наименование товара
-        th.basket-table__th Скидка
-        th.basket-table__th Цена
-        th.basket-table__th
-          button XLS
-          button Clear Basket
-        th.basket-table__th
+        th.basket-table__th.d-none.d-md-table-cell
+        th.basket-table__th.d-none.d-md-table-cell
+        th.basket-table__th.d-none.d-md-table-cell Артикул
+        th.basket-table__th.d-none.d-md-table-cell Наименование
+        th.basket-table__th.d-none.d-md-table-cell Скидка,&nbsp;%
+        th.basket-table__th.d-none.d-md-table-cell Цена
+        th.basket-table__th.basket-table__buttons-wrapper
+          .basket-table__buttons
+            +button({type: 'icon', iconId: 'xls'})(class="basket-table__xls")
+
+            +button(class="basket-table__clear")
+              |Очистить корзину
+        th.basket-table__th.d-none.d-md-table-cell
     tbody.basket-table__tbody
       +basket-table-product({basket: basket})
       +basket-table-product({basket: basket})
