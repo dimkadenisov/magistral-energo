@@ -1,0 +1,37 @@
+.summary-buttons {
+	display: flex;
+	flex-wrap: wrap;
+
+	& .button {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.summary-buttons {
+		max-width: 330px;
+
+		& .button {
+			width: auto;
+			margin-bottom: 15px;
+
+			&:first-of-type {
+				margin-right: 15px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 575px) {
+	.summary-buttons {
+		max-width: none;
+
+		& .button {
+			width: 100%;
+
+			&:first-of-type {
+				margin-right: 0;
+			}
+		}
+	}
+}

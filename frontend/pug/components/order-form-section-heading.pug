@@ -1,0 +1,7 @@
+mixin order-form-section-heading(props = {})
+
+  - const { number, text } = props;
+
+  .order-form-section-heading&attributes(attributes)
+    span.order-form-section-heading__number= number
+    span.order-form-section-heading__text= text

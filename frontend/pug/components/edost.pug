@@ -1,0 +1,15 @@
+mixin edost(props = {})
+  include order-form-section
+
+  .edost&attributes(attributes)
+    +order-form-section({number: '1', text: 'Данные покупателя'})
+      .edost_div
+        .edost_prop_div
+          .edost_prop
+            .edost_person_type(onclick='this.children[0].checked = true; submitForm();')
+              input.visually-hidden#PERSON_TYPE_1(type='radio' name='PERSON_TYPE' value='1' checked='checked' onclick2='submitForm()')
+              label(for='PERSON_TYPE_1') Физическое лицо
+            .edost_person_type(onclick='this.children[0].checked = true; submitForm();')
+              input.visually-hidden#PERSON_TYPE_2(type='radio' name='PERSON_TYPE' value='2' onclick2='submitForm()')
+              label(for='PERSON_TYPE_2') Юридическое лицо
+            input(type='hidden' name='PERSON_TYPE_OLD' value='1')

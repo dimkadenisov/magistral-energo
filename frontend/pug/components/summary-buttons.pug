@@ -1,0 +1,9 @@
+mixin summary-buttons(props = {})
+
+  .summary-buttons&attributes(attributes)
+    +button({variant: 'border_primary'})(class="d-lg-none")
+      |Изменить заказ
+    +button({variant: 'primary'})
+      |Оформить заказ
+    +checkbox({checked: true})(class="d-lg-none")
+      |Нажимая кнопку «Оформить заказ», я даю согласие на обработку персональных данных.

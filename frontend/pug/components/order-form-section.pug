@@ -1,0 +1,9 @@
+mixin order-form-section(props = {})
+  include order-form-section-heading
+
+  - const { number, text } = props;
+
+  .order-form-section&attributes(attributes)
+    +order-form-section-heading({number: number, text: text})
+    .order-form-section__content
+      block

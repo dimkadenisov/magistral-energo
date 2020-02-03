@@ -30,18 +30,6 @@ mixin button(props = {})
         span.button__text
           block
 
-    //- when "icon_right"
-    //-   #{tag}(class= classList)&attributes(attributes)
-    //-     span.button__text
-    //-       block
-    //-     svg.button__icon
-    //-       use(xlink:href= `#${iconId}`)
-
-    //- when "underlined"
-    //-   #{tag}(class= classList)&attributes(attributes)
-    //-     span.button__text
-    //-       block
-
     default
       #{tag}(class= classList)&attributes(attributes)
         span.button__text

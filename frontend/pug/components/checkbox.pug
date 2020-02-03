@@ -1,8 +1,9 @@
 mixin checkbox(props = {})
 
+  - const { checked = false } = props;
 
-  label.checkbox
-    input(type="checkbox").visually-hidden&attributes(attributes)
+  label.checkbox&attributes(attributes)
+    input(type="checkbox").visually-hidden&attributes({checked: checked})
     span.checkbox__checkbox
     span.checkbox__text
       block

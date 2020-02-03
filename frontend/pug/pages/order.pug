@@ -1,13 +1,15 @@
 extends ../components/page
 
 include ../components/breadcrumbs
-include ../components/product-name
-include ../components/basket-table
-include ../components/summary-block
 include ../components/button
+include ../components/checkbox
+include ../components/edost
+include ../components/product-name
+include ../components/summary-block
+include ../components/summary-buttons
 
 block title
-  |Корзина
+  |Оформление заказа
 
 block content
   +breadcrumbs
@@ -16,9 +18,8 @@ block content
       |Импорт из списка
     .container
       .row
-        .col-12
-          +basket-table
-        .col-12.offset-0.col-md-6.offset-md-6.col-lg-5.offset-lg-7.col-xl-4.offset-xl-8
+        .col-12.col-lg-7.col-xl-8
+          +edost
+        .col-12.col-lg-5.col-xl-4
           +summary-block
-            +button({variant: 'primary'})
-              |Оформить заказ
+            +summary-buttons
