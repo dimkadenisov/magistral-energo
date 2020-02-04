@@ -3,4 +3,4 @@ mixin link-image(props = {})
   - const { imgSrc } = props;
 
   a(href="#").link-image&attributes(attributes)
-    img(src=imgSrc, alt="Изображение" data-object-fit="cover").link-image__img
+    img(src=imgSrc, alt="Изображение" data-object-fit="contain").link-image__img
