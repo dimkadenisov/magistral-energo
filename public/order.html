@@ -761,13 +761,37 @@
                         <div class="order-form-section">
                             <div class="order-form-section-heading"><span class="order-form-section-heading__number">1</span><span class="order-form-section-heading__text">Данные покупателя</span></div>
                             <div class="order-form-section__content">
-                                <div class="edost_div">
-                                    <div class="edost_prop_div">
-                                        <div class="edost_prop">
-                                            <div class="edost_person_type" onclick="this.children[0].checked = true; submitForm();"><input class="visually-hidden" id="PERSON_TYPE_1" type="radio" name="PERSON_TYPE" value="1" checked="checked" onclick2="submitForm()" /><label for="PERSON_TYPE_1">Физическое лицо</label></div>
-                                            <div class="edost_person_type" onclick="this.children[0].checked = true; submitForm();"><input class="visually-hidden" id="PERSON_TYPE_2" type="radio" name="PERSON_TYPE" value="2" onclick2="submitForm()" /><label for="PERSON_TYPE_2">Юридическое лицо</label></div><input type="hidden" name="PERSON_TYPE_OLD" value="1" />
-                                        </div>
+                                <div class="edost-item">
+                                    <div class="edost-item__content">
+                                        <div class="radio-button"><input class="visually-hidden radio-button__input" type="radio" id="PERSON_TYPE_1" name="PERSON_TYPE" value="1" checked="checked" /><label class="radio-button__label" for="PERSON_TYPE_1">Юридическое лицо</label></div>
+                                        <div class="radio-button"><input class="visually-hidden radio-button__input" type="radio" id="PERSON_TYPE_2" name="PERSON_TYPE" value="2" /><label class="radio-button__label" for="PERSON_TYPE_2">Физическое лицо</label></div>
                                     </div>
+                                </div><br />
+                                <div class="edost-item">
+                                    <div class="edost-item__content"><label class="edost-input"><input class="edost-input__input" placeholder="Введите Название компании или ИНН" /><span class="edost-input__label">Введите Название компании или ИНН<sup class="edost-input__requirement">*</sup></span></label></div>
+                                </div>
+                                <div class="edost-item">
+                                    <div class="edost-item__content"><label class="edost-input"><input class="edost-input__input" placeholder="ФИО контактного лица" type="text" autocomplete="off" autocorrect="off" spellcheck="false" maxlength="250" size="" value="" name="ORDER_PROP_1" id="ORDER_PROP_1" data-type="name" oninput="window.edost_window.input('update', this, event)" style="box-sizing: border-box;" /><span class="edost-input__label">ФИО контактного лица<sup class="edost-input__requirement">*</sup></span></label></div>
+                                </div>
+                                <div class="edost-item">
+                                    <div class="edost-item__content"><label class="edost-input"><input class="edost-input__input" placeholder="E-mail" type="text" autocomplete="off" autocorrect="off" spellcheck="false" autocapitalize="off" maxlength="250" size="" value="" name="ORDER_PROP_2" id="ORDER_PROP_2" data-type="email" oninput="window.edost_window.input('update', this, event)" style="box-sizing: border-box;" /><span class="edost-input__label">E-mail<sup class="edost-input__requirement">*</sup></span></label></div>
+                                </div>
+                                <div class="edost-item">
+                                    <div class="edost-item__content"><label class="edost-input"><input class="edost-input__input" placeholder="+7 000 000-00-00" type="tel" autocomplete="tel" autocorrect="off" spellcheck="false" maxlength="16" size="" value="" name="ORDER_PROP_3" id="ORDER_PROP_3" data-type="tel" oninput="window.edost_window.input('update', this, event)" /><span class="edost-input__label">Телефон<sup class="edost-input__requirement">*</sup></span></label></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-form-section">
+                            <div class="order-form-section-heading"><span class="order-form-section-heading__number">2</span><span class="order-form-section-heading__text">Доставка</span></div>
+                            <div class="order-form-section__content">
+                                <div class="edost-item">
+                                    <div class="edost-item__content">
+                                        <div class="radio-button"><input class="visually-hidden radio-button__input" type="radio" id="DELIVERY_TYPE_1" name="DELIVERY_TYPE" value="1" checked="checked" /><label class="radio-button__label" for="DELIVERY_TYPE_1">До терминала</label></div>
+                                        <div class="radio-button"><input class="visually-hidden radio-button__input" type="radio" id="DELIVERY_TYPE_2" name="DELIVERY_TYPE" value="2" /><label class="radio-button__label" for="DELIVERY_TYPE_2">До двери</label></div>
+                                    </div>
+                                </div>
+                                <div class="edost-item">
+                                    <div class="edost-item__content"><label class="edost-input"><input class="edost-input__input" placeholder="Адрес доставки" /><span class="edost-input__label">Адрес доставки<sup class="edost-input__requirement">*</sup></span></label></div>
                                 </div>
                             </div>
                         </div>

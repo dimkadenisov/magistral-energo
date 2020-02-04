@@ -1,0 +1,9 @@
+mixin edost-input(props = {})
+
+  - const { labelText, labelAttrs, required } = props;
+
+  label.edost-input&attributes(labelAttrs)
+    input.edost-input__input(placeholder=labelText)&attributes(attributes)
+    span.edost-input__label= labelText
+      if required
+        sup.edost-input__requirement *
