@@ -1,0 +1,9 @@
+mixin label-with-image(props = {})
+
+  - const { imgSrc } = props;
+
+  .label-with-image&attributes(attributes)
+    .label-with-image__img-wrapper
+      img.label-with-image__img(src= imgSrc, alt="Картинка")
+    .label-with-image__text
+      block

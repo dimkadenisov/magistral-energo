@@ -1,9 +1,16 @@
-.order-form-section-heading {
-	display: flex;
-	align-items: center;
+.order-form-legend {
+	display: block;
 	margin-bottom: 20px;
+	padding-right: 0;
+	padding-left: 0;
+
+	&__content {
+		display: flex;
+		align-items: center;
+	}
 
 	&__number {
+		flex-shrink: 0;
 		min-width: 48px;
 		height: 48px;
 		margin-right: 24px;

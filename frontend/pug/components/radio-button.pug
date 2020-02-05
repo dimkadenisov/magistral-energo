@@ -2,7 +2,8 @@ mixin radio-button(props = {})
 
   - const { labelAtrrs } = props;
 
-  .radio-button
+  label.radio-button&attributes(labelAtrrs)
     input.visually-hidden.radio-button__input&attributes(attributes)
-    label.radio-button__label&attributes(labelAtrrs)
+    .radio-button__radio
+    span.radio-button__label
       block

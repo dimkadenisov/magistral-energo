@@ -1,0 +1,27 @@
+.label-with-image {
+	position: relative;
+	margin-bottom: 20px;
+
+	&__img-wrapper {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 40px;
+		height: 30px;
+		transform: translateY(-25%);
+	}
+
+	&__img {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		max-width: 100%;
+		max-height: 100%;
+		object-fit: contain;
+		transform: translate(-50%, -50%);
+	}
+
+	&__text {
+		margin-left: 55px;
+	}
+}

@@ -1,6 +1,6 @@
 mixin separate-image(props = {})
 
-  - const { imgSrc = "assets/img/some-product.jpg" } = props
+  - const { imgSrc = "assets/img/some-product.jpg", objectFit = 'contain' } = props
 
   .separate-image&attributes(attributes)
-    img.separate-image__img(src= imgSrc alt="Описание картинки")
+    img.separate-image__img(src= imgSrc alt="Описание картинки" data-object-fit=objectFit)

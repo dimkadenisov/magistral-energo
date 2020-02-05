@@ -1,0 +1,8 @@
+mixin order-form-legend(props = {})
+
+  - const { number, text } = props;
+
+  legend.order-form-legend&attributes(attributes)
+    span.order-form-legend__content
+      span.order-form-legend__number= number
+      span.order-form-legend__text= text

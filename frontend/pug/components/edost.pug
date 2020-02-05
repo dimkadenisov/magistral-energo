@@ -1,11 +1,16 @@
 mixin edost(props = {})
-  include order-form-section
+  include order-form-fieldset
   include edost-item
   include radio-button
   include edost-input
+  include edost-location-button
+  include separate-image
+  include checkbox
+  include label-with-image
+  include edost-submit-block
 
-  .edost&attributes(attributes)
-    +order-form-section({number: '1', text: 'Данные покупателя'})
+  form.edost&attributes(attributes)
+    +order-form-fieldset({number: '1', text: 'Данные покупателя'})
       +edost-item
         +radio-button({labelAtrrs: {for: 'PERSON_TYPE_1'}})(type='radio' id="PERSON_TYPE_1" name='PERSON_TYPE' value='1' checked="checked")
           |Юридическое лицо
@@ -19,17 +24,93 @@ mixin edost(props = {})
         +edost-input({labelText: 'ФИО контактного лица', required: true,})(type="text" autocomplete="off" autocorrect="off" spellcheck="false" maxlength="250" size="" value="" name="ORDER_PROP_1" id="ORDER_PROP_1" data-type="name" oninput="window.edost_window.input('update', this, event)" style="box-sizing: border-box;")
 
       +edost-item
-        +edost-input({labelText: 'E-mail', required: true,})(type="text" autocomplete="off" autocorrect="off" spellcheck="false" autocapitalize="off" maxlength="250" size="" value="" name="ORDER_PROP_2" id="ORDER_PROP_2" data-type="email" oninput="window.edost_window.input('update', this, event)" style="box-sizing: border-box;")
+        +edost-input({labelText: 'E-mail', required: true,})(type="text" autocomplete="off" autocorrect="off" spellcheck="false" autocapitalize="off" maxlength="250" size="" value="" name="ORDER_PROP_2" id="ORDER_PROP_2" data-type="email" oninput="window.edost_window.input('update', this, event)")
 
       +edost-item
         +edost-input({labelText: 'Телефон', required: true,})(type="tel" autocomplete="tel" autocorrect="off" spellcheck="false" maxlength="16" size="" value="" name="ORDER_PROP_3" id="ORDER_PROP_3" data-type="tel" oninput="window.edost_window.input('update', this, event)" placeholder="+7 000 000-00-00")
 
-    +order-form-section({number: '2', text: 'Доставка'})
+    +order-form-fieldset({number: '2', text: 'Доставка'})
+      +edost-item
+        span Доставка в
+        |
+        |
+        +edost-location-button
+          |Москва
+      br
+      +edost-item
+        +radio-button({labelAtrrs: {for: 'DELIVERY_COMPANY_1'}})(type='radio' id="DELIVERY_COMPANY_1" name='DELIVERY_COMPANY' value='1')
+          +label-with-image({imgSrc: 'assets/img/delovie-linii.png'})
+            |ТК Деловые линии:
+            |
+            |
+            b 503 ₽
+            |,
+            |
+            |
+            b 3 дня
+        br
+        +radio-button({labelAtrrs: {for: 'DELIVERY_COMPANY_2'}})(type='radio' id="DELIVERY_COMPANY_2" name='DELIVERY_COMPANY' value='2')
+          +label-with-image({imgSrc: 'assets/img/pek.png'})
+            |ТК ПЭК:
+            |
+            |
+            b 482 ₽
+            |,
+            |
+            |
+            b 3 дня
+        br
+        +radio-button({labelAtrrs: {for: 'DELIVERY_COMPANY_3'}})(type='radio' id="DELIVERY_COMPANY_3" name='DELIVERY_COMPANY' value='3')
+          +label-with-image({imgSrc: 'assets/img/zeldor.png'})
+            |ТК Желдор Экспедиция:
+            |
+            |
+            b 535 ₽
+            |,
+            |
+            |
+            b 3 дня
+        br
       +edost-item
         +radio-button({labelAtrrs: {for: 'DELIVERY_TYPE_1'}})(type='radio' id="DELIVERY_TYPE_1" name='DELIVERY_TYPE' value='1' checked="checked")
           |До терминала
         +radio-button({labelAtrrs: {for: 'DELIVERY_TYPE_2'}})(type='radio' id="DELIVERY_TYPE_2" name='DELIVERY_TYPE' value='2')
           |До двери
-
+      br
       +edost-item
         +edost-input({labelText: 'Адрес доставки', required: true,})
+
+    +order-form-fieldset({number: '3', text: 'Оплата'})
+      +edost-item
+        +radio-button({labelAtrrs: {for: 'PAYMENT_TYPE_1'}})(type='radio' id="PAYMENT_TYPE_1" name='PAYMENT_TYPE' value='1')
+          +label-with-image({imgSrc: 'assets/img/credit-cards.png'})
+            |Банковский перевод
+        br
+        +radio-button({labelAtrrs: {for: 'PAYMENT_TYPE_2'}})(type='radio' id="PAYMENT_TYPE_2" name='PAYMENT_TYPE' value='2')
+          +label-with-image({imgSrc: 'assets/img/credit-cards.png'})
+            |Наличные
+
+    +order-form-fieldset({number: '4', text: 'Дополнительные услуги'})
+      +edost-item
+        +checkbox
+          |Дополнительная услуга
+        br
+        +checkbox
+          |Дополнительная услуга
+        br
+        +checkbox
+          |Дополнительная услуга
+        br
+        +checkbox
+          |Дополнительная услуга c очень длинным названием,
+          br
+          |которое ломает дезигн
+
+    +order-form-fieldset({number: '5', text: 'подтверждение заказа'})
+      +edost-item
+        +checkbox
+          |Требуется отсрочка платежа
+      br
+      +edost-item
+        +edost-input({labelText: 'Комментарий к заказу', type: 'textarea'})(tautocomplete="off" autocorrect="off" spellcheck="false" autocapitalize="off")
+    +edost-submit-block(class="d-none d-lg-flex")

@@ -1,0 +1,9 @@
+.order-form-fieldset {
+	padding: 0;
+
+	&:nth-last-of-type(n + 2) {
+		margin-bottom: 30px;
+		padding-bottom: 20px;
+		border-bottom: 1px solid var(--gray-200);
+	}
+}

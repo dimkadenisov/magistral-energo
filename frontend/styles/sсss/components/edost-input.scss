@@ -1,10 +1,14 @@
 .edost-input {
 	display: block;
 	position: relative;
-	max-width: 350px;
 	width: 100%;
 	border-radius: 5px;
 	border: 1px solid var(--gray-400-alpha-50);
+
+	textarea.edost-input__input {
+		height: 108px;
+		resize: none;
+	}
 
 	&__input {
 		width: 100%;
@@ -14,6 +18,7 @@
 		border: 0;
 		color: var(--gray-700);
 		font-size: 16px;
+		line-height: 1.5;
 		transition: all 0.15s ease;
 		-webkit-appearance: none;
 		appearance: none;
@@ -28,13 +33,13 @@
 
 			& + .edost-input__label {
 				color: var(--green-400);
-				transform: translate3d(0, -90%, 0) scale(0.75);
+				transform: translate3d(0, -9px, 0) scale(0.75);
 			}
 		}
 
 		&:not(:-ms-placeholder-shown) {
 			& + .edost-input__label {
-				transform: translate3d(0, -90%, 0) scale(0.75);
+				transform: translate3d(0, -9px, 0) scale(0.75);
 			}
 
 			&:focus {
@@ -46,7 +51,7 @@
 
 		&:not(:placeholder-shown) {
 			& + .edost-input__label {
-				transform: translate3d(0, -90%, 0) scale(0.75) !important;
+				transform: translate3d(0, -9px, 0) scale(0.75) !important;
 			}
 
 			&:focus {
@@ -57,7 +62,8 @@
 		}
 	}
 
-	input {
+	input,
+	textarea {
 		&::-moz-placeholder {
 			font-size: 0.1px;
 			opacity: 0;
@@ -71,13 +77,13 @@
 
 	&__label {
 		position: absolute;
-		top: 50%;
+		top: 10px;
 		left: 12px;
 		color: var(--gray-400);
-		font-size: 16px;
+		font-size: 14px;
 		line-height: 1.4;
 		transform-origin: 0 0;
-		transform: translate3d(0, -50%, 0);
+		transform: translate3d(0, 0, 0);
 		transition: all 0.2s ease;
 		cursor: text;
 	}

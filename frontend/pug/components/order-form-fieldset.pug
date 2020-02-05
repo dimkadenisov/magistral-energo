@@ -1,0 +1,9 @@
+mixin order-form-fieldset(props = {})
+  include order-form-legend
+
+  - const { number, text } = props;
+
+  fieldset.order-form-fieldset&attributes(attributes)
+    +order-form-legend({number: number, text: text})
+    .order-form-fieldset__content
+      block

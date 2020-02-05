@@ -1,9 +1,18 @@
 mixin edost-input(props = {})
 
-  - const { labelText, labelAttrs, required } = props;
+  - const { type, labelText, labelAttrs, required } = props;
 
-  label.edost-input&attributes(labelAttrs)
-    input.edost-input__input(placeholder=labelText)&attributes(attributes)
-    span.edost-input__label= labelText
-      if required
-        sup.edost-input__requirement *
+  case type
+    default
+      label.edost-input&attributes(labelAttrs)
+        input.edost-input__input(placeholder=labelText)&attributes(attributes)
+        span.edost-input__label= labelText
+          if required
+            sup.edost-input__requirement *
+
+    when 'textarea'
+      label.edost-input&attributes(labelAttrs)
+        textarea.edost-input__input(placeholder=labelText)&attributes(attributes)
+        span.edost-input__label= labelText
+          if required
+            sup.edost-input__requirement *

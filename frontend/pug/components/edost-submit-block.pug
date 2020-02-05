@@ -1,10 +1,8 @@
-mixin summary-buttons(props = {})
+mixin edost-submit-block(props = {})
 
-  .summary-buttons&attributes(attributes)
-    +button({variant: 'border_primary'})(class="d-lg-none")
-      |Изменить заказ
+  .edost-submit-block&attributes(attributes)
     +button({variant: 'primary'})
       |Оформить заказ
-    +checkbox({checked: true})(class="d-lg-none")
+    +checkbox({checked: true})
       span.text-small
         |Нажимая кнопку «Оформить заказ», я даю согласие на обработку персональных данных.
