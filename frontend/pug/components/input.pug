@@ -1,3 +1,18 @@
 mixin input(props = {})
 
-  input.input&attributes(attributes)
+  - const { type, labelText, labelAttrs, required } = props;
+
+  case type
+    default
+      label.input&attributes(labelAttrs)
+        input.input__input(placeholder=labelText)&attributes(attributes)
+        span.input__label= labelText
+          if required
+            sup.input__requirement *
+
+    when 'textarea'
+      label.input&attributes(labelAttrs)
+        textarea.input__input(placeholder=labelText)&attributes(attributes)
+        span.input__label= labelText
+          if required
+            sup.input__requirement *

@@ -8,10 +8,10 @@ mixin quick-order-form(props = {})
 
   form.quick-order-form&attributes(attributes)
     if !callback
-      +input(type="text" placeholder="Введите Название компании или ИНН" required)
-      +input(type="email" placeholder="Email" inputmode='email' autocapitalize='off' autocorrect='off' autocomplete='email' required)
+      +input({labelText: 'Введите Название компании или ИНН', required: true,})(required="required")
+      +input({labelText: 'E-mail', required: true,})(required="required" type="text" autocomplete="off" autocorrect="off" spellcheck="false" autocapitalize="off" maxlength="250")
 
-    +input(type="tel" placeholder="Телефон" inputmode='tel' autocorrect='off' autocomplete='tel' required)
+    +input({labelText: 'Телефон', required: true,})(type="tel" inputmode='tel' autocorrect='off' autocomplete='tel')
     +button({variant: 'primary'})(type="submit")= buttonText
     +checkbox({checked: true})
       span.text-small

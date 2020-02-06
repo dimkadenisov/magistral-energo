@@ -2,7 +2,7 @@ mixin edost(props = {})
   include order-form-fieldset
   include edost-item
   include radio-button
-  include edost-input
+  include input
   include edost-location-button
   include separate-image
   include checkbox
@@ -18,16 +18,16 @@ mixin edost(props = {})
           |Физическое лицо
       br
       +edost-item
-        +edost-input({labelText: 'Введите Название компании или ИНН', required: true,})
+        +input({labelText: 'Введите Название компании или ИНН', required: true,})(required="required")
 
       +edost-item
-        +edost-input({labelText: 'ФИО контактного лица', required: true,})(type="text" autocomplete="off" autocorrect="off" spellcheck="false" maxlength="250" size="" value="" name="ORDER_PROP_1" id="ORDER_PROP_1" data-type="name" oninput="window.edost_window.input('update', this, event)" style="box-sizing: border-box;")
+        +input({labelText: 'ФИО контактного лица', required: true,})(required="required" type="text" autocomplete="off" autocorrect="off" spellcheck="false" maxlength="250" size="" value="" name="ORDER_PROP_1" id="ORDER_PROP_1" data-type="name" oninput="window.edost_window.input('update', this, event)" style="box-sizing: border-box;")
 
       +edost-item
-        +edost-input({labelText: 'E-mail', required: true,})(type="text" autocomplete="off" autocorrect="off" spellcheck="false" autocapitalize="off" maxlength="250" size="" value="" name="ORDER_PROP_2" id="ORDER_PROP_2" data-type="email" oninput="window.edost_window.input('update', this, event)")
+        +input({labelText: 'E-mail', required: true,})(required="required" type="text" autocomplete="off" autocorrect="off" spellcheck="false" autocapitalize="off" maxlength="250" size="" value="" name="ORDER_PROP_2" id="ORDER_PROP_2" data-type="email" oninput="window.edost_window.input('update', this, event)")
 
       +edost-item
-        +edost-input({labelText: 'Телефон', required: true,})(type="tel" autocomplete="tel" autocorrect="off" spellcheck="false" maxlength="16" size="" value="" name="ORDER_PROP_3" id="ORDER_PROP_3" data-type="tel" oninput="window.edost_window.input('update', this, event)" placeholder="+7 000 000-00-00")
+        +input({labelText: 'Телефон', required: true,})(required="required" type="tel" autocomplete="tel" autocorrect="off" spellcheck="false" maxlength="16" size="" value="" name="ORDER_PROP_3" id="ORDER_PROP_3" data-type="tel" oninput="window.edost_window.input('update', this, event)" placeholder="+7 000 000-00-00")
 
     +order-form-fieldset({number: '2', text: 'Доставка'})
       +edost-item
@@ -78,7 +78,7 @@ mixin edost(props = {})
           |До двери
       br
       +edost-item
-        +edost-input({labelText: 'Адрес доставки', required: true,})
+        +input({labelText: 'Адрес доставки', required: true,})(required="required")
 
     +order-form-fieldset({number: '3', text: 'Оплата'})
       +edost-item
@@ -112,5 +112,5 @@ mixin edost(props = {})
           |Требуется отсрочка платежа
       br
       +edost-item
-        +edost-input({labelText: 'Комментарий к заказу', type: 'textarea'})(tautocomplete="off" autocorrect="off" spellcheck="false" autocapitalize="off")
+        +input({labelText: 'Комментарий к заказу', type: 'textarea'})(tautocomplete="off" autocorrect="off" spellcheck="false" autocapitalize="off")
     +edost-submit-block(class="d-none d-lg-flex")

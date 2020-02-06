@@ -1,14 +1,14 @@
 .edost-item {
 	margin-bottom: 10px;
 
-	.edost-input {
+	.input {
 		max-width: 350px;
 	}
 }
 
 @media screen and (max-width: 991px) {
 	.edost-item {
-		.edost-input {
+		.input {
 			max-width: none;
 		}
 	}
