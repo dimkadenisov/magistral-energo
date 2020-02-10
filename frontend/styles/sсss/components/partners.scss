@@ -9,12 +9,6 @@
 	border: 2px solid var(--orange-400);
 	overflow-x: hidden;
 
-	.swiper-wrapper {
-		-webkit-transition-timing-function: linear !important;
-		transition-timing-function: linear !important;
-		position: relative;
-	}
-
 	&__item {
 		padding-left: 30px;
 
