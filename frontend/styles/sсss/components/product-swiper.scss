@@ -68,6 +68,18 @@
 			transform: translate(-50%, -50%);
 		}
 	}
+
+	&:hover {
+		.swiper-button {
+			background-color: var(--green-400);
+			color: var(--white);
+
+			&.swiper-button-disabled {
+				background-color: transparent;
+				color: var(--gray-400);
+			}
+		}
+	}
 }
 
 @media screen and (max-width: 1199px) {

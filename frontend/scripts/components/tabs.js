@@ -1,5 +1,5 @@
 $(window).scroll(function() {
-	const offset = $(window).width() <= 991 ? 142 : 64;
+	const offset = $(window).width() <= 991 ? 140 : 64;
 
 	if (
 		document.querySelector('.tabs__wrapper') &&

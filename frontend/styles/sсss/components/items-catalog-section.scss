@@ -1,5 +1,6 @@
 .items-catalog-section {
 	display: flex;
+	margin-right: 30px;
 
 	.separate-image {
 		display: block;
@@ -11,6 +12,7 @@
 
 		&__img {
 			top: 0;
+			left: 50%;
 			transform: translate(-50%, 0);
 		}
 	}

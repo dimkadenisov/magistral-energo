@@ -1,6 +1,8 @@
 .categories-swiper {
 	position: relative;
+	margin-right: -15px;
 	margin-bottom: 40px;
+	margin-left: -15px;
 	overflow: hidden;
 
 	.swiper-wrapper {
@@ -8,16 +10,18 @@
 	}
 
 	&__item {
-		width: 16.6666%;
+		width: calc(20% - 30px);
 		flex-grow: 0;
+		margin-right: 15px;
 		margin-bottom: 25px;
+		margin-left: 15px;
 	}
 }
 
 @media screen and (max-width: 1199px) {
 	.categories-swiper {
 		&__item {
-			width: 20%;
+			width: calc(25% - 30px);
 		}
 	}
 }
@@ -25,19 +29,24 @@
 @media screen and (max-width: 991px) {
 	.categories-swiper {
 		&__item {
-			width: 25%;
+			width: calc(33.3333% - 30px);
 		}
 	}
 }
 
 @media screen and (max-width: 767px) {
 	.categories-swiper {
+		margin-right: 0;
+		margin-left: 0;
+
 		.swiper-wrapper {
 			flex-wrap: nowrap;
 		}
 
 		&__item {
-			width: 50%;
+			width: auto;
+			margin-right: 0;
+			margin-left: 0;
 		}
 	}
 }

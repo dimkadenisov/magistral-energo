@@ -94,6 +94,10 @@
 		padding: 15px 30px;
 	}
 
+	.checkbox {
+		width: 100%;
+	}
+
 	&:nth-last-child(n + 4) {
 		border-bottom: 1px solid var(--gray-350);
 	}

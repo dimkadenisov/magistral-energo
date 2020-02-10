@@ -3,6 +3,30 @@
 	border-radius: 5px;
 	overflow: hidden;
 
+	&__item {
+		position: relative;
+	}
+
+	.link-image {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
+
+	&:hover {
+		.swiper-button {
+			background-color: var(--green-400);
+			color: var(--white);
+
+			&.swiper-button-disabled {
+				background-color: transparent;
+				color: var(--gray-400);
+			}
+		}
+	}
+
 	&_big {
 		height: 350px;
 		margin-bottom: 15px;
@@ -29,6 +53,16 @@
 
 		&_left {
 			left: 0;
+		}
+	}
+}
+
+@media screen and (max-width: 575px) {
+	.hero-swiper {
+		height: auto;
+
+		&__item {
+			padding-top: 60%;
 		}
 	}
 }

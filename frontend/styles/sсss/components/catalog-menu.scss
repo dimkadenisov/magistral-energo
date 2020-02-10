@@ -1,7 +1,6 @@
 .catalog-menu {
 	position: absolute;
-	top: 174px;
-	// width: 255px;
+	top: 168px;
 
 	&_fixed {
 		position: fixed;
@@ -13,7 +12,6 @@
 @media screen and (max-width: 1199px) {
 	.catalog-menu {
 		top: 168px;
-		// width: 210px;
 
 		&_fixed {
 			top: 64px;

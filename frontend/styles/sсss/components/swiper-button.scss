@@ -18,7 +18,8 @@
 
 	&:hover,
 	&:focus {
-		color: var(--green-400);
+		background-color: var(--green-400);
+		color: var(--white);
 	}
 
 	&_stroke {
@@ -32,5 +33,13 @@
 
 	&-lock {
 		display: none;
+	}
+
+	&.swiper-button-disabled {
+		&:hover,
+		&:focus {
+			background-color: transparent;
+			color: var(--gray-400);
+		}
 	}
 }

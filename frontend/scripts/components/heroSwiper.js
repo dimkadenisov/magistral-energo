@@ -8,6 +8,10 @@ const heroSwiperBigConfig = {
 	observerParents: true,
 	observeSlideChildren: true,
 
+	autoplay: {
+		delay: 5000,
+	},
+
 	navigation: {
 		nextEl: '.swiper-button_right',
 		prevEl: '.swiper-button_left',
@@ -34,6 +38,10 @@ const heroSwiperSmallConfig = {
 	observer: true,
 	observerParents: true,
 	observeSlideChildren: true,
+
+	autoplay: {
+		delay: 5000,
+	},
 
 	navigation: {
 		nextEl: '.swiper-button_right',

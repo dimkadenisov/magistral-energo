@@ -2,6 +2,6 @@ mixin category(props = {})
   include separate-image
 
   .category&attributes(attributes)
-    +separate-image
+    +separate-image({objectFit: "cover"})(class="separate-image_square")
     span.category__text
       block
