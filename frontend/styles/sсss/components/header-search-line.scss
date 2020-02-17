@@ -10,7 +10,9 @@
 	}
 
 	.button {
-		width: 100%;
+		min-width: 213px;
+		padding-right: 0;
+		padding-left: 0;
 	}
 
 	&_scroll {
