@@ -13,6 +13,10 @@
 		min-width: 213px;
 		padding-right: 0;
 		padding-left: 0;
+
+		&__text {
+			min-width: 115px;
+		}
 	}
 
 	&_scroll {
